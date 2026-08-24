@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset name="Keleva Woo">
+    <description>Contrôles PHPCS WordPress/WooCommerce du package Keleva Woo.</description>
+    <file>wordpress/theme/keleva-woo</file>
+    <file>wordpress/plugin/keleva-woo-addons</file>
+    <file>wordpress-dev/bin</file>
+    <file>wordpress-dev/tests</file>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <!-- CSS is validated by the browser/Axe checks; these shipped files are minified assets, not PHP. -->
+    <exclude-pattern>*/style.css</exclude-pattern>
+    <exclude-pattern>*/assets/css/*.css</exclude-pattern>
+    <rule ref="WordPress.Security"/>
+    <rule ref="WordPress.DB"/>
+    <rule ref="WordPress.WP"/>
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals"/>
+    <rule ref="WordPress.WP.Capabilities.Unknown">
+        <properties>
+            <property name="custom_capabilities" type="array">
+                <element value="manage_woocommerce" />
+            </property>
+        </properties>
+    </rule>
+    <rule ref="PHPCompatibility"/>
+    <arg name="colors"/>
+    <arg value="sp"/>
+</ruleset>

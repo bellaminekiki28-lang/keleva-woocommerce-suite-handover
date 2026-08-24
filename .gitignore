@@ -1,0 +1,42 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+
+# Dependencies and generated outputs
+**/node_modules/
+**/vendor/
+**/dist/
+**/.cache/
+**/.phpstan/
+**/coverage/
+**/playwright-report/
+**/test-results/
+
+# Runtime sessions, logs and local databases
+**/.manus/
+**/.manus-logs/
+**/wp-content/uploads/
+**/*.sqlite
+**/*.sqlite3
+**/*.sql
+**/*.log
+**/cookies.json
+**/storage-state.json
+
+# Generated archives and mutable evidence
+**/installables/
+**/proofs/
+**/preuves/
+**/*.zip
+**/*.tar
+**/*.gz
+
+# Editor / OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,5 @@
+261dcc4a82f58c412249595cc8ad38ccde7e2bd7e2198c07bdd0a1aa6715058c  installables/keleva-woo-0.4.2.zip
+db103a84557e144538e1c9a94ba92420b0817f084d05b2f4794b04a476655ca2  installables/keleva-woo-addons-0.4.2.zip
+d725ed6f0ae6f5e0d8319cc185b1e14b44cbd24f5bb87fc95c4240989d6a4857  installables/keleva-woo-developer-package-0.4.2.tar.gz
+bf048252298360303121631410706083adf03d9e02837b57cae8c6c7dc316984  docs/RELEASE_GATE_REPORT_0.4.2_2026-08-24.md
+fdd0e835ad40937442af5aa0a610ed9ce926e0e03dd7315b86f69b160a2726bb  verification/RELEASE_GATE_STATUS.txt

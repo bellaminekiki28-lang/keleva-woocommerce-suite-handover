@@ -1,0 +1,87 @@
+# Project TODO
+
+- [x] Définir l’architecture de séparation entre storefront WordPress, plugin bridge et console React/BFF.
+- [ ] Créer une console marchand React/TypeScript mobile-first, accessible et distincte de wp-admin.
+- [x] Mettre en place les modèles de données pour magasins, connexions, rôles, événements, synchronisations, médias, imports et audit.
+- [ ] Construire le BFF Node.js avec authentification, sessions sécurisées, rôles et validation Zod.
+- [ ] Ajouter une connexion WooCommerce côté serveur, chiffrée, testable et révocable sans exposer de secret navigateur.
+- [ ] Implémenter les vues dashboard, commandes, produits, variations, stock, médias et journal d’audit.
+- [ ] Ajouter confirmations, permissions serveur et journal d’audit pour les opérations sensibles.
+- [ ] Implémenter les webhooks WooCommerce signés, idempotents, rejouables et observables.
+- [ ] Afficher l’état de synchronisation et proposer une resynchronisation contrôlée.
+- [ ] Ajouter l’import/export CSV avec erreurs ligne par ligne et stratégie de rollback documentée.
+- [ ] Mettre en œuvre la chaîne média asynchrone : original, variantes JPEG/WebP/AVIF, états, erreurs, retry et fallback.
+- [x] Compléter les widgets Elementor prioritaires avec contrôles serveur, états vides/erreur/sans JS et tests runtime.
+- [ ] Configurer les paiements sandbox carte, wallet et moyen local retenu sans stockage de carte.
+- [x] Configurer et tester les règles de livraison retenues pour le marché cible.
+- [x] Ajouter les fonctions SEO/commerce : sitemap, robots, canoniques, schéma et feed Merchant Center.
+- [ ] Ajouter rate limiting, politique de headers, scan secrets/dépendances et couverture de sécurité applicative.
+- [ ] Préparer un staging TLS valide avec cache représentatif et observabilité RUM/CWV.
+- [ ] Exécuter Lighthouse mobile, navigateurs/appareils, tests de paiement et validation p75 avant le nouveau verdict.
+- [ ] Écrire et exécuter les tests Vitest, intégration, contrats, E2E et sécurité pour les nouvelles fonctions.
+- [ ] Actualiser la matrice de conformité CDC avec des preuves reproductibles et un verdict honnête.
+- [ ] Configurer le contexte WooCommerce Maroc : pays MA, devise MAD, taxes et formats monétaires vérifiables.
+- [ ] Sélectionner et intégrer une gateway Visa disponible en sandbox pour le marché Maroc, sans stockage de données carte.
+- [ ] Tester les parcours carte Visa sandbox, remboursement et échecs contrôlés sur un staging HTTPS public.
+- [x] Ajouter et vérifier au runtime le widget Elementor P1 « Product Search » avec formulaire GET accessible et fallback sans JavaScript.
+- [x] Mettre à jour les dépendances critiques de build et stockage ; audit npm ramené de 3 à 0 vulnérabilité critique, avec réexécution TypeScript et Vitest.
+- [x] Exécuter un test Sharp réel de génération et lecture des variantes JPEG, WebP et AVIF.
+- [x] Ajouter le widget Elementor P1 « Product Filters » avec URL contrôlable, catégories, stock et réinitialisation accessible.
+- [x] Brancher les paramètres Product Filters au query WooCommerce/WordPress, vérifier le format catégorie et gérer l’état vide.
+- [x] Ajouter une assertion E2E spécifique du filtre stock, en plus du filtre catégorie et de la réinitialisation déjà démontrés.
+- [x] Tester l’état vide SSR du filtre dans le layout Elementor shop_archive actif.
+- [x] Intégrer et valider le widget Product Filters dans le layout Elementor actif « shop_archive », qui remplace le fallback archive du thème.
+- [x] Ajouter le widget Elementor P1 « Product Media » avec galerie serveur, images responsive et fallback accessible hors JavaScript.
+- [x] Intégrer Product Media au layout Elementor single_product actif par délégation SSR unique du shortcode, puis vérifier le HTML réellement servi sans JavaScript sans dupliquer la galerie.
+- [x] Implémenter et prouver les widgets P1 Product Badges et Product Archive Header ; recenser explicitement les widgets P2/P3 différés.
+- [ ] Implémenter l’application d’un import catalogue vers WooCommerce avec snapshots pré-mutation, idempotence, erreurs par ligne et rollback contrôlé.
+- [x] Ajouter des tests Vitest mockés de l’import appliqué, de l’échec partiel et du rollback intégral.
+- [ ] Déployer et valider les workers planifiés sync/média, avec journaux d’exécution, reprise et preuve de traitement contre une boutique HTTPS accessible.
+- [ ] Exécuter un scénario webhook WooCommerce signé de bout en bout avec déduplication, audit et replay contrôlé.
+- [x] Préparer un staging WordPress HTTPS public représentatif et y exécuter les contrôles TLS, cache, Lighthouse et E2E.
+- [ ] Soumettre le flux produit au compte Merchant Center et consigner le diagnostic réel, sans l’inventer.
+- [x] Installer et exécuter les scans de secrets et sécurité applicative, puis corriger les findings exploitables.
+- [ ] Recueillir ou instrumenter des mesures RUM/CWV p75 et documenter les limites de représentativité des tests laboratoire.
+- [x] Réparer le bootstrap tRPC/Heartbeat cassé par le routeur imports, puis faire repasser TypeScript, Vitest et build.
+- [x] Rendre atomique la réservation d’un import prêt avant traitement afin d’éviter le double traitement concurrent.
+- [x] Restaurer les scripts WooCommerce requis sur le checkout staging, puis prouver le recalcul de livraison Maroc sous et au-dessus de 500 MAD.
+- [x] Implémenter et tester les widgets P2 Keleva Checkout Shell et Keleva Product Tabs avec rendu SSR, contrôles Elementor et fallback sans JavaScript.
+- [x] Réévaluer le périmètre des widgets P2/P3 : ceux identifiés sont livrés et testés, sans présenter d’option non livrée comme couverte.
+- [x] Implémenter Keleva Wishlist et Keleva Compare avec dégradation sans JavaScript, stockage non fragile et parcours navigateur prouvé.
+- [x] Implémenter Keleva Mega Menu et Keleva Analytics Cards, avec contrôles Elementor, données véridiques et rendu SSR documenté.
+- [x] Déployer Keleva Woo Addons 0.4.9 sur Hostinger et confirmer son état actif dans l’administration WordPress.
+- [x] Déployer Keleva Woo 0.4.6 sur Hostinger avec une politique cache privée pour les réponses WooCommerce personnalisées.
+- [x] Prouver sur staging la transition et le retrait d’un favori de session WooCommerce sans JavaScript applicatif, puis nettoyer la session de recette.
+- [x] Nettoyer le panier staging de recette de livraison et confirmer une réponse panier vide, sans créer de commande.
+- [x] Créer une surface de démonstration non indexée pour tester publiquement Wishlist, Compare, Mega Menu, Checkout Shell et Product Tabs au clavier et sans JavaScript applicatif.
+- [x] Vérifier Analytics Cards dans une session administrateur autorisée, sans exposer les données WooCommerce au public.
+- [x] Déployer Keleva Woo Addons 0.5.0 avec contrôles Elementor de produit explicites pour Wishlist et Compare, puis obtenir Plugin Check sans erreur localement.
+- [x] Déployer Keleva Woo 0.4.7 avec page de validation non indexée et privée de cache pour les widgets de recette.
+- [x] Diagnostiquer et corriger la soumission clavier directe du bouton Compare sur la surface de validation staging, puis prouver l’ajout, l’état aria-pressed et le nettoyage au retour de redirection.
+- [x] Revalider Wishlist/Compare sur staging à la souris et au clavier, sans JavaScript applicatif, après la correction du parcours Compare.
+- [x] Déployer Keleva Woo Addons 0.5.1 avec retour de formulaire explicite, validation de redirection et Plugin Check sans erreur localement.
+- [x] Déployer Keleva Woo 0.4.8 et prouver en staging le JSON-LD Product/Offer WooCommerce avec MAD et disponibilité.
+- [x] Déployer Keleva Woo Addons 0.5.2 avec Product Tabs configurable hors template produit, puis prouver le rendu P2, le clavier et le nettoyage du panier de recette sur staging.
+- [x] Prouver sur la page de validation non indexée que Checkout Shell et Product Tabs restent utilisables sans JavaScript applicatif, avec HTML SSR et parcours clavier explicites.
+- [x] Réduire les avis pnpm exploitables par des mises à niveau compatibles des dépendances directes, puis rejouer audit, TypeScript, Vitest et build.
+- [ ] Qualifier ou éliminer l’avis moderate esbuild transitif de Drizzle Kit dès qu’une version compatible corrigée est publiée ; il reste hors bundle de production mais l’audit n’est pas à zéro.
+- [x] Exécuter et archiver une suite E2E automatisée sur le staging public HTTPS, au minimum Chromium et les parcours catalogue, favori, widgets et checkout sans paiement, puis documenter précisément sa portée.
+- [ ] Diagnostiquer la cause des bascules récurrentes du thème staging entre Keleva Woo et RestoCommerce, y compris la désactivation observée après son remplacement 0.4.9, puis prouver une configuration Keleva stable avant tout jalon de release.
+- [x] Restaurer Keleva Woo comme thème actif sur le staging après la régression RestoCommerce observée, puis revalider les versions, cache et parcours storefront affectés.
+- [x] Relire la version active de Keleva Woo après restauration puis rejouer les en-têtes HTTP cache frais de `/boutique/` et `/keleva-validation-widgets/`.
+- [x] Diagnostiquer l’écart observé entre le compteur panier d’en-tête `01` et le panneau indiquant 0 article dans la session staging après restauration de thème.
+- [x] Retirer le produit de recette réellement présent dans le panier staging après la seconde restauration, puis archiver une réponse panier vide.
+- [x] Retirer le produit de recette réellement présent dans le panier staging après la seconde restauration, puis archiver une réponse panier vide.
+- [x] Rejouer la suite E2E Chromium avec son nettoyage en `finally` contre l’état Keleva restauré après la seconde régression RestoCommerce.
+- [ ] Vérifier publiquement Keleva Woo 0.4.9 après son déploiement : thème actif, version servie et fermeture des fuites REST/auteur/XML-RPC constatées. La preuve a montré XML-RPC encore accessible ; l’item reste historiquement ouvert comme constat d’écart.
+- [x] Vérifier publiquement Keleva Woo 0.4.10 après son déploiement : thème actif, version servie et fermeture REST/auteur/XML-RPC confirmées.
+- [ ] Ajouter et valider le rate limiting applicatif des surfaces WordPress/BFF concernées ; le hardening REST/auteur/XML-RPC ne le remplace pas.
+- [ ] Déployer Addons 0.5.6 et prouver publiquement le `429`/`Retry-After` du rate limiting REST dès que le staging Hostinger redevient disponible.
+- [x] Rejouer les preuves storefront staging après activation de Keleva Woo 0.4.10, notamment E2E Chromium et recette sans JavaScript avec panier nettoyé.
+- [ ] Obtenir les journaux d’activité WordPress et/ou Hostinger permettant d’attribuer les activations RestoCommerce récurrentes avant de poursuivre les revalidations staging.
+- [x] Déployer Keleva Woo Addons 0.5.3 et vérifier que son journal `theme_switch` enregistre la prochaine activation de thème sans données IP.
+- [ ] Surveiller le journal `theme_switch` lors de toute nouvelle bascule inattendue et rapprocher son acteur/contexte des journaux Hostinger afin d’en établir la cause.
+- [x] Déployer Keleva Woo Addons 0.5.5 afin d’appliquer en staging le correctif de métadonnée Stable Tag validé par Plugin Check.
+- [x] Déployer et réactiver Keleva Woo Addons 0.5.3 sur le staging afin de rendre disponible l’instrumentation indépendante du thème.
+- [x] Restaurer Keleva Woo comme thème actif lors de la seconde régression RestoCommerce, puis revalider le storefront public, la version 0.4.8 et les en-têtes cache privés.
+- [ ] Créer et publier un dépôt GitHub public assaini regroupant le thème, les extensions, la console, les scripts de validation, la documentation de reprise et les limites externes, sans secret ni session.

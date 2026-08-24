@@ -1,0 +1,22 @@
+Keleva Woo 0.4.2 — release gate exécutée le 2026-08-24
+
+VERDICT_GLOBAL=NOT_APPROVED_FOR_FULL_CDC_100_PERCENT
+VERDICT_IMPLEMENTED_LOCAL_SCOPE=PASS_WITH_LIMITS
+
+PHP_LINT=PASS (35 files)
+JS_SYNTAX=PASS
+PHPSTAN=PASS (level 5, 35/35 files)
+PHPCS_PRODUCTION=PASS (theme + plugin, 38 files)
+PLUGIN_CHECK=PASS (no errors found)
+COMPOSER_AUDIT=PASS (no security vulnerability advisories found)
+NPM_AUDIT=NOT_APPLICABLE (no package.json in delivered repository)
+REST_CONTRACTS=PASS (appearance, categories, orders, coupons)
+PHP_CONTRACTS=PASS (checkout, palettes, email styles)
+ELEMENTOR_RUNTIME=PASS (4 registered widgets, Keleva category)
+PLAYWRIGHT=PASS (Chromium, Firefox, WebKit)
+AXE_PLAYWRIGHT=PASS (26 passes, 0 violations)
+AXE_RESPONSIVE=PASS (4 views, 0 violations, 0 browser errors)
+LIGHTHOUSE_CI=NOT_USABLE_IN_LOCAL_LAB (certificate/interstitial prevented valid collection)
+HTTP_TIMINGS=MEASURED_ONLY (not CWV p75)
+
+FULL_CDC_GAPS=BFF/React console, OAuth/SSO, rate limiting/2FA, signed idempotent webhooks, CSV rollback, async AVIF/retry/status, missing Elementor widget set, real payment/shipping matrix, SEO sitemap/feed/Merchant Center, LiteSpeed/Redis/CDN/RUM/CWV p75, real-device/Safari iOS/Edge coverage, independent pentest.

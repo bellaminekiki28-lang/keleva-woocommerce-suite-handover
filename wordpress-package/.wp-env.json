@@ -1,0 +1,18 @@
+{
+  "core": "WordPress/WordPress#7.1",
+  "phpVersion": "8.2",
+  "port": 8888,
+  "testsPort": 8889,
+  "themes": [
+    "./wordpress/theme/keleva-woo"
+  ],
+  "plugins": [
+    "./wordpress/plugin/keleva-woo-addons"
+  ],
+  "mappings": {
+    "./wordpress-dev/mu-plugins": "/var/www/html/wp-content/mu-plugins"
+  },
+  "lifecycleScripts": {
+    "afterStart": "bash ./wordpress-dev/bin/provision.sh"
+  }
+}

@@ -1,0 +1,4 @@
+d809cdd14dc0bbc9c6f06ee09caa1b56e94a9dce708a203aa5999e416b0b8480  installables/keleva-woo-0.3.5.zip
+c0ec6edafab203d1084a82b4d56a28535283128c7d6932d07f58c43157ee5bf5  installables/keleva-woo-0.4.1-local-lab.zip
+aa4535e0b009a48b68d2c5b5046367cc3a6acf0e4870c9d43712bd9d105306b1  installables/keleva-woo-addons-0.3.4.zip
+041862e3b10e715ab17601d510b678da634fc10ce42a267e98444d454f274370  installables/keleva-woo-addons-0.4.1-local-lab.zip
