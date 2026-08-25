@@ -5,8 +5,24 @@ get_header();
 $products = keleva_woo_featured_products(9);
 $hero_product = $products[0] ?? null;
 $hero_image_id = (int) get_theme_mod('keleva_home_hero_image_id', 0);
-if (!$hero_image_id && $hero_product) {
-  $hero_image_id = $hero_product->get_image_id();
+if (!$hero_image_id) {
+  $first_image_id = 0;
+  foreach ($products as $candidate_product) {
+    $candidate_image_id = (int) $candidate_product->get_image_id();
+    if ($candidate_image_id <= 0) {
+      continue;
+    }
+    $first_image_id = $first_image_id ?: $candidate_image_id;
+    $candidate_metadata = wp_get_attachment_metadata($candidate_image_id);
+    $candidate_width = (int) ($candidate_metadata['width'] ?? 0);
+    $candidate_height = (int) ($candidate_metadata['height'] ?? 0);
+    if ($candidate_width > 1 && $candidate_height > 1) {
+      $hero_image_id = $candidate_image_id;
+      break;
+    }
+  }
+  // Preserve a valid attachment fallback if metadata is unavailable.
+  $hero_image_id = $hero_image_id ?: $first_image_id;
 }
 $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/');
 $categories = [
@@ -27,7 +43,7 @@ $faqs = [
   ['Le checkout est-il adapté au mobile ?', 'Oui. Les champs sont regroupés en petites séquences, le résumé reste accessible et les contrôles sont conçus pour le pouce, avec une zone tactile confortable.'],
 ];
 ?>
-<main id="keleva-main" class="keleva-main">
+<main id="keleva-main" class="keleva-main" tabindex="-1">
   <section class="velora-hero" aria-labelledby="keleva-hero-title">
     <div class="velora-hero__copy">
       <p class="velora-eyebrow"><span></span><?php esc_html_e('Objets utiles, choisis avec intention', 'keleva-woo'); ?></p>

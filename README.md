@@ -1,68 +1,56 @@
-# Keleva Woo — dossier de reprise technique
+# Keleva Woo
 
-Ce dépôt rassemble les **sources versionnables** du travail Keleva : le thème et les extensions WordPress/WooCommerce/Elementor, les scripts de vérification PHP et Playwright, ainsi que la console marchande React/TypeScript avec son BFF. Il est destiné à une reprise de développement et d’audit ; il ne constitue pas une déclaration de conformité intégrale.
+Keleva Woo rassemble les sources du storefront WordPress/WooCommerce, du portail marchand Keleva natif et des outils de recette associés. Le dépôt est public et ne contient volontairement aucun identifiant, secret, cookie, sauvegarde, journal de session ou archive de déploiement.
 
-> **État de décision.** La livraison locale est fortement testée sur le périmètre décrit dans les documents d’audit, mais la conformité globale demeure incomplète tant que les dépendances réelles de paiement, Merchant Center, API WooCommerce, webhooks, RUM/CWV p75, appareils physiques, pentest et stabilité Hostinger ne sont pas prouvées.
+> Pour reprendre le projet sans dépendance à l’environnement local d’origine, commencez par [HANDOVER.md](HANDOVER.md). Ce document décrit l’architecture active, les limites connues, les contrôles et le déploiement staging.
 
 ## Structure
 
 | Répertoire | Contenu | Point de départ |
 | --- | --- | --- |
-| `wordpress-package/wordpress/theme/keleva-woo` | Thème storefront WordPress PHP SSR | `style.css`, `functions.php`, `inc/` et `woocommerce/` |
-| `wordpress-package/wordpress/plugin/keleva-woo-addons` | Widgets Elementor, endpoints Dashboard, listes sauvegardées, audit et rate limiting | `keleva-woo-addons.php` et `includes/` |
-| `wordpress-package/wordpress-dev` | Scripts WordPress, régressions PHP, Playwright et recettes staging | `README.md`, `tests/` et `qa/` |
-| `wordpress-package/docs` | Inventaire staging, matrice CDC, décisions d’architecture et preuves de test | Commencer par `STAGING_HOSTINGER_INVENTORY_2026-08-24.md` |
-| `merchant-console` | Console React/TypeScript et BFF Express/tRPC | `README.md`, `docs/ARCHITECTURE.md`, `server/`, `client/` |
+| `wordpress-package/wordpress/theme/keleva-woo` | Thème storefront WordPress/WooCommerce, palettes et templates | `style.css`, `functions.php`, `inc/`, `woocommerce/` |
+| `wordpress-package/wordpress/plugin/keleva-woo-addons` | Portail marchand, intégrations WooCommerce, options, variantes, audit et réglages | `keleva-woo-addons.php`, `includes/` |
+| `wordpress-package/wordpress-dev` | Scripts de recette, utilitaires et tests WordPress | `README.md`, `tests/`, `qa/` |
+| `wordpress-package/docs` | Documentation d’audit, modèle d’architecture et rapports de validation | `VALIDATION_REPORT_2026-08-24.md` |
+| `merchant-console` | Console React/TypeScript historique et BFF | `docs/ARCHITECTURE.md`, `server/`, `client/` |
 
-Les dépendances installées (`vendor`, `node_modules`), caches, builds, journaux de session, archives installables et captures de preuve ont volontairement été exclus. Elles sont régénérables et ne doivent pas être publiées sans nouvelle revue.
+## État fonctionnel de référence
 
-## Démarrage local
+Le parcours marchand actif est un portail PHP rendu par WordPress. Il est séparé de wp-admin et prend en charge les produits, le prix, le stock, les catégories, les options, les suppléments, les limites de sélection et les vraies variantes WooCommerce avec un prix, un stock et une disponibilité propres à chaque option.
 
-### WordPress et WooCommerce
+La source de l’extension `Keleva Woo Addons` est en version **0.6.11**. Cette release comprend le portail de variantes stockées, le retrait des anciens raccourcis externes, et un écran technique Keleva Dashboard sans promotions tierces hors sujet. Les détails de recette et de reprise sont dans [HANDOVER.md](HANDOVER.md).
 
-Préparez une installation WordPress locale avec WooCommerce et Elementor, puis installez le thème et l’extension depuis les sources de `wordpress-package/wordpress/`. Les outils PHP du package sont décrits dans `wordpress-package/README.md` et dans `wordpress-package/wordpress-dev/README.md`.
+## Démarrage rapide
 
-Les validations ciblées utilisent notamment PHP lint, PHPCS, PHPStan, Plugin Check, WP-CLI et Playwright. Les tests de checkout, favoris et widgets ajoutent puis retirent des données de recette : utilisez une base locale ou de staging dédiée, jamais une boutique de production.
+### WordPress / WooCommerce
 
-### Console marchande
-
-Dans `merchant-console`, installez les dépendances avec `pnpm install`, puis lancez les contrôles suivants :
+Installez les sources du thème et du plugin dans une instance WordPress locale avec WooCommerce et Elementor. Les prérequis et recettes spécifiques sont documentés dans `wordpress-package/README.md` et `wordpress-package/wordpress-dev/README.md`.
 
 ```bash
+find wordpress-package/wordpress/plugin/keleva-woo-addons -name '*.php' -print0 | xargs -0 -n1 php -l
+find wordpress-package/wordpress/theme/keleva-woo -name '*.php' -print0 | xargs -0 -n1 php -l
+git diff --check
+```
+
+### Console React historique
+
+```bash
+cd merchant-console
+pnpm install
+export KELEVA_CONNECTION_ENCRYPTION_KEY="<clé-base64-de-32-octets-pour-le-test>"
 pnpm check
 pnpm test --run
 pnpm build
-pnpm audit
 ```
 
-Les variables de session, base de données et intégration OAuth doivent être fournies par l’environnement de déploiement ; ne créez pas de fichier `.env` versionné. L’architecture, les rôles, les imports, les webhooks et leurs limites de preuve figurent dans `merchant-console/docs/ARCHITECTURE.md`.
+La console React est conservée pour la continuité technique, mais le portail WordPress natif est le parcours marchand de référence. Consultez [HANDOVER.md](HANDOVER.md) avant de réutiliser ou redéployer la console.
 
-## Versions et état connu
+## Publication et sécurité
 
-| Composant | État source du dépôt | État staging connu avant indisponibilité HTTPS |
-| --- | --- | --- |
-| Keleva Woo | 0.4.10 | Déployé et hardening REST/auteur/XML-RPC prouvé à l’instant du contrôle |
-| Keleva Woo Addons | 0.5.6 | 0.5.5 actif ; 0.5.6 validé localement mais **non déployé** |
-| Console marchande | React/TypeScript, BFF et tests Vitest | Non déployée contre une API WooCommerce réelle |
+Les contributions doivent respecter [CONTRIBUTING.md](CONTRIBUTING.md) et [SECURITY.md](SECURITY.md). Ne publiez jamais de mot de passe, clé API, Consumer Key/Secret WooCommerce, secret de webhook, jeton OAuth, cookie, `.env`, base de données, journal, capture de session ou archive WordPress.
 
-Addons 0.5.6 introduit un rate limiting REST ciblé, basé sur une fenêtre de 60 secondes et des identifiants HMAC. Son contrat local traverse le serveur REST WordPress réel et valide cinq tentatives login suivies d’un `429`, d’un `Retry-After` et de `Cache-Control: no-store`. La preuve publique demeure à réaliser après retour d’un HTTPS Hostinger stable.
-
-## Reprise prioritaire
-
-Les tâches en cours et leurs états sont conservés dans `merchant-console/todo.md`. Le développeur repreneur doit prioriser les points suivants :
-
-1. Rétablir une disponibilité HTTPS stable du staging Hostinger, déployer Addons 0.5.6 et archiver le contrôle public de rate limiting.
-2. Identifier la cause des bascules répétées entre Keleva Woo et RestoCommerce en utilisant le journal `theme_switch` Addons et les journaux Hostinger.
-3. Configurer de vraies clés WooCommerce limitées, valider imports, workers, webhooks et rollback contre un HTTPS accessible.
-4. Obtenir les comptes et clés sandbox nécessaires aux moyens de paiement Maroc, sans jamais stocker de données de carte.
-5. Finaliser Merchant Center, RUM/CWV p75, essais sur appareils physiques et pentest indépendant.
-
-## Sécurité et publication
-
-Le dépôt public ne doit contenir ni mot de passe, clé API, Consumer Key/Secret WooCommerce, secret webhook, fichier `.env`, cookie, journal de navigateur, base locale, archive de sauvegarde ou capture de session. Avant tout nouveau push, exécutez un scan de secrets et inspectez les changements proposés.
-
-Le seul avis pnpm connu au moment de la reprise est un avis moderate transitif d’`esbuild@0.18.20` via `drizzle-kit@0.31.10` et `@esbuild-kit/core-utils@3.3.2`, outil de migration hors bundle de production. Il est documenté dans `merchant-console/docs/ARCHITECTURE.md` et reste ouvert jusqu’à une correction amont compatible.
+Ne déployez jamais sur production sans sauvegarde vérifiée, fenêtre de changement, plan de restauration et recette finale séparée. Les paiements, WhatsApp, n8n, Merchant Center et les données clients doivent être configurés avec des secrets hors Git et validés en sandbox.
 
 ## Licence
 
-Le thème et les extensions WordPress sont publiés sous licence GPL-2.0-or-later conformément à leur intégration WordPress. La console conserve ses licences déclarées dans ses propres manifestes. Vérifiez les obligations des dépendances avant toute redistribution commerciale.
+Le thème et les extensions WordPress sont publiés sous licence GPL-2.0-or-later conformément à leur intégration WordPress. La console conserve les licences déclarées dans ses propres manifestes. Vérifiez les obligations des dépendances avant toute redistribution commerciale.

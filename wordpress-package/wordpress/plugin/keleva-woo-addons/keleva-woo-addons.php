@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Keleva Woo Addons
  * Description: Quick view REST endpoint and Elementor commerce widgets for Keleva Woo.
- * Version: 0.5.6
+ * Version: 0.6.11
  * Author: Keleva
  * Text Domain: keleva-woo-addons
  * License: GPLv2 or later
@@ -17,12 +17,16 @@ require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-quick-view-endpoint.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-dashboard-audit-log.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-theme-switch-audit.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-dashboard-settings.php';
+require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-manager-admin.php';
+require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-native-merchant-portal.php';
+require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-portal-public-entry.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-rest-rate-limiter.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-product-options.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-category-service.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-dashboard-endpoint.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-restaurant-extras.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-saved-product-lists.php';
+require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-whatsapp-order.php';
 
 register_activation_hook(__FILE__, ['Keleva_Dashboard_Audit_Log', 'install']);
 add_action('plugins_loaded', ['Keleva_Dashboard_Audit_Log', 'maybe_install']);
@@ -31,9 +35,13 @@ add_action('rest_api_init', ['Keleva_Quick_View_Endpoint', 'register_routes']);
 add_action('rest_api_init', ['Keleva_Dashboard_Endpoint', 'register_routes']);
 Keleva_Rest_Rate_Limiter::boot();
 Keleva_Dashboard_Settings::boot();
+Keleva_Manager_Admin::boot();
+Keleva_Native_Merchant_Portal::boot();
+Keleva_Portal_Public_Entry::boot();
 Keleva_Restaurant_Extras::boot();
 Keleva_Product_Options::boot();
 Keleva_Saved_Product_Lists::boot();
+Keleva_WhatsApp_Order::boot();
 
 add_action('elementor/elements/categories_registered', static function ($elements_manager): void {
     $elements_manager->add_category('keleva-woo', [

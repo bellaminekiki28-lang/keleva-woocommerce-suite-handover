@@ -63,6 +63,13 @@ add_action('wp_enqueue_scripts', static function (): void {
         keleva_woo_asset_version('/assets/js/storefront.js'),
         ['strategy' => 'defer', 'in_footer' => true]
     );
+    wp_enqueue_script(
+        'keleva-accessibility',
+        get_template_directory_uri() . '/assets/js/accessibility.js',
+        [],
+        keleva_woo_asset_version('/assets/js/accessibility.js'),
+        ['strategy' => 'defer', 'in_footer' => true]
+    );
 
     wp_add_inline_script(
         'keleva-storefront',

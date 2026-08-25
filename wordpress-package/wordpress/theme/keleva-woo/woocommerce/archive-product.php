@@ -4,7 +4,7 @@ get_header('shop');
 
 $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/');
 ?>
-<main id="keleva-main" class="keleva-main velora-listing">
+<div id="keleva-main" class="keleva-main velora-listing" tabindex="-1">
   <?php if (keleva_woo_render_layout('shop_archive')) : ?>
   <?php else : ?>
     <?php do_action('woocommerce_before_main_content'); ?>
@@ -38,5 +38,5 @@ $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('sh
     </section>
     <?php do_action('woocommerce_after_main_content'); ?>
   <?php endif; ?>
-</main>
+</div>
 <?php get_footer('shop'); ?>

@@ -14,7 +14,7 @@ $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('sh
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="keleva-page-progress" aria-hidden="true"></div>
-<a class="screen-reader-text" href="#catalogue"><?php esc_html_e('Aller au catalogue', 'keleva-woo'); ?></a>
+<a class="screen-reader-text" href="#keleva-main"><?php esc_html_e('Aller au contenu principal', 'keleva-woo'); ?></a>
 <header class="site-header keleva-header">
   <div class="site-header__inner keleva-header__inner">
     <a class="site-brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home" aria-label="<?php esc_attr_e('Velora, revenir en haut', 'keleva-woo'); ?>">

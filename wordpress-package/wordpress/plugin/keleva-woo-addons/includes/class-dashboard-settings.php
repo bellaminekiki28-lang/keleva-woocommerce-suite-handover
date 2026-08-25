@@ -12,12 +12,32 @@ final class Keleva_Dashboard_Settings {
         'KELEVA_DASHBOARD_TOKEN' => 'Jeton dashboard actif',
         'KELEVA_DASHBOARD_PREVIOUS_TOKEN' => 'Jeton dashboard précédent',
         'KELEVA_DASHBOARD_WEBHOOK_URL' => 'URL HTTPS du webhook',
-        'KELEVA_DASHBOARD_WEBHOOK_SECRET' => 'Secret de signature webhook',
+        'KELEVA_DASHBOARD_WEBHOOK_SECRET' => 'Secret de signature webhook dashboard',
+        'KELEVA_WHATSAPP_NUMBER' => 'Numéro WhatsApp Business',
+        'KELEVA_WHATSAPP_WEBHOOK_URL' => 'URL HTTPS du webhook WhatsApp / n8n',
+        'KELEVA_WHATSAPP_WEBHOOK_SECRET' => 'Secret de signature webhook WhatsApp',
     ];
 
     public static function boot(): void {
         add_action('admin_menu', [self::class, 'register_page']);
         add_action('admin_post_keleva_save_dashboard_settings', [self::class, 'save']);
+        add_action('current_screen', [self::class, 'suppress_unrelated_admin_notices']);
+    }
+
+    /**
+     * Keeps the Keleva integration screen focused on its own controls.
+     * Third-party promotions and template notices remain available on their
+     * respective WordPress screens and are not rendered on this page.
+     *
+     * @param WP_Screen $screen Current WordPress admin screen.
+     */
+    public static function suppress_unrelated_admin_notices($screen): void {
+        if (!is_object($screen) || 'woocommerce_page_keleva-dashboard-settings' !== ($screen->id ?? '')) {
+            return;
+        }
+
+        remove_all_actions('admin_notices');
+        remove_all_actions('all_admin_notices');
     }
 
     public static function get(string $field): string {
@@ -56,7 +76,7 @@ final class Keleva_Dashboard_Settings {
         <div class="wrap">
             <h1><?php esc_html_e('Keleva Dashboard — intégration sécurisée', 'keleva-woo-addons'); ?></h1>
             <p><?php esc_html_e('Utilisez uniquement des secrets de test en préproduction. Les valeurs sont chiffrées dans WordPress et ne s’affichent jamais après enregistrement.', 'keleva-woo-addons'); ?></p>
-            <p><a class="button button-primary" href="https://velorashop-mfwzckre.manus.space/marchand" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Ouvrir le dashboard marchand', 'keleva-woo-addons'); ?></a> <span class="description"><?php esc_html_e('La console de préproduction demande son jeton temporaire ; aucun secret n’est transmis depuis WordPress.', 'keleva-woo-addons'); ?></span></p>
+            <p><a class="button button-primary" href="<?php echo esc_url(admin_url('admin.php?page=keleva-manager')); ?>"><?php esc_html_e('Ouvrir Keleva Manager', 'keleva-woo-addons'); ?></a> <span class="description"><?php esc_html_e('Les actions marchandes guidées se font depuis le portail Keleva natif de ce site. Cette page reste réservée aux réglages d’intégration avancés.', 'keleva-woo-addons'); ?></span></p>
             <?php // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- simple flag de redirection assaini, sans mutation d’état.
             if (isset($_GET['updated']) && '1' === sanitize_text_field(wp_unslash($_GET['updated']))) : ?>
                 <div class="notice notice-success is-dismissible"><p><?php esc_html_e('Configuration Keleva enregistrée.', 'keleva-woo-addons'); ?></p></div>
@@ -70,8 +90,8 @@ final class Keleva_Dashboard_Settings {
                         <tr>
                             <th scope="row"><label for="<?php echo esc_attr($field); ?>"><?php echo esc_html($label); ?></label></th>
                             <td>
-                                <input name="<?php echo esc_attr($field); ?>" id="<?php echo esc_attr($field); ?>" type="<?php echo 'KELEVA_DASHBOARD_WEBHOOK_URL' === $field ? 'url' : 'password'; ?>" class="regular-text" autocomplete="new-password" value="" placeholder="<?php echo $configured[$field] ? esc_attr__('Déjà configuré — laisser vide pour conserver', 'keleva-woo-addons') : ''; ?>">
-                                <?php if ('KELEVA_DASHBOARD_WEBHOOK_URL' === $field) : ?>
+                                <input name="<?php echo esc_attr($field); ?>" id="<?php echo esc_attr($field); ?>" type="<?php echo in_array($field, ['KELEVA_DASHBOARD_WEBHOOK_URL', 'KELEVA_WHATSAPP_WEBHOOK_URL'], true) ? 'url' : 'password'; ?>" class="regular-text" autocomplete="new-password" value="" placeholder="<?php echo $configured[$field] ? esc_attr__('Déjà configuré — laisser vide pour conserver', 'keleva-woo-addons') : ''; ?>">
+                                <?php if (in_array($field, ['KELEVA_DASHBOARD_WEBHOOK_URL', 'KELEVA_WHATSAPP_WEBHOOK_URL'], true)) : ?>
                                     <p class="description"><?php esc_html_e('Seules les URL HTTPS sont acceptées.', 'keleva-woo-addons'); ?></p>
                                 <?php endif; ?>
                             </td>
@@ -128,7 +148,7 @@ final class Keleva_Dashboard_Settings {
         $settings = get_option(self::OPTION, []);
         $settings = is_array($settings) ? $settings : [];
         if (!empty($_POST['keleva_generate_test_secrets'])) {
-            foreach (['KELEVA_DASHBOARD_TOKEN', 'KELEVA_DASHBOARD_PREVIOUS_TOKEN', 'KELEVA_DASHBOARD_WEBHOOK_SECRET'] as $field) {
+            foreach (['KELEVA_DASHBOARD_TOKEN', 'KELEVA_DASHBOARD_PREVIOUS_TOKEN', 'KELEVA_DASHBOARD_WEBHOOK_SECRET', 'KELEVA_WHATSAPP_WEBHOOK_SECRET'] as $field) {
                 $settings[$field] = self::encrypt(bin2hex(random_bytes(32)));
             }
         }
@@ -137,7 +157,7 @@ final class Keleva_Dashboard_Settings {
             if ('' === $value) {
                 continue;
             }
-            if ('KELEVA_DASHBOARD_WEBHOOK_URL' === $field && ('https' !== wp_parse_url($value, PHP_URL_SCHEME) || !wp_http_validate_url($value))) {
+            if (in_array($field, ['KELEVA_DASHBOARD_WEBHOOK_URL', 'KELEVA_WHATSAPP_WEBHOOK_URL'], true) && ('https' !== wp_parse_url($value, PHP_URL_SCHEME) || !wp_http_validate_url($value))) {
                 wp_die(esc_html__('L’URL du webhook doit être une URL HTTPS valide.', 'keleva-woo-addons'));
             }
             $encrypted = self::encrypt($value);

@@ -81,7 +81,9 @@ add_action('template_redirect', static function (): void {
 }, 0);
 
 function keleva_woo_featured_products(int $limit = 9): array {
-    $key = 'keleva_featured_products_' . $limit;
+    // Keep the curated list when the Velora demo catalog exists, but fall back to
+    // the latest published WooCommerce products on stores with different slugs.
+    $key = 'keleva_featured_products_v2_' . $limit;
     $products = get_transient($key);
 
     if (false !== $products) {
@@ -111,13 +113,25 @@ function keleva_woo_featured_products(int $limit = 9): array {
         'order' => 'ASC',
         'fields' => 'ids',
     ]);
-    $products = $ids ? wc_get_products([
-        'status' => 'publish',
-        'include' => $ids,
-        'orderby' => 'include',
-        'limit' => $limit,
-        'return' => 'objects',
-    ]) : [];
+    if ($ids) {
+        $products = wc_get_products([
+            'status' => 'publish',
+            'include' => $ids,
+            'orderby' => 'include',
+            'limit' => $limit,
+            'return' => 'objects',
+        ]);
+    } else {
+        // A fresh installation may use different product slugs. Avoid rendering
+        // an empty home catalogue and derive the hero image from the first result.
+        $products = wc_get_products([
+            'status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'limit' => $limit,
+            'return' => 'objects',
+        ]);
+    }
 
     set_transient($key, $products, 5 * MINUTE_IN_SECONDS);
     return $products;
@@ -126,6 +140,7 @@ function keleva_woo_featured_products(int $limit = 9): array {
 function keleva_woo_flush_product_caches(): void {
     foreach ([6, 9, 12] as $limit) {
         delete_transient('keleva_featured_products_' . $limit);
+        delete_transient('keleva_featured_products_v2_' . $limit);
     }
 }
 

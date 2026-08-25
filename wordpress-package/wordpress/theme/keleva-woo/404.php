@@ -2,7 +2,7 @@
 defined('ABSPATH') || exit;
 get_header();
 ?>
-<main id="keleva-main" class="keleva-main velora-empty-page">
+<main id="keleva-main" class="keleva-main velora-empty-page" tabindex="-1">
   <section class="velora-empty-state" aria-labelledby="keleva-404-title">
     <p class="velora-eyebrow"><?php esc_html_e('Navigation apaisée', 'keleva-woo'); ?></p>
     <h1 id="keleva-404-title"><?php esc_html_e('Cette page a quitté l’atelier.', 'keleva-woo'); ?></h1>
