@@ -8,7 +8,7 @@ Ce document décrit les sources et l’état de référence publiés. Il est des
 | --- | --- | --- |
 | Portail marchand | Portail PHP rendu par le plugin Keleva Woo Addons | Chemin natif `/espace-marchand/`, session Keleva distincte de wp-admin |
 | Addons | Version source `0.6.15` | Version `0.6.15` installée sur le staging Hostinger |
-| Thème et RTL | CSS RTL conditionnel, WOFF2 Noto Sans Arabic auto-hébergés | Thème `0.4.13` validé sur `/ar/` et portail `/ar/espace-marchand/` |
+| Thème et RTL | CSS RTL conditionnel, WOFF2 Noto Sans Arabic auto-hébergés | Thème `0.4.14` validé sur `/ar/`, fiche variable et portail `/ar/espace-marchand/` |
 | Catalogue | Catégories, options, suppléments, limites et stock | Recettes de catégories/options/suppléments réalisées puis nettoyées |
 | Variantes | Vraies variantes WooCommerce à un attribut guidé | Prix, stock et disponibilité par option validés, puis fixture supprimée |
 | Console React | Sources conservées pour historique et audit | Hors parcours marchand actif ; ne pas la redéployer sans décision explicite |
@@ -17,9 +17,9 @@ Ce document décrit les sources et l’état de référence publiés. Il est des
 
 ## Fondation français-arabe : état et limite connue
 
-Polylang est actif sur le staging avec le français et l’arabe ; la couche RTL applique `lang="ar"`, `dir="rtl"` et des propriétés CSS logiques au storefront et au portail. Les deux routes arabes servent Noto Sans Arabic depuis les fichiers WOFF2 du thème ou du plugin, sans requête Noto vers Google. La recette à 390 × 844 px et à 1280 px ne montre ni débordement horizontal ni contrôle hors canevas.
+TranslatePress Free est le moteur de langues unique actif sur le staging : le français est la source et l’arabe la seule langue additionnelle. Polylang est conservée installée mais désactivée pour un retour arrière ; ne réactivez jamais les deux moteurs ensemble. La couche RTL applique `lang="ar"`, `dir="rtl"`, la classe `translatepress-ar` et des propriétés CSS logiques au storefront et au portail. Les routes arabes servent Noto Sans Arabic depuis les fichiers WOFF2 du thème ou du plugin, sans requête Noto vers Google. La recette à 390 × 844 px et à 1280 px ne montre ni débordement horizontal ni contrôle hors canevas, y compris la fiche produit variable après le correctif 0.4.14.
 
-> Cette fondation n’est pas une traduction complète du commerce. Les contenus, produits, catégories, options et variantes existants restent français. Avant toute traduction de données WooCommerce, installer **uniquement Polylang Business Pack avec Polylang for WooCommerce**, puis suivre la recette détaillée dans [`wordpress-package/docs/I18N_RTL_STAGING_2026-08-26.md`](wordpress-package/docs/I18N_RTL_STAGING_2026-08-26.md). Ne pas associer WPML ni créer de traductions manuelles de produits variables avant cette étape.
+> Cette fondation n’est pas encore une traduction complète du commerce. Les produits WooCommerce, leurs variantes, prix, stocks et médias restent **canoniques et uniques** ; TranslatePress traduit le rendu client sans copie de données. Une chaîne de recette a été persistée en arabe sur une fiche variable. Poursuivez avec la recette contrôlée de [`FREE_TRANSLATION_STAGING_2026-08-26.md`](wordpress-package/docs/FREE_TRANSLATION_STAGING_2026-08-26.md), sans associer Polylang, WPML ou un second produit arabe.
 
 ## Architecture utile
 
