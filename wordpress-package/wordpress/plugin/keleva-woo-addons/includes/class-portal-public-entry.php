@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
  */
 final class Keleva_Portal_Public_Entry {
     private const QUERY_VAR = 'keleva_portal';
-    private const REWRITE_VERSION = '0.6.15';
+    private const REWRITE_VERSION = '0.6.17';
 
     public static function boot(): void {
         add_filter('query_vars', [self::class, 'register_query_var']);

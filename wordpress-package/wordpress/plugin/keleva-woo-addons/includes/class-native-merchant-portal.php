@@ -130,6 +130,10 @@ final class Keleva_Native_Merchant_Portal {
 
     public static function render(): void {
         nocache_headers();
+        // The portal is session-aware; shared page caches must never replay its login form.
+        header('Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('Vary: Cookie');
         status_header(200);
         header('Content-Type: text/html; charset=' . get_bloginfo('charset'));
 
@@ -201,13 +205,14 @@ final class Keleva_Native_Merchant_Portal {
      * @param array<string, mixed> $access
      */
     private static function create_session(array $access): void {
-        $token = wp_generate_password(64, false, false);
         $record = [
             'username' => sanitize_user((string) ($access['username'] ?? ''), true),
             'permissions' => is_array($access['permissions'] ?? null) ? array_values($access['permissions']) : [],
             'expires_at' => time() + self::SESSION_TTL,
         ];
-        set_transient(self::SESSION_PREFIX . hash('sha256', $token), $record, self::SESSION_TTL);
+        // Use a signed, opaque cookie so the session survives Hostinger cache/server boundaries.
+        $payload = rtrim(strtr(base64_encode((string) wp_json_encode($record)), '+/', '-_'), '=');
+        $token = $payload . '.' . hash_hmac('sha256', $payload, (string) ($access['password_hash'] ?? ''));
         setcookie(self::COOKIE_NAME, $token, [
             'expires' => time() + self::SESSION_TTL,
             'path' => '/',
@@ -222,10 +227,20 @@ final class Keleva_Native_Merchant_Portal {
      */
     private static function current_session(): ?array {
         $token = sanitize_text_field((string) wp_unslash($_COOKIE[self::COOKIE_NAME] ?? ''));
-        if ('' === $token || !preg_match('/^[A-Za-z0-9]{32,}$/', $token)) {
+        if ('' === $token || !preg_match('/^([A-Za-z0-9_-]+)\.([A-Fa-f0-9]{64})$/', $token, $matches)) {
             return null;
         }
-        $record = get_transient(self::SESSION_PREFIX . hash('sha256', $token));
+        $payload = $matches[1];
+        $signature = $matches[2];
+        $access = self::access_config();
+        if (!hash_equals($signature, hash_hmac('sha256', $payload, (string) ($access['password_hash'] ?? '')))) {
+            self::clear_session_cookie();
+            return null;
+        }
+        $base64 = strtr($payload, '-_', '+/');
+        $base64 .= str_repeat('=', (4 - strlen($base64) % 4) % 4);
+        $decoded = base64_decode($base64, true);
+        $record = is_string($decoded) ? json_decode($decoded, true) : null;
         if (!is_array($record) || empty($record['username']) || empty($record['expires_at']) || (int) $record['expires_at'] < time()) {
             self::clear_session_cookie();
             return null;
@@ -238,7 +253,6 @@ final class Keleva_Native_Merchant_Portal {
      * @param array<string, mixed> $session
      */
     private static function logout(array $session): true {
-        delete_transient(self::SESSION_PREFIX . hash('sha256', (string) $session['token']));
         self::clear_session_cookie();
         Keleva_Dashboard_Audit_Log::record('merchant_native_logout', [], (string) $session['username']);
         return true;
