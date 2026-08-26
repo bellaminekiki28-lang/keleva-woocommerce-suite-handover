@@ -4,7 +4,7 @@
 
 ## 1. Réponse courte : le travail est-il entièrement sur GitHub ?
 
-Le dépôt public contient les sources WordPress de reprise, le plugin Keleva Woo Addons, le thème Keleva Woo, la console historique, les tests, les journaux de recette, les rapports FR/AR, les contrôles de sécurité, la procédure de migration et la documentation technique. Le dépôt distant vérifié est : [bellaminekiki28-lang/keleva-woocommerce-suite-handover](https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover), branche `main`, dernier commit vérifié `df1faa517ebc746dd546f8b2bd2076f47e070b0b` (`df1faa5`).
+Le dépôt public contient les sources WordPress de reprise, le plugin Keleva Woo Addons, le thème Keleva Woo, la console historique, les tests, les journaux de recette, les rapports FR/AR, les contrôles de sécurité, la procédure de migration et la documentation technique. Le dépôt distant vérifié est : [bellaminekiki28-lang/keleva-woocommerce-suite-handover](https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover), branche `main`, dernier commit vérifié `9c7e5f3cde0d68ff09a939b3a480290d813562a` (`9c7e5f3`).
 
 Cependant, **tout ce qui existe sur le site WordPress ne peut pas être contenu dans GitHub**. Les traductions enregistrées par TranslatePress Free, les produits, catégories, variations, médias, réglages, comptes portail, cookies, commandes et autres données du staging résident dans la base et le stockage Hostinger. Ils ne sont pas exportés dans le dépôt public, conformément à la protection des secrets et des données métier. Le prochain développeur doit donc récupérer une sauvegarde privée du staging et un accès Hostinger séparé.
 
@@ -21,6 +21,7 @@ Cependant, **tout ce qui existe sur le site WordPress ne peut pas être contenu 
 | Console historique | `merchant-console/` | Code de reprise, à ne pas confondre avec le portail natif Hostinger |
 | Sécurité et contribution | `SECURITY.md`, `CONTRIBUTING.md`, `README.md` | Présents |
 | Intégrité | `wordpress-package/CHECKSUMS-SHA256.txt` | À recalculer après toute nouvelle archive |
+| Fixtures publiques | `PUBLIC-TEST-FIXTURES.md` | Manifeste assaini des produits, options et scénarios de démonstration |
 
 Pour récupérer le projet :
 
@@ -46,7 +47,7 @@ Ne jamais ajouter de fichier `.env`, mot de passe, token, export SQL, sauvegarde
 | Données | Staging uniquement ; aucune commande, client ou paiement réel prévu |
 | Portail | Authentification dédiée Keleva, séparée de wp-admin, session signée HMAC |
 
-Le compte de recette est `keleva.recette`. Son mot de passe n’est volontairement pas écrit ici ni dans GitHub ; il doit être transmis par un canal privé ou régénéré depuis WordPress avant recette. Le portail ne doit pas être relié à une session wp-admin.
+Le compte de recette est `keleva.recette`. Son mot de passe n’est volontairement pas écrit ici ni dans GitHub ; il doit être transmis par un canal privé ou régénéré depuis WordPress avant recette. Le manifeste public `PUBLIC-TEST-FIXTURES.md` décrit les données de démonstration sans publier ce secret. Le portail ne doit pas être relié à une session wp-admin.
 
 ## 4. Fonctionnalités livrées
 
