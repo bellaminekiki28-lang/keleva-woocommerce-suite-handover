@@ -213,7 +213,7 @@ final class Keleva_Native_Merchant_Portal {
 
     public static function render(): void {
         nocache_headers();
-        add_filter('gettext', [self::class, 'arabic_portal_gettext'], 20, 3);
+        // Arabic labels are rendered through the route-aware UI strings; avoid a global gettext hook on Hostinger.
         // The portal is session-aware; shared page caches must never replay its login form.
         header('Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0');
         header('Pragma: no-cache');
@@ -233,7 +233,6 @@ final class Keleva_Native_Merchant_Portal {
             self::render_dashboard($session);
         }
         self::render_document_end();
-        remove_filter('gettext', [self::class, 'arabic_portal_gettext'], 20);
     }
 
     private static function handle_public_action(): void {
