@@ -132,8 +132,8 @@ final class Keleva_Native_Merchant_Portal {
      * Translate the white-label portal UI when WordPress is rendering an RTL route.
      * Product names, merchant names and palette names intentionally remain unchanged.
      */
-    public static function arabic_portal_gettext(string $translation, string $text, string $domain): string {
-        if ('keleva-woo-addons' !== $domain || !is_rtl()) return $translation;
+    public static function arabic_portal_gettext($translation, $text, $domain) {
+        if ('keleva-woo-addons' !== (string) $domain || (function_exists('is_rtl') && !is_rtl())) return (string) $translation;
         $translations = [
             'Connexion Keleva' => 'تسجيل الدخول إلى كيليفا',
             'Portail marchand Keleva' => 'بوابة التاجر كيليفا',
@@ -207,7 +207,8 @@ final class Keleva_Native_Merchant_Portal {
             'variantes' => 'متغيرات',
             'suppléments' => 'إضافات',
         ];
-        return $translations[$text] ?? $translation;
+        $text = (string) $text;
+        return $translations[$text] ?? (string) $translation;
     }
 
     public static function render(): void {
