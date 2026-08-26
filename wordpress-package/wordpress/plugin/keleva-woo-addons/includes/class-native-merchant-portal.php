@@ -133,8 +133,22 @@ final class Keleva_Native_Merchant_Portal {
      * Product names, merchant names and palette names intentionally remain unchanged.
      */
     public static function arabic_portal_gettext($translation, $text, $domain) {
-        if ('keleva-woo-addons' !== (string) $domain || (function_exists('is_rtl') && !is_rtl())) return (string) $translation;
+        if ('keleva-woo-addons' !== (string) $domain) return (string) $translation;
         $translations = [
+            'Votre activité, sans le technique.' => 'نشاطك، بدون تعقيد تقني.',
+            'Ajoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.' => 'أضف منتجًا، عدّل السعر أو راجع طلبًا بخطوات بسيطة.',
+            'Portail unique' => 'بوابة موحّدة',
+            'Session Keleva' => 'جلسة كيليفا',
+            'Outil technique' => 'أداة تقنية',
+            'ACCÈS MARCHAND' => 'دخول التاجر',
+            'Bienvenue.' => 'مرحبًا بك.',
+            'Connectez-vous avec vos identifiants Keleva dédiés.' => 'سجّل الدخول باستخدام بيانات كيليفا المخصّصة لك.',
+            'Accès en préparation.' => 'الدخول قيد الإعداد.',
+            'Le propriétaire doit créer le premier identifiant Keleva dans les réglages sécurisés du site.' => 'يجب على المالك إنشاء أول معرّف لكيليفا من إعدادات الموقع الآمنة.',
+            'Identifiant portail' => 'معرّف البوابة',
+            'Mot de passe' => 'كلمة المرور',
+            'Entrer dans mon espace' => 'الدخول إلى مساحتي',
+            'Ce portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.' => 'تُستضاف هذه البوابة داخل موقع كيليفا. ولا تمنح أبدًا وصولًا إلى الإدارة التقنية.',
             'Connexion Keleva' => 'تسجيل الدخول إلى كيليفا',
             'Portail marchand Keleva' => 'بوابة التاجر كيليفا',
             'Portail marchand' => 'بوابة التاجر',
