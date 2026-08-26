@@ -128,8 +128,91 @@ final class Keleva_Native_Merchant_Portal {
         exit;
     }
 
+    /**
+     * Translate the white-label portal UI when WordPress is rendering an RTL route.
+     * Product names, merchant names and palette names intentionally remain unchanged.
+     */
+    private static function arabic_portal_gettext(string $translation, string $text, string $domain): string {
+        if ('keleva-woo-addons' !== $domain || !is_rtl()) return $translation;
+        $translations = [
+            'Connexion Keleva' => 'تسجيل الدخول إلى كيليفا',
+            'Portail marchand Keleva' => 'بوابة التاجر كيليفا',
+            'Portail marchand' => 'بوابة التاجر',
+            'Ajouter un produit' => 'إضافة منتج',
+            'Produits & stock' => 'المنتجات والمخزون',
+            'Commandes' => 'الطلبات',
+            'Apparence' => 'المظهر',
+            'Catégories & options' => 'الفئات والخيارات',
+            'Déconnexion' => 'تسجيل الخروج',
+            'ESPACE DE STAGING' => 'بيئة الاختبار',
+            'Bonjour %s, que voulez-vous faire ?' => 'مرحبًا %s، ماذا تريد أن تفعل؟',
+            'Les actions essentielles sont présentées clairement. Les réglages techniques restent hors de cet espace.' => 'تظهر الإجراءات الأساسية بوضوح. تبقى الإعدادات التقنية خارج هذه المساحة.',
+            'ÉTAPE 1' => 'الخطوة 1',
+            'Commencez simplement. Le brouillon évite toute publication involontaire.' => 'ابدأ ببساطة. يحمي المسودّة من النشر غير المقصود.',
+            'Nom du produit' => 'اسم المنتج',
+            'Catégorie' => 'الفئة',
+            'Sans catégorie' => 'بدون فئة',
+            'Prix' => 'السعر',
+            'Stock' => 'المخزون',
+            'Description (facultative)' => 'الوصف (اختياري)',
+            'Photo (facultative)' => 'الصورة (اختيارية)',
+            'Texte de la photo (facultatif)' => 'النص البديل للصورة (اختياري)',
+            'État' => 'الحالة',
+            'Brouillon — vérifier avant publication' => 'مسودة — تحقّق قبل النشر',
+            'Actif — visible dans le staging' => 'نشط — ظاهر في بيئة الاختبار',
+            'Créer le produit de test' => 'إنشاء منتج اختباري',
+            'ÉTAPE 2' => 'الخطوة 2',
+            'Les 6 produits les plus récents sont affichés pour garder cette page simple. Ouvrez un produit seulement si vous voulez le modifier.' => 'تظهر أحدث 6 منتجات للحفاظ على بساطة الصفحة. افتح المنتج فقط إذا أردت تعديله.',
+            'Afficher seulement les 6 derniers' => 'عرض آخر 6 منتجات فقط',
+            'Voir les %d derniers produits' => 'عرض آخر %d منتجًا',
+            'Rechercher un produit' => 'البحث عن منتج',
+            'Rechercher' => 'بحث',
+            'Effacer' => 'مسح',
+            'Aucun produit à afficher.' => 'لا توجد منتجات لعرضها.',
+            'Photo' => 'صورة',
+            'Actif' => 'نشط',
+            'Brouillon' => 'مسودة',
+            'En stock' => 'متوفر في المخزون',
+            'Rupture de stock' => 'غير متوفر في المخزون',
+            'Modifier ce produit' => 'تعديل هذا المنتج',
+            'Ne pas modifier' => 'عدم التعديل',
+            'Enregistrer le produit' => 'حفظ المنتج',
+            'ÉTAPE 3' => 'الخطوة 3',
+            'Aucun paiement ni message n’est envoyé depuis cette page.' => 'لا يتم إرسال أي دفعة أو رسالة من هذه الصفحة.',
+            'Client invité' => 'عميل زائر',
+            'Statut' => 'الحالة',
+            'Total' => 'الإجمالي',
+            'Action' => 'الإجراء',
+            'Nouveau statut' => 'الحالة الجديدة',
+            'En attente' => 'قيد الانتظار',
+            'En pause' => 'معلّق',
+            'En préparation' => 'قيد التحضير',
+            'Terminée' => 'مكتمل',
+            'Annulée' => 'ملغى',
+            'Valider' => 'تأكيد',
+            'ÉTAPE 4' => 'الخطوة 4',
+            'Choisissez une palette Keleva validée. Les couleurs techniques restent cachées.' => 'اختر لوحة ألوان كيليفا المعتمدة. تبقى الألوان التقنية مخفية.',
+            'Appliquer la palette' => 'تطبيق لوحة الألوان',
+            'ACTIVITÉ' => 'النشاط',
+            'Dernières actions' => 'آخر الإجراءات',
+            'Catégories, variantes et suppléments' => 'الفئات والمتغيرات والإضافات',
+            'Catégories disponibles' => 'الفئات المتاحة',
+            'Nouvelle catégorie' => 'فئة جديدة',
+            'Nom de la catégorie' => 'اسم الفئة',
+            'Petite description (facultative)' => 'وصف قصير (اختياري)',
+            'Créer la catégorie' => 'إنشاء الفئة',
+            'Choix, variantes et suppléments' => 'الخيارات والمتغيرات والإضافات',
+            'Gérer les choix' => 'إدارة الخيارات',
+            'groupes' => 'مجموعات',
+            'variantes' => 'متغيرات',
+            'suppléments' => 'إضافات',
+        ];
+        return $translations[$text] ?? $translation;
+    }
+
     public static function render(): void {
         nocache_headers();
+        add_filter('gettext', [self::class, 'arabic_portal_gettext'], 20, 3);
         // The portal is session-aware; shared page caches must never replay its login form.
         header('Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0');
         header('Pragma: no-cache');
@@ -149,6 +232,7 @@ final class Keleva_Native_Merchant_Portal {
             self::render_dashboard($session);
         }
         self::render_document_end();
+        remove_filter('gettext', [self::class, 'arabic_portal_gettext'], 20);
     }
 
     private static function handle_public_action(): void {
