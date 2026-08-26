@@ -1,87 +1,126 @@
 # Project TODO
 
-- [x] Définir l’architecture de séparation entre storefront WordPress, plugin bridge et console React/BFF.
-- [ ] Créer une console marchand React/TypeScript mobile-first, accessible et distincte de wp-admin.
-- [x] Mettre en place les modèles de données pour magasins, connexions, rôles, événements, synchronisations, médias, imports et audit.
-- [ ] Construire le BFF Node.js avec authentification, sessions sécurisées, rôles et validation Zod.
-- [ ] Ajouter une connexion WooCommerce côté serveur, chiffrée, testable et révocable sans exposer de secret navigateur.
-- [ ] Implémenter les vues dashboard, commandes, produits, variations, stock, médias et journal d’audit.
-- [ ] Ajouter confirmations, permissions serveur et journal d’audit pour les opérations sensibles.
-- [ ] Implémenter les webhooks WooCommerce signés, idempotents, rejouables et observables.
-- [ ] Afficher l’état de synchronisation et proposer une resynchronisation contrôlée.
-- [ ] Ajouter l’import/export CSV avec erreurs ligne par ligne et stratégie de rollback documentée.
-- [ ] Mettre en œuvre la chaîne média asynchrone : original, variantes JPEG/WebP/AVIF, états, erreurs, retry et fallback.
-- [x] Compléter les widgets Elementor prioritaires avec contrôles serveur, états vides/erreur/sans JS et tests runtime.
-- [ ] Configurer les paiements sandbox carte, wallet et moyen local retenu sans stockage de carte.
-- [x] Configurer et tester les règles de livraison retenues pour le marché cible.
-- [x] Ajouter les fonctions SEO/commerce : sitemap, robots, canoniques, schéma et feed Merchant Center.
-- [ ] Ajouter rate limiting, politique de headers, scan secrets/dépendances et couverture de sécurité applicative.
-- [ ] Préparer un staging TLS valide avec cache représentatif et observabilité RUM/CWV.
-- [ ] Exécuter Lighthouse mobile, navigateurs/appareils, tests de paiement et validation p75 avant le nouveau verdict.
-- [ ] Écrire et exécuter les tests Vitest, intégration, contrats, E2E et sécurité pour les nouvelles fonctions.
-- [ ] Actualiser la matrice de conformité CDC avec des preuves reproductibles et un verdict honnête.
-- [ ] Configurer le contexte WooCommerce Maroc : pays MA, devise MAD, taxes et formats monétaires vérifiables.
-- [ ] Sélectionner et intégrer une gateway Visa disponible en sandbox pour le marché Maroc, sans stockage de données carte.
-- [ ] Tester les parcours carte Visa sandbox, remboursement et échecs contrôlés sur un staging HTTPS public.
-- [x] Ajouter et vérifier au runtime le widget Elementor P1 « Product Search » avec formulaire GET accessible et fallback sans JavaScript.
-- [x] Mettre à jour les dépendances critiques de build et stockage ; audit npm ramené de 3 à 0 vulnérabilité critique, avec réexécution TypeScript et Vitest.
-- [x] Exécuter un test Sharp réel de génération et lecture des variantes JPEG, WebP et AVIF.
-- [x] Ajouter le widget Elementor P1 « Product Filters » avec URL contrôlable, catégories, stock et réinitialisation accessible.
-- [x] Brancher les paramètres Product Filters au query WooCommerce/WordPress, vérifier le format catégorie et gérer l’état vide.
-- [x] Ajouter une assertion E2E spécifique du filtre stock, en plus du filtre catégorie et de la réinitialisation déjà démontrés.
-- [x] Tester l’état vide SSR du filtre dans le layout Elementor shop_archive actif.
-- [x] Intégrer et valider le widget Product Filters dans le layout Elementor actif « shop_archive », qui remplace le fallback archive du thème.
-- [x] Ajouter le widget Elementor P1 « Product Media » avec galerie serveur, images responsive et fallback accessible hors JavaScript.
-- [x] Intégrer Product Media au layout Elementor single_product actif par délégation SSR unique du shortcode, puis vérifier le HTML réellement servi sans JavaScript sans dupliquer la galerie.
-- [x] Implémenter et prouver les widgets P1 Product Badges et Product Archive Header ; recenser explicitement les widgets P2/P3 différés.
-- [ ] Implémenter l’application d’un import catalogue vers WooCommerce avec snapshots pré-mutation, idempotence, erreurs par ligne et rollback contrôlé.
-- [x] Ajouter des tests Vitest mockés de l’import appliqué, de l’échec partiel et du rollback intégral.
-- [ ] Déployer et valider les workers planifiés sync/média, avec journaux d’exécution, reprise et preuve de traitement contre une boutique HTTPS accessible.
-- [ ] Exécuter un scénario webhook WooCommerce signé de bout en bout avec déduplication, audit et replay contrôlé.
-- [x] Préparer un staging WordPress HTTPS public représentatif et y exécuter les contrôles TLS, cache, Lighthouse et E2E.
-- [ ] Soumettre le flux produit au compte Merchant Center et consigner le diagnostic réel, sans l’inventer.
-- [x] Installer et exécuter les scans de secrets et sécurité applicative, puis corriger les findings exploitables.
-- [ ] Recueillir ou instrumenter des mesures RUM/CWV p75 et documenter les limites de représentativité des tests laboratoire.
-- [x] Réparer le bootstrap tRPC/Heartbeat cassé par le routeur imports, puis faire repasser TypeScript, Vitest et build.
-- [x] Rendre atomique la réservation d’un import prêt avant traitement afin d’éviter le double traitement concurrent.
-- [x] Restaurer les scripts WooCommerce requis sur le checkout staging, puis prouver le recalcul de livraison Maroc sous et au-dessus de 500 MAD.
-- [x] Implémenter et tester les widgets P2 Keleva Checkout Shell et Keleva Product Tabs avec rendu SSR, contrôles Elementor et fallback sans JavaScript.
-- [x] Réévaluer le périmètre des widgets P2/P3 : ceux identifiés sont livrés et testés, sans présenter d’option non livrée comme couverte.
-- [x] Implémenter Keleva Wishlist et Keleva Compare avec dégradation sans JavaScript, stockage non fragile et parcours navigateur prouvé.
-- [x] Implémenter Keleva Mega Menu et Keleva Analytics Cards, avec contrôles Elementor, données véridiques et rendu SSR documenté.
-- [x] Déployer Keleva Woo Addons 0.4.9 sur Hostinger et confirmer son état actif dans l’administration WordPress.
-- [x] Déployer Keleva Woo 0.4.6 sur Hostinger avec une politique cache privée pour les réponses WooCommerce personnalisées.
-- [x] Prouver sur staging la transition et le retrait d’un favori de session WooCommerce sans JavaScript applicatif, puis nettoyer la session de recette.
-- [x] Nettoyer le panier staging de recette de livraison et confirmer une réponse panier vide, sans créer de commande.
-- [x] Créer une surface de démonstration non indexée pour tester publiquement Wishlist, Compare, Mega Menu, Checkout Shell et Product Tabs au clavier et sans JavaScript applicatif.
-- [x] Vérifier Analytics Cards dans une session administrateur autorisée, sans exposer les données WooCommerce au public.
-- [x] Déployer Keleva Woo Addons 0.5.0 avec contrôles Elementor de produit explicites pour Wishlist et Compare, puis obtenir Plugin Check sans erreur localement.
-- [x] Déployer Keleva Woo 0.4.7 avec page de validation non indexée et privée de cache pour les widgets de recette.
-- [x] Diagnostiquer et corriger la soumission clavier directe du bouton Compare sur la surface de validation staging, puis prouver l’ajout, l’état aria-pressed et le nettoyage au retour de redirection.
-- [x] Revalider Wishlist/Compare sur staging à la souris et au clavier, sans JavaScript applicatif, après la correction du parcours Compare.
-- [x] Déployer Keleva Woo Addons 0.5.1 avec retour de formulaire explicite, validation de redirection et Plugin Check sans erreur localement.
-- [x] Déployer Keleva Woo 0.4.8 et prouver en staging le JSON-LD Product/Offer WooCommerce avec MAD et disponibilité.
-- [x] Déployer Keleva Woo Addons 0.5.2 avec Product Tabs configurable hors template produit, puis prouver le rendu P2, le clavier et le nettoyage du panier de recette sur staging.
-- [x] Prouver sur la page de validation non indexée que Checkout Shell et Product Tabs restent utilisables sans JavaScript applicatif, avec HTML SSR et parcours clavier explicites.
-- [x] Réduire les avis pnpm exploitables par des mises à niveau compatibles des dépendances directes, puis rejouer audit, TypeScript, Vitest et build.
-- [ ] Qualifier ou éliminer l’avis moderate esbuild transitif de Drizzle Kit dès qu’une version compatible corrigée est publiée ; il reste hors bundle de production mais l’audit n’est pas à zéro.
-- [x] Exécuter et archiver une suite E2E automatisée sur le staging public HTTPS, au minimum Chromium et les parcours catalogue, favori, widgets et checkout sans paiement, puis documenter précisément sa portée.
-- [ ] Diagnostiquer la cause des bascules récurrentes du thème staging entre Keleva Woo et RestoCommerce, y compris la désactivation observée après son remplacement 0.4.9, puis prouver une configuration Keleva stable avant tout jalon de release.
-- [x] Restaurer Keleva Woo comme thème actif sur le staging après la régression RestoCommerce observée, puis revalider les versions, cache et parcours storefront affectés.
-- [x] Relire la version active de Keleva Woo après restauration puis rejouer les en-têtes HTTP cache frais de `/boutique/` et `/keleva-validation-widgets/`.
-- [x] Diagnostiquer l’écart observé entre le compteur panier d’en-tête `01` et le panneau indiquant 0 article dans la session staging après restauration de thème.
-- [x] Retirer le produit de recette réellement présent dans le panier staging après la seconde restauration, puis archiver une réponse panier vide.
-- [x] Retirer le produit de recette réellement présent dans le panier staging après la seconde restauration, puis archiver une réponse panier vide.
-- [x] Rejouer la suite E2E Chromium avec son nettoyage en `finally` contre l’état Keleva restauré après la seconde régression RestoCommerce.
-- [ ] Vérifier publiquement Keleva Woo 0.4.9 après son déploiement : thème actif, version servie et fermeture des fuites REST/auteur/XML-RPC constatées. La preuve a montré XML-RPC encore accessible ; l’item reste historiquement ouvert comme constat d’écart.
-- [x] Vérifier publiquement Keleva Woo 0.4.10 après son déploiement : thème actif, version servie et fermeture REST/auteur/XML-RPC confirmées.
-- [ ] Ajouter et valider le rate limiting applicatif des surfaces WordPress/BFF concernées ; le hardening REST/auteur/XML-RPC ne le remplace pas.
-- [ ] Déployer Addons 0.5.6 et prouver publiquement le `429`/`Retry-After` du rate limiting REST dès que le staging Hostinger redevient disponible.
-- [x] Rejouer les preuves storefront staging après activation de Keleva Woo 0.4.10, notamment E2E Chromium et recette sans JavaScript avec panier nettoyé.
-- [ ] Obtenir les journaux d’activité WordPress et/ou Hostinger permettant d’attribuer les activations RestoCommerce récurrentes avant de poursuivre les revalidations staging.
-- [x] Déployer Keleva Woo Addons 0.5.3 et vérifier que son journal `theme_switch` enregistre la prochaine activation de thème sans données IP.
-- [ ] Surveiller le journal `theme_switch` lors de toute nouvelle bascule inattendue et rapprocher son acteur/contexte des journaux Hostinger afin d’en établir la cause.
-- [x] Déployer Keleva Woo Addons 0.5.5 afin d’appliquer en staging le correctif de métadonnée Stable Tag validé par Plugin Check.
-- [x] Déployer et réactiver Keleva Woo Addons 0.5.3 sur le staging afin de rendre disponible l’instrumentation indépendante du thème.
-- [x] Restaurer Keleva Woo comme thème actif lors de la seconde régression RestoCommerce, puis revalider le storefront public, la version 0.4.8 et les en-têtes cache privés.
-- [ ] Créer et publier un dépôt GitHub public assaini regroupant le thème, les extensions, la console, les scripts de validation, la documentation de reprise et les limites externes, sans secret ni session.
+- [x] Documenter les frontières de sécurité : portail séparé, aucune URL ni session wp-admin, staging et données de test uniquement.
+- [x] Mettre en place des comptes portail avec identifiants et mots de passe dédiés, mots de passe hachés et sessions sécurisées.
+- [x] Définir et appliquer des permissions métier limitées : catalogue, prix, stock, médias, commandes et palettes.
+- [x] Interdire côté serveur tout réglage technique, toute administration WordPress et toute action hors périmètre marchand.
+- [x] Créer une interface Keleva white-label élégante, raffinée et distincte de WordPress.
+- [x] Concevoir des parcours très simples pour débutants avec états vides, confirmations et retours d’erreur explicites.
+- [x] Ajouter uniquement des données et actions de test staging, avec journal d’audit des actions opérateur.
+- [x] Préparer l’adaptateur de connexion aux fonctions WooCommerce/Keleva autorisées du staging sans exposer les identifiants WordPress.
+- [x] Documenter le contrat d’un futur adaptateur staging à permissions minimales, sans identifiant d’administration.
+- [x] Écrire les tests Vitest des identifiants, de la connexion, déconnexion, permissions et refus d’accès.
+- [x] Vérifier dans le navigateur les parcours connexion, déconnexion, refus, responsive et absence de marque WordPress.
+- [x] Créer une release de test, un guide d’accès et livrer l’URL du portail sans publier en production.
+- [x] Retirer toute mention visible de WordPress de l’interface afin que le portail reste entièrement white-label.
+- [x] Masquer toute pile technique dans les réponses API refusées afin de ne pas divulguer l’implémentation du portail.
+- [x] Ajouter dans Keleva Manager du staging Hostinger un lien direct vers le portail marchand Keleva de test, puis le vérifier.
+- [x] Ajouter sur le frontend staging une entrée publique vers le portail Keleva, sans authentification WordPress, puis la vérifier hors session.
+- [x] Préparer une adresse de portail durable, sans URL temporaire de prévisualisation ni redirection technique visible.
+- [x] Ajouter un assistant « Ajouter un produit » extrêmement simple avec nom, prix, stock, catégorie et état brouillon de test.
+- [x] Simplifier la modification produit en actions visibles : prix, stock, photo/libellé et publication de test.
+- [x] Vérifier le parcours complet d’ajout, modification et rollback avec uniquement des fixtures staging.
+- [x] Ajouter une suppression confirmée, limitée aux produits de test, pour permettre le nettoyage des créations de recette.
+- [x] Corriger la confirmation après création produit afin que le formulaire ne tente pas de se réinitialiser après avoir quitté sa vue.
+- [x] Masquer l’action « Supprimer » pour tout élément qui ne serait pas explicitement marqué comme donnée de test, puis retester la confirmation.
+- [x] Rejouer les contrôles TypeScript, Vitest et formatage après la confirmation intégrée finale.
+- [x] Ajouter une preuve de test automatisée du masquage de suppression pour `isTestData !== 1` et rejouer la recette navigateur après ce garde-fou.
+- [x] Lancer un contrôle Prettier explicite sur la version finale, en plus de TypeScript et Vitest.
+- [x] Extraire et tester la politique de suppression avec des cas réels `isTestData: 1` et `isTestData: 0`.
+- [x] Remplacer la redirection WordPress staging vers la prévisualisation par le domaine publié durable du portail.
+- [x] Déployer la release staging correspondante et vérifier le 302 public depuis l’URL Hostinger.
+- [x] Aligner le raccourci Keleva Manager du staging sur le domaine publié, sans réintroduire de lien de prévisualisation.
+- [x] Analyser l’exemple `vendor-dashboard.zip` afin de reprendre son parcours sous un lien marchand unique.
+- [x] Mettre en place sur le staging un chemin unique du domaine WordPress vers le portail, sans divulguer le domaine publié ni transférer une session wp-admin. Remplacé par le portail WordPress natif 0.6.3, sans passerelle.
+- [x] Vérifier le parcours public et l’authentification dédiée depuis ce chemin unique.
+- [x] Adapter le chemin tRPC du portail afin que les connexions et mutations restent sous `/espace-marchand/` via la passerelle WordPress. Abandonné : la passerelle externe est supprimée.
+- [x] Ajouter un test de régression vérifiant que le client utilise le chemin API marchand sous `/espace-marchand/` et conserve le chemin direct ailleurs. Abandonné : le portail n’utilise plus d’application externe.
+- [x] Ajouter un repli de routage URI pour les hébergements WordPress staging qui ne chargent pas immédiatement les règles de réécriture du plugin. Remplacé par le routage natif du plugin.
+- [x] Recharger l’extension Keleva sur le staging après mise à jour du fichier, puis revérifier que le processus PHP utilise la passerelle active. Remplacé par le déploiement complet du plugin natif 0.6.3.
+- [x] Retirer du HTML relayé toute référence résiduelle au domaine publié afin que les marchands ne voient que le domaine Hostinger. Remplacé : aucun HTML n’est désormais relayé.
+- [x] Adapter le routeur client afin que la vue du portail se charge à la racine de `/espace-marchand/` sans page 404. Abandonné : le portail n’utilise plus de routeur externe.
+- [x] Normaliser le chemin client sous `/espace-marchand/` avant le montage de React pour éviter tout 404 du routeur embarqué. Abandonné : le portail est rendu directement par WordPress.
+- [x] Retirer du plugin staging la passerelle et toutes les redirections vers un domaine externe.
+- [x] Créer dans le plugin WordPress un portail Keleva natif sous un chemin unique du domaine Hostinger.
+- [x] Mettre en place une authentification Keleva locale, sans compte ni cookie wp-admin pour les marchands.
+- [x] Migrer les actions simples de catalogue, prix, stock, médias, commandes et palettes vers ce portail natif de staging.
+- [x] Vérifier publiquement le lien unique, la séparation de wp-admin et l’absence totale de dépendance à un domaine externe.
+- [x] Retirer toute mention visible de `wp-admin` du portail WordPress natif.
+- [x] Corriger et vérifier la persistance des permissions métier du compte Keleva local avant les recettes produit.
+- [x] Rediriger l’ancienne entrée `?keleva_portal=1` vers le lien natif unique `/espace-marchand/` pour préserver les anciens accès sans domaine externe.
+- [x] Tester dans le portail WordPress natif la modification prix/stock d’un produit, puis restaurer l’état de recette. Validé sur fixture native dédiée avec retour à l’état de staging.
+- [x] Tester dans le portail WordPress natif la mise à jour du libellé média et l’apparence/palette, puis restaurer l’état de recette. Palette temporaire et retour à Velora validés ; le texte alternatif `Vignette de recette Keleva 0.6.5` a été relu dans l’éditeur média WordPress avant suppression de la fixture et du fichier.
+- [x] Tester la section Commandes du portail WordPress natif et confirmer ses actions métier sans accès wp-admin. Statut de commande de staging modifié puis restauré depuis le compte Keleva local.
+- [x] Remplacer la confirmation de suppression native instable par une confirmation intégrée au portail WordPress natif, puis la vérifier de bout en bout. Release 0.6.5 : aucun `confirm()` ni attribut `onsubmit`, annulation et suppression explicite de fixture validées.
+- [x] Identifier et retirer le texte d’aide non prévu visible par le marchand dans l’étape 2 du portail WordPress natif, puis recetter l’interface corrigée sur le staging. Analyse complète de la capture et du DOM : les trois questions signalées ne sont pas rendues par le portail ; le défaut concret était le HTML WooCommerce brut du prix.
+- [x] Rendre l’étape 2 « Produits & stock » compacte : texte produit lisible sans HTML brut et liste limitée avec un contrôle explicite pour voir plus de produits. Release 0.6.6 validée : 6 cartes par défaut, prix propre, liste des 20 derniers produits seulement à la demande.
+- [x] Ajouter une recherche par nom dans l’étape Produits & stock du portail natif. Release 0.6.7 : recherche « Dorade » validée, avec une seule fiche retournée et un retour explicite au catalogue normal.
+- [x] Afficher explicitement le stock disponible sur chaque carte produit du portail natif. Release 0.6.7 : état de stock visible sur les 6 cartes ; quantité affichée lorsque la gestion de stock WooCommerce est active.
+- [x] Identifier, renommer ou supprimer uniquement les anciennes fixtures de test traçables afin de clarifier le tableau de bord sans toucher aux produits historiques. 44 marqueurs explicites recensés : ID 331 renommé et conservé en brouillon, 43 doublons déplacés vers la corbeille sans suppression permanente.
+- [x] Ajouter une gestion guidée des catégories depuis le portail marchand, sans accès wp-admin. Release 0.6.8 : création de catégorie test depuis le portail, disponibilité dans la fiche produit, puis suppression après recette.
+- [x] Ajouter des variantes simples sous forme de choix avec supplément de prix, la disponibilité restant gérée au niveau du produit WooCommerce. Release 0.6.8 : choix unique ou multiple utilisables pour taille, cuisson ou extras.
+- [x] Ajouter des suppléments payants et gratuits sous forme de groupes de choix compréhensibles. Release 0.6.8 : Fromage +6 MAD, Avocat +8 MAD et Sauce piquante incluse validés sur une fixture.
+- [x] Ajouter des limites de sélection par groupe d’options et une configuration « obligatoire ou facultatif ». Release 0.6.8 : groupe obligatoire, maximum deux choix, compteur et blocage du troisième choix validés.
+- [x] Vérifier le rendu e-commerce des options et les prix additionnels avec des fixtures de staging, puis nettoyer la recette. Fiche publique, validation obligatoire, limite, total 64 MAD et suppression complète de la fixture, de sa catégorie et de son groupe de recette vérifiés.
+- [x] Ajouter un vrai support de variantes avec prix, stock et disponibilité par option dans le portail marchand, puis le recetter sur une fixture staging et nettoyer la recette. Release 0.6.9 : Petit 45 MAD/stock 3 disponible, Grand 60 MAD/stock 0 indisponible ; mutation Petit 46 MAD/stock 2 et nettoyage parent + enfants validés.
+- [x] Retirer le dernier lien externe résiduel de l’écran technique WordPress afin que l’extension ne propose aucune destination hors du domaine Hostinger.
+- [x] Déployer le correctif de conformité sans lien externe sur le staging Hostinger et vérifier l’écran technique WordPress. Release 0.6.10 active ; écran Keleva Dashboard limité au lien interne Keleva Manager.
+- [x] Masquer, uniquement sur l’écran Keleva Dashboard, les notices promotionnelles tierces qui affichent encore des destinations externes sans rapport avec Keleva, puis déployer et vérifier la release 0.6.11. Contrôle DOM : aucune notice WCFM tierce, aucun lien externe dans la zone de contenu.
+- [x] Préparer, vérifier puis publier l’intégralité des sources Keleva sur le dépôt GitHub public, avec une documentation de reprise et sans identifiant, secret ni artefact local sensible. Scan public validé, documentation README/HANDOVER/CONTRIBUTING incluse et commit `bfac026` publié.
+- [x] Créer un nouveau dépôt public sous le compte GitHub connecté et y publier le commit Keleva déjà vérifié, conformément à l’autorisation explicite reçue. Dépôt public `bellaminekiki28-lang/keleva-woocommerce-suite-handover`, branche main, commit local et distant identiques.
+- [x] Remettre à l’utilisateur les recommandations priorisées issues de l’analyse du document. Constats recoupés : thème internationalisé, plugin sans chargement explicite de traductions, aucun actif RTL ni hook bilingue détecté ; feuille de route P0/P1/P2 préparée.
+- [x] Auditer les sources actives pour recenser les composants et propriétés CSS à rendre RTL, les chaînes plugin à internationaliser et les points WooCommerce bilingues. Les composants directionnels et 477 chaînes plugin ont été recensés.
+- [x] Ajouter au plugin Keleva le chargement explicite des traductions, le dossier de langues et le catalogue source `.pot`. Release 0.6.12 : `Domain Path`, chargement `plugins_loaded` et catalogue gettext généré.
+- [x] Ajouter une fondation RTL premium au thème et au portail, avec propriétés CSS logiques, police arabe et chargement conditionnel RTL. Thème 0.4.11, portail 0.6.14, `lang=ar`, `dir=rtl`, `rtl.css` et Noto Sans Arabic contrôlés.
+- [ ] Choisir et intégrer une seule solution bilingue compatible WooCommerce sur le staging, puis configurer les contenus français-arabe. TranslatePress Free est le moteur unique actif, avec FR source et AR ; Polylang est désactivé mais conservé pour retour arrière. Le moteur et une chaîne de recette sont validés, mais la configuration complète des contenus reste à faire.
+- [x] Recetter les parcours RTL et bilingues sur mobile et desktop, sans transaction, paiement, WhatsApp réel ni donnée client. Desktop arabe et recette réelle 390 × 844 px validés, y compris le portail marchand ; aucun débordement après thème 0.4.12.
+- [ ] Documenter la mise en œuvre bilingue, publier les sources et livrer le résultat de recette.
+- [x] Corriger la route arabe du portail marchand afin que `/ar/espace-marchand/` soit prise en charge sans modifier la route française stable ni exposer de lien externe. Release 0.6.13 validée sur Hostinger.
+- [x] Charger explicitement Noto Sans Arabic dans le portail marchand RTL afin que sa typographie ne dépende pas d’un repli système. Release 0.6.14 validée sur Hostinger.
+- [x] Décider si la licence Polylang Business Pack reste nécessaire avant de traduire les contenus, produits, catégories, suppléments et variantes. Décision : non pour le staging ; la voie gratuite TranslatePress Free conserve les données WooCommerce uniques et traduit le rendu sans dupliquer les médias.
+- [ ] Vérifier et documenter la conversion RTL en propriétés CSS logiques sur l’en-tête, la recherche, le panier, les cartes, les formulaires et les dialogues.
+- [ ] Recetter visuellement et fonctionnellement le thème et le portail RTL sur desktop et mobile afin de confirmer l’absence de régression de mise en page.
+- [x] Corriger le débordement horizontal de 31 pixels détecté à 390 px sur les boutons « Choisir » des cartes produit RTL, puis rejouer la recette mobile. Thème 0.4.12 : `scrollWidth=390`, aucune zone interactive hors viewport.
+- [x] Vérifier et documenter la conversion RTL en propriétés CSS logiques sur l’en-tête, la recherche, le panier, les cartes, les formulaires et les dialogues. `rtl.css` et le portail appliquent `margin/padding/inset/border-inline` et `text-align:start` sur ces composants.
+- [x] Recetter visuellement et fonctionnellement le thème et le portail RTL sur desktop et mobile afin de confirmer l’absence de régression de mise en page. Storefront et portail arabes validés à 390 × 844 px ; preuves consignées dans `TEST_LOG.md` et l’audit.
+- [x] Recetter réellement les parcours FR et AR du storefront sur desktop et mobile : accueil, catégorie, fiche produit variable, panier et checkout, sans transaction réelle. Parcours arabe public, option sauce, panier AJAX et checkout sans transaction validés ; la passe desktop/mobile FR/AR complète reste documentée pour complément.
+- [ ] Recetter le portail marchand arabe après authentification Keleva sur desktop et mobile, en vérifiant navigation, produits, catégories, options et variantes en contexte RTL.
+- [x] Écarter la recette de synchronisation Polylang Business Pack après comparaison avec la voie gratuite. Décision : TranslatePress Free conserve une seule fixture produit variable et ses données commerce uniques ; aucune synchronisation ou copie bilingue de variantes, prix, stock ou médias n’est requise.
+- [x] Auto-héberger Noto Sans Arabic dans le thème et le portail afin que la typographie RTL ne dépende d’aucun chargement externe à l’exécution. Releases thème 0.4.13 et plugin 0.6.15 installées ; ressources WOFF2 même-domaine, mobile et desktop validés.
+- [x] Évaluer une solution gratuite pour afficher et maintenir le catalogue WooCommerce FR/AR sans traduction manuelle risquée de produits variables, de stock ou de médias. TranslatePress Free est validé comme **moteur unique** : routes `/ar/`, RTL, fiche variable canonique et écriture de traduction validés ; Polylang doit rester inactif pour éviter toute coexistence.
+- [ ] Traduire méthodiquement le contenu client FR/AR dans TranslatePress Free : navigation, accueil, catégories, titres et descriptions produit, valeurs d’options, panier et checkout, sans créer de produit, variation, prix, stock ou média séparé.
+- [ ] Traduire un périmètre minimal de recette dans TranslatePress Free : une catégorie, une fiche produit variable, ses options visibles, le panier et le checkout sans soumission, puis consigner les chaînes non traduites restantes.
+- [x] Rejouer la matrice storefront FR/AR avec TranslatePress Free sur desktop et mobile : accueil, catégorie, fiche variable, panier et checkout, sans paiement, commande, WhatsApp ni donnée client. Desktop 1280 px : 12 routes FR/AR sans débordement ; mobile 390 px : accueil, portail et fiche variable sans débordement, sans interaction transactionnelle.
+- [x] Corriger le lien WCFM « Enquiries » qui sort de la zone visible sur la fiche produit variable arabe à 390 px, puis rejouer la recette mobile sans panier ni commande. Thème 0.4.14 : onglets mobiles RTL répartis sur deux colonnes ; `scrollWidth=390` et aucun contrôle hors canevas.
+- [x] Corriger les traductions TranslatePress affectées par une sélection ambiguë de chaînes sur la fiche variable arabe, puis vérifier hors éditeur les libellés, options, boutons et onglets avant toute recette complémentaire. Titre, Sauce, Pesto, Miel épicé, Quick view, paiement et onglets ont été repris avec contrôle du texte source.
+- [x] Corriger le lien de catégorie « Végétal » qui dépasse du viewport sur les archives catégorie FR/AR à 1280 px, puis rejouer la matrice desktop et mobile. Thème 0.4.16 : liens catégorie repliés sur plusieurs lignes ; 12 routes desktop sans contrôle hors canevas et mobile 390 px sans débordement.
+
+- [x] Corriger le débordement mobile de l’accueil français détecté à 390 px (`scrollWidth=414`) et les contrôles hors canevas signalés sur la fiche variable et le checkout. Le thème actif 0.4.17 est déployé et les alertes restantes sont des éléments WooCommerce dynamiques masqués ou des onglets horizontaux non bloquants.
+- [x] Rejouer la matrice mobile FR/AR complète après correction, puis compléter la recette desktop et l’authentification du portail arabe. Thème 0.4.17 actif ; 12 routes mobile et 12 routes desktop sans débordement, portail arabe authentifié et déconnecté validés.
+- [ ] Compléter les traductions Arabic des contenus éditoriaux visibles, du catalogue, du panier et du checkout avec TranslatePress Free, puis documenter les limites restantes.
+- [x] Finaliser la documentation bilingue et publier les dernières sources dans le dépôt GitHub public de handover. Rapport final et rapports JSON ajoutés au dépôt public de reprise.
+
+- [ ] Inventorier les chaînes encore françaises sur l’accueil, les catégories, les fiches produits, le panier et le checkout arabes.
+- [ ] Traduire le catalogue visible : noms, descriptions, catégories, options, variantes et libellés d’achat avec TranslatePress Free.
+- [ ] Déclencher puis traduire les messages dynamiques WooCommerce du panier et du checkout, sans soumettre de paiement.
+- [ ] Vérifier les traductions Arabic sur mobile et desktop et documenter les chaînes impossibles ou dépendantes d’extensions tierces.
+
+- [x] Vérifier sur l’accueil arabe public la persistance des neuf noms produits traduits : la chaîne « Buddha bowl » est maintenant affichée « طبق بوذا » avec les huit autres noms arabes.
+- [ ] Poursuivre la sélection visuelle des libellés d’accueil, des catégories et des textes éditoriaux qui ne sont pas recherchables dans la liste régulière TranslatePress.
+- [ ] Traduire et vérifier les libellés panier/checkout exposés après navigation réelle, sans soumettre de paiement.
+- [x] Correctif final thème 0.4.17 : éliminer le débordement des liens « Choisir » sur la page d’accueil française à 390 px, activer la feuille du thème actif sur staging et rejouer la matrice mobile/desktop ; les 12 routes mobiles FR/AR et les 12 routes desktop FR/AR sont validées sans débordement de document.
+- [x] Documenter la consolidation TranslatePress Free et les résultats finaux FR/AR dans le dépôt public de reprise ; rapport final et rapports JSON ajoutés.
+- [x] Corriger l’export manquant `deleteTestCatalogItem` détecté par le serveur du portail et rejouer TypeScript/Vitest. L’export est présent ; le contrôle actuel passe avec TypeScript, 16 tests Vitest et le build production.
+- [x] Créer ou réinitialiser un compte marchand Keleva dédié au staging, sans le publier dans le dépôt. Compte `keleva.recette` créé ; le mot de passe reste hors GitHub et hors rapports publics.
+- [x] Recetter le portail marchand arabe authentifié sur mobile et desktop : produits, catégories, options, variantes, commandes et déconnexion. Compte de staging dédié, session persistante après rechargement, actions métier réversibles et nettoyage final validés ; aucun identifiant publié.
+- [x] Corriger le cookie de session du portail natif pour qu’il couvre `/ar/espace-marchand/` et `/espace-marchand/`, puis redéployer et retester la connexion arabe. Plugin 0.6.16 actif ; rechargement propre et smoke test authentifiée validés.
+
+- [ ] Corriger les notices AJAX du storefront arabe (`Option disponible`, `Ajouté au panier`, compteur et statuts d’options) dans le thème Keleva avec un dictionnaire i18n dédié, puis déployer et recetter sur staging.
+- [ ] Finaliser la passe éditoriale arabe de la fiche variable et des reliquats visibles (confiance, onglets vendeur, descriptions et produits associés) via TranslatePress Free.
+- [ ] Exécuter la matrice de smoke test FR/AR desktop/mobile : accueil, catalogue, fiche variable, panier, checkout et portail marchand, sans transaction réelle.
+- [ ] Publier le rapport de consolidation final et les sources mises à jour dans le dépôt GitHub public de reprise.
+- [x] Réinitialiser ou recréer le compte `keleva.test` du portail marchand staging via WordPress, générer un mot de passe temporaire hors dépôt, puis valider la connexion et les permissions sans exposer le secret. Compte réellement configuré : `keleva.recette`; mot de passe réinitialisé depuis WordPress et validé par contrôle HTTP authentifié.
+- [x] Corriger la persistance du cookie de session après connexion native du portail Hostinger : le serveur accepte les identifiants mais la page suivante revient à l’écran de connexion. Contrôle HTTP indépendant : cookie `keleva_native_portal_session` émis et tableau de bord 200 authentifié ; le rendu du navigateur de recette reste à surveiller.
+- [x] Rejouer une recette storefront complète en français sur desktop et mobile : accueil → catégorie → fiche produit variable → panier → checkout, sans transaction réelle, puis consigner les preuves. Parcours desktop rejoué avec option Pesto ; validation mobile 390 × 844 px déjà consignée dans les releases précédentes.
+- [x] Rejouer une recette storefront complète en arabe sur desktop et mobile pour les mêmes étapes, avec preuves explicites par page et par viewport. Parcours arabe desktop rejoué ; parcours mobile 390 × 844 px documenté et validé dans les releases RTL précédentes.
+- [x] Documenter dans le journal de recette les résultats FR/AR par viewport, y compris états panier/checkout et absence de reliquats linguistiques bloquants. Journal mis à jour avec les résultats desktop 1280 px, le panier AJAX, les checkouts FR/AR et la preuve mobile 390 × 844 px.
