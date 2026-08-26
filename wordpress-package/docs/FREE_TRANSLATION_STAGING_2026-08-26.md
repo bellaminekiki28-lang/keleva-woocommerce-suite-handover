@@ -19,7 +19,7 @@ Le staging Keleva utilise désormais **TranslatePress Free** comme moteur de lan
 
 La fiche variable `brunch-bloom-avocado-toast` a été contrôlée en français et en arabe. Les deux routes référencent le même produit WooCommerce (`postid-78`) et le même formulaire de variations. La traduction visuelle enregistrée sur la route arabe est persistée hors éditeur tandis que la route française conserve la chaîne source. Ce comportement évite le risque de divergences de prix, stock ou options qui apparaît lorsqu’un second produit est créé pour chaque langue. [2]
 
-La recette CDP mobile a porté sur l’accueil arabe, la fiche variable arabe et le portail arabe à 390 × 844 px. Elle a détecté un onglet WCFM `Enquiries` hors canevas ; le thème Keleva Woo 0.4.14 le distribue maintenant dans une grille RTL à deux colonnes. Après correction, chaque route a `scrollWidth=390`, aucun débordement horizontal et aucune zone interactive hors viewport.
+La recette CDP mobile finale a porté sur 12 routes à 390 × 844 px : accueil, catégorie, fiche variable, panier, checkout et portail marchand, en français et en arabe. Le correctif de thème Keleva Woo 0.4.17 distribue les lignes prix/action des cartes dans une grille qui reste dans la carte, en français comme en RTL. Après activation réelle de 0.4.17 sur le thème actif, les 12 routes ont `scrollWidth=390`, aucun débordement horizontal et aucun contrôle de carte hors viewport. Les quelques coordonnées hors-canevas conservées par le script concernent des onglets horizontaux ou des champs WooCommerce dynamiques masqués par le navigateur ; elles ne modifient pas la largeur du document et ne constituent pas un débordement de page.
 
 ## Limites à respecter
 
@@ -40,8 +40,8 @@ Traduire d’abord une seule fiche variable de recette et une seule catégorie. 
 
 ## Résultats de la matrice finale
 
-La matrice desktop post-correction couvre 12 routes à 1280 px : accueil, archive catégorie, fiche variable, panier, checkout et portail, chacun en français et en arabe. Toutes ont `scrollWidth=1265`, zéro débordement, zéro contrôle hors canevas et zéro ressource Noto externe. La recette mobile post-correction couvre l’accueil arabe, la fiche variable arabe et le portail arabe à 390 × 844 px : chaque surface a `scrollWidth=390`, sans débordement ni contrôle hors viewport.
+La matrice desktop post-correction couvre 12 routes à 1280 px : accueil, archive catégorie, fiche variable, panier, checkout et portail marchand, chacun en français et en arabe. Toutes ont `scrollWidth=1265`, zéro débordement, zéro contrôle hors canevas et zéro ressource Noto externe. La matrice mobile post-correction couvre les mêmes 12 routes à 390 × 844 px : toutes ont `scrollWidth=390`, zéro débordement et aucun contrôle de carte hors viewport. Les rapports JSON détaillés sont conservés avec cette note dans le dépôt de reprise.
 
-Le thème **Keleva Woo 0.4.16** corrige le lien de catégorie « Végétal » qui sortait auparavant de l’écran sur les archives. Les liens se replient maintenant sur plusieurs lignes, en français comme en arabe. Le même jalon conserve le correctif précédent des onglets WCFM RTL mobiles.
+Le thème **Keleva Woo 0.4.17** est actif sur le staging Hostinger. Il conserve le correctif de catégorie « Végétal » qui se replie sur plusieurs lignes et ajoute la correction globale des CTA prix/action des cartes produit sur mobile, en français comme en arabe. Le même jalon conserve les correctifs précédents des onglets WCFM RTL mobiles et des onglets produit RTL.
 
 Le périmètre traduit de la fiche variable de recette comprend le titre, l’attribut Sauce, les choix Pesto et Miel épicé, Quick view, le libellé de paiement et More Offers. Le socle de navigation arabe a également reçu des traductions contrôlées. Les titres, descriptions, catégories, panier et checkout restants nécessitent encore une traduction éditoriale méthodique ; cette étape n’a réalisé aucune commande ni aucun paiement.

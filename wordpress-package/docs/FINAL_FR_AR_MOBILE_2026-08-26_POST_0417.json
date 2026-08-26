@@ -1,0 +1,254 @@
+[
+  {
+    "name": "storefront-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/",
+    "title": "Velora — Choisissez vite. Gardez le contrôle.",
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "httpPath": "/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "category-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/product-category/brunch-cafe/",
+    "title": "Page non trouvée – aliceblue-bison-433987.hostingersite.com",
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "httpPath": "/product-category/brunch-cafe/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "variable-product-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/product/brunch-bloom-avocado-toast/?keleva_translate_check=mobile-fr",
+    "title": "Avocado toast – aliceblue-bison-433987.hostingersite.com",
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "httpPath": "/produit/brunch-bloom-avocado-toast/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [
+      {
+        "text": "Store Policies",
+        "left": 396,
+        "right": 475,
+        "width": 80,
+        "height": 48
+      },
+      {
+        "text": "Renseignements",
+        "left": 493,
+        "right": 591,
+        "width": 98,
+        "height": 48
+      }
+    ],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "cart-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/panier/",
+    "title": "Velora — Votre sélection",
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "httpPath": "/panier/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "checkout-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/commander/",
+    "title": "Velora — Finaliser simplement",
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "httpPath": "/commander/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [
+      {
+        "text": "Appartement, suite, unité, etc.",
+        "left": -19980,
+        "right": -19802,
+        "width": 178,
+        "height": 29
+      }
+    ],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "merchant-fr-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/espace-marchand/",
+    "title": "Connexion Keleva",
+    "root": {
+      "lang": "fr-FR",
+      "dir": "ltr"
+    },
+    "httpPath": "/espace-marchand/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [],
+    "externalNotoResources": []
+  },
+  {
+    "name": "storefront-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/",
+    "title": "Velora — Choisissez vite. Gardez le contrôle.",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "category-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/product-category/brunch-cafe/",
+    "title": "Brunch & café – aliceblue-bison-433987.hostingersite.com",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/product-category/brunch-cafe/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "variable-product-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/product/brunch-bloom-avocado-toast/?keleva_translate_check=mobile-ar",
+    "title": "Avocado toast – aliceblue-bison-433987.hostingersite.com",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/product/brunch-bloom-avocado-toast/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "cart-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/panier/",
+    "title": "Velora — Votre sélection",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/panier/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "checkout-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/commander/",
+    "title": "Velora — Finaliser simplement",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/commander/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [
+      {
+        "text": "",
+        "left": 20186,
+        "right": 20370,
+        "width": 184,
+        "height": 29
+      }
+    ],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": []
+  },
+  {
+    "name": "merchant-ar-mobile",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "title": "Connexion Keleva",
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "httpPath": "/ar/espace-marchand/",
+    "scrollWidth": 390,
+    "overflowing": false,
+    "offCanvas": [],
+    "fontResources": [
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/plugins/keleva-woo-addons/assets/fonts/noto-sans-arabic-latin.woff2"
+    ],
+    "externalNotoResources": []
+  }
+]

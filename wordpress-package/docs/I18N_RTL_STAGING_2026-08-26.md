@@ -9,10 +9,10 @@
 | Moteur de langues | TranslatePress Free actif ; français source et arabe additionnel | Polylang est conservée installée mais désactivée pour retour arrière ; aucun second moteur actif |
 | Métadonnées médias | Produit et fichiers uniques | Les chaînes de rendu média peuvent être traduites sans dupliquer les fichiers ou le produit WooCommerce |
 | Plugin Keleva | Domaine de traduction, dossier `languages/` et catalogue `.pot` | Keleva Woo Addons 0.6.12 ; 477 chaînes extraites |
-| Thème public | Feuille RTL conditionnelle et Noto Sans Arabic | Keleva Woo 0.4.14 ; police Noto auto-hébergée et onglets produit RTL mobiles corrigés |
+| Thème public | Feuille RTL conditionnelle, Noto Sans Arabic et CTA mobiles bornés | Keleva Woo 0.4.17 ; police Noto auto-hébergée, onglets produit RTL et lignes prix/action mobiles corrigés |
 | Portail marchand | `lang="ar"`, `dir="rtl"`, styles RTL et Noto Sans Arabic | Keleva Woo Addons 0.6.15 ; police Noto auto-hébergée |
 | Route marchande arabe | `/ar/espace-marchand/` est rendue localement | Keleva Woo Addons 0.6.13 |
-| Mobile RTL | Vérification à 390 × 844 px sans débordement horizontal | Keleva Woo 0.4.14 : accueil, fiche variable et portail |
+| Mobile FR/AR | 12 routes vérifiées à 390 × 844 px sans débordement horizontal | Keleva Woo 0.4.17 : accueil, catégorie, fiche variable, panier, checkout et portail, en français et en arabe |
 
 Les URL françaises existantes ne sont pas modifiées. La route de portail française reste `/espace-marchand/`, tandis que l’arabe peut utiliser `/ar/espace-marchand/`. Les deux routes restent sur le même domaine Hostinger et utilisent l’authentification Keleva séparée de wp-admin.
 
@@ -30,7 +30,7 @@ Le portail marchand rend son propre document HTML hors du thème. Il choisit don
 |---|---:|---|
 | Storefront arabe `/ar/` | 390 × 844 px | `lang=ar`, `dir=rtl`, police arabe présente, 63 contrôles interactifs inspectés, aucune zone interactive hors viewport, largeur de contenu 390 px |
 | Portail arabe `/ar/espace-marchand/` | 390 × 844 px | `lang=ar`, `dir=rtl`, Noto Sans Arabic chargé, formulaire local présent, aucune zone interactive hors viewport, largeur de contenu 390 px |
-| Correctif mobile | 390 × 844 px | Un débordement initial de 31 px sur quatre boutons « Choisir » de cartes variables a été corrigé dans 0.4.12 par une grille logique prix/action |
+| Correctifs mobile | 390 × 844 px | Le débordement initial de 31 px sur les boutons « Choisir » a été corrigé par les règles RTL puis généralisé à FR/AR dans 0.4.17 ; les 12 routes finales restent à `scrollWidth=390` |
 | Desktop arabe | navigateur staging | Route `/ar/`, feuille RTL et police arabe chargées ; aucune transaction, paiement, message WhatsApp, commande ou donnée client créée |
 
 ## Mise à jour : Noto Sans Arabic auto-hébergée
@@ -48,7 +48,7 @@ Les requêtes Google éventuellement visibles concernent encore DM Sans et Space
 
 TranslatePress Free est le seul moteur de langues actif sur le staging ; il prend en charge le couple français-arabe et traduit le rendu client à partir d’une fiche WooCommerce unique. Une chaîne de recette a été persistée sur la fiche variable `brunch-bloom-avocado-toast` : `Informations et achat` est rendu comme `معلومات الشراء` uniquement sur `/ar/`, alors que la route française conserve la chaîne source. Le produit, ses variations, prix, stock et médias restent uniques, ce qui supprime le besoin de synchroniser des copies de données. [1] [2]
 
-La recette mobile de cette fiche a relevé l’onglet WCFM `Enquiries` hors canevas à 390 px. Le correctif thème 0.4.14 répartit les onglets RTL sur deux colonnes : après correction, l’accueil arabe, la fiche variable arabe et le portail arabe ont tous `scrollWidth=390` et aucune zone interactive hors viewport.
+La recette mobile de cette fiche a relevé l’onglet WCFM `Enquiries` hors canevas à 390 px. Les règles RTL répartissent les onglets sur deux colonnes ; la release 0.4.17 généralise en plus la grille des lignes prix/action aux cartes françaises et arabes. Après activation du thème actif, les 12 routes FR/AR ont `scrollWidth=390` et aucune zone de carte hors viewport. Les contrôles dynamiques WooCommerce masqués qui apparaissent dans le rapport brut sont documentés comme non bloquants.
 
 ## Checklist de reprise développeur
 

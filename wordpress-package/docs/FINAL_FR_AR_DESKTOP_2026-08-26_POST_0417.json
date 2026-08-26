@@ -1,0 +1,284 @@
+[
+  {
+    "name": "storefront-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/",
+    "title": "Velora — Choisissez vite. Gardez le contrôle.",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 77,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/storefront-fr-desktop.png"
+  },
+  {
+    "name": "storefront-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/",
+    "title": "Velora — Choisissez vite. Gardez le contrôle.",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 92,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/storefront-ar-desktop.png"
+  },
+  {
+    "name": "category-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/categorie-produit/brunch-cafe/",
+    "title": "Brunch & café – aliceblue-bison-433987.hostingersite.com",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 54,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/category-fr-desktop.png"
+  },
+  {
+    "name": "category-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/product-category/brunch-cafe/",
+    "title": "Brunch & café – aliceblue-bison-433987.hostingersite.com",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 54,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/category-ar-desktop.png"
+  },
+  {
+    "name": "variable-product-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/produit/brunch-bloom-avocado-toast/",
+    "title": "Avocado toast – aliceblue-bison-433987.hostingersite.com",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 47,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/variable-product-fr-desktop.png"
+  },
+  {
+    "name": "variable-product-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/product/brunch-bloom-avocado-toast/?keleva_translatepress_check=desktop",
+    "title": "Avocado toast – aliceblue-bison-433987.hostingersite.com",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 47,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/variable-product-ar-desktop.png"
+  },
+  {
+    "name": "cart-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/panier/",
+    "title": "Velora — Votre sélection",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 28,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/cart-fr-desktop.png"
+  },
+  {
+    "name": "cart-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/panier/",
+    "title": "Velora — Votre sélection",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 28,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/cart-ar-desktop.png"
+  },
+  {
+    "name": "checkout-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/commander/",
+    "title": "Velora — Finaliser simplement",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": ""
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 38,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/checkout-fr-desktop.png"
+  },
+  {
+    "name": "checkout-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/commander/",
+    "title": "Velora — Finaliser simplement",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 38,
+    "offCanvas": [],
+    "fontResources": [
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&ver=1787756182",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-latin.woff2",
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/themes/keleva-woo/assets/fonts/noto-sans-arabic-arabic.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/checkout-ar-desktop.png"
+  },
+  {
+    "name": "merchant-fr-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/espace-marchand/",
+    "title": "Connexion Keleva",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "fr-FR",
+      "dir": "ltr"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 3,
+    "offCanvas": [],
+    "fontResources": [],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/merchant-fr-desktop.png"
+  },
+  {
+    "name": "merchant-ar-desktop",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "title": "Connexion Keleva",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "root": {
+      "lang": "ar",
+      "dir": "rtl"
+    },
+    "scrollWidth": 1265,
+    "overflowing": false,
+    "interactiveCount": 3,
+    "offCanvas": [],
+    "fontResources": [
+      "https://aliceblue-bison-433987.hostingersite.com/wp-content/plugins/keleva-woo-addons/assets/fonts/noto-sans-arabic-latin.woff2"
+    ],
+    "externalNotoResources": [],
+    "screenshot": "/home/ubuntu/rtl-mobile-evidence/merchant-ar-desktop.png"
+  }
+]
