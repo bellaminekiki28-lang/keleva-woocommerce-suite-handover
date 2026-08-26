@@ -264,19 +264,31 @@ final class Keleva_Native_Merchant_Portal {
      * @return string
      */
     public static function translate_arabic_markup($buffer) {
-        return preg_replace_callback('/>([^<>]+)</u', static function ($matches) {
+        $buffer = strtr((string) $buffer, [
+            'placeholder="Ex. Brunch du dimanche"' => 'placeholder="مثال: فطور الأحد"',
+            'placeholder="Ex. 49.00"' => 'placeholder="مثال: 49.00"',
+            'placeholder="Décrivez le produit simplement."' => 'placeholder="اكتب وصف المنتج ببساطة."',
+            'placeholder="Ex. Assiette brunch"' => 'placeholder="مثال: طبق فطور"',
+            'placeholder="Ex. brunch, tajine, pizza"' => 'placeholder="مثال: برانش، طاجين، بيتزا"',
+        ]);
+        $buffer = preg_replace_callback('/>([^<>]+)</u', static function ($matches) {
             $value = (string) $matches[1];
             $trimmed = trim($value);
             if ('' === $trimmed) {
                 return $matches[0];
             }
-            $translated = Keleva_Native_Merchant_Portal::arabic_portal_gettext($trimmed, $trimmed, 'keleva-woo-addons');
-            if ($translated === $trimmed) {
+            $decoded = html_entity_decode($trimmed, ENT_QUOTES, 'UTF-8');
+            if (preg_match('/^Bonjour\s+(.+),\s+que voulez-vous faire \?$/u', $decoded, $greeting)) {
+                $translated = 'مرحبًا ' . $greeting[1] . '، ماذا تريد أن تفعل؟';
+            } else {
+                $translated = Keleva_Native_Merchant_Portal::arabic_portal_gettext($decoded, $decoded, 'keleva-woo-addons');
+            }
+            if ($translated === $decoded) {
                 return $matches[0];
             }
             $prefix = substr($value, 0, strlen($value) - strlen(ltrim($value)));
             $suffix = substr($value, strlen(rtrim($value)));
-            return '>' . $prefix . $translated . $suffix . '<';
+            return '>' . $prefix . esc_html($translated) . $suffix . '<';
         }, (string) $buffer) ?? (string) $buffer;
     }
 
