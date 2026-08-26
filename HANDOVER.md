@@ -7,12 +7,19 @@ Ce document décrit les sources et l’état de référence publiés. Il est des
 | Élément | État source à reprendre | État staging validé |
 | --- | --- | --- |
 | Portail marchand | Portail PHP rendu par le plugin Keleva Woo Addons | Chemin natif `/espace-marchand/`, session Keleva distincte de wp-admin |
-| Addons | Version source `0.6.11` | Version `0.6.11` installée sur le staging Hostinger |
+| Addons | Version source `0.6.15` | Version `0.6.15` installée sur le staging Hostinger |
+| Thème et RTL | CSS RTL conditionnel, WOFF2 Noto Sans Arabic auto-hébergés | Thème `0.4.13` validé sur `/ar/` et portail `/ar/espace-marchand/` |
 | Catalogue | Catégories, options, suppléments, limites et stock | Recettes de catégories/options/suppléments réalisées puis nettoyées |
 | Variantes | Vraies variantes WooCommerce à un attribut guidé | Prix, stock et disponibilité par option validés, puis fixture supprimée |
 | Console React | Sources conservées pour historique et audit | Hors parcours marchand actif ; ne pas la redéployer sans décision explicite |
 
 > Le portail marchand actif est rendu directement par WordPress. Il ne dépend ni d’un proxy ni d’une application externe. Les anciens composants de console sont conservés pour la continuité du code, mais ne servent pas la route marchande actuelle.
+
+## Fondation français-arabe : état et limite connue
+
+Polylang est actif sur le staging avec le français et l’arabe ; la couche RTL applique `lang="ar"`, `dir="rtl"` et des propriétés CSS logiques au storefront et au portail. Les deux routes arabes servent Noto Sans Arabic depuis les fichiers WOFF2 du thème ou du plugin, sans requête Noto vers Google. La recette à 390 × 844 px et à 1280 px ne montre ni débordement horizontal ni contrôle hors canevas.
+
+> Cette fondation n’est pas une traduction complète du commerce. Les contenus, produits, catégories, options et variantes existants restent français. Avant toute traduction de données WooCommerce, installer **uniquement Polylang Business Pack avec Polylang for WooCommerce**, puis suivre la recette détaillée dans [`wordpress-package/docs/I18N_RTL_STAGING_2026-08-26.md`](wordpress-package/docs/I18N_RTL_STAGING_2026-08-26.md). Ne pas associer WPML ni créer de traductions manuelles de produits variables avant cette étape.
 
 ## Architecture utile
 

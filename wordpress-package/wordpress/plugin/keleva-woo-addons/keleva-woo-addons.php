@@ -2,9 +2,10 @@
 /**
  * Plugin Name: Keleva Woo Addons
  * Description: Quick view REST endpoint and Elementor commerce widgets for Keleva Woo.
- * Version: 0.6.11
+ * Version: 0.6.15
  * Author: Keleva
  * Text Domain: keleva-woo-addons
+ * Domain Path: /languages
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -12,6 +13,11 @@
 defined('ABSPATH') || exit;
 
 define('KELEVA_WOO_ADDONS_PATH', plugin_dir_path(__FILE__));
+define('KELEVA_WOO_ADDONS_URL', plugin_dir_url(__FILE__));
+
+add_action('plugins_loaded', static function (): void {
+    load_plugin_textdomain('keleva-woo-addons', false, dirname(plugin_basename(__FILE__)) . '/languages');
+}, 1);
 
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-quick-view-endpoint.php';
 require_once KELEVA_WOO_ADDONS_PATH . 'includes/class-dashboard-audit-log.php';

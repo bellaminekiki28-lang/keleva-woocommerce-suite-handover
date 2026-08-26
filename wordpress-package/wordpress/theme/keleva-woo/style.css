@@ -6,7 +6,7 @@ Theme Name: Keleva Woo
 Theme URI: https://keleva.local
 Author: Keleva
 Description: Thème WooCommerce Velora, sans jQuery, avec cache HTTP prudent, images progressives et parcours catalogue à panier persistant.
- Version: 0.4.10
+ Version: 0.4.13
 Text Domain: keleva-woo
 Requires at least: 6.7
 Requires PHP: 8.2
@@ -61,3 +61,25 @@ body.keleva-cart-drawer-open{overflow:hidden}.keleva-cart-drawer{position:fixed;
 .velora-primary,.keleva-cart-drawer__actions .velora-primary,.site-cart b{color:var(--on-accent)}
 .keleva-cart-drawer__message,.keleva-cart-drawer__footer>p{color:#5f5b54}.keleva-cart-drawer__actions .velora-primary{color:#fff}
 :root{--on-ink:#fff}
+
+/* RTL mobile: keep the price and variation call-to-action inside each narrow product card. */
+@media (max-width: 800px) {
+  html[dir="rtl"] .keleva-product-card__buy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px;
+  }
+
+  html[dir="rtl"] .keleva-product-card .price {
+    min-inline-size: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-wrap: anywhere;
+  }
+
+  html[dir="rtl"] .keleva-product-card .button {
+    min-inline-size: 0;
+    padding-inline: 6px 0;
+    white-space: normal;
+  }
+}

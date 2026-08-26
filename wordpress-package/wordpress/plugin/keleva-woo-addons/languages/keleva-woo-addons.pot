@@ -1,0 +1,2152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Keleva Woo Addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Keleva Woo Addons 0.6.11\n"
+"Report-Msgid-Bugs-To: https://github.com/bellaminekiki28-lang/keleva-"
+"woocommerce-suite-handover/issues\n"
+"POT-Creation-Date: 2026-08-26 11:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: includes/class-native-merchant-portal.php:894
+msgid " · facultatif"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:894
+msgid " · obligatoire"
+msgstr ""
+
+#. translators: 1: action verb, 2: saved list name.
+#: includes/class-saved-product-lists.php:69
+#, php-format
+msgid "%1$s aux %2$s"
+msgstr ""
+
+#. translators: %d is the number of products currently in the cart.
+#: includes/class-elementor-mobile-cart-bar.php:22
+#, php-format
+msgid "%d article"
+msgid_plural "%d articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is the number of products currently in the cart.
+#: includes/class-elementor-side-cart.php:32
+#, php-format
+msgid "%d article dans votre sélection."
+msgid_plural "%d articles dans votre sélection."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-native-merchant-portal.php:871
+#, php-format
+msgid "%d groupe"
+msgid_plural "%d groupes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-native-merchant-portal.php:847
+#, php-format
+msgid "%d produit"
+msgid_plural "%d produits"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-native-merchant-portal.php:871
+#, php-format
+msgid "%d variante"
+msgid_plural "%d variantes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-manager-admin.php:85
+msgid "(nouvelle fenêtre)"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:759
+msgid "ACCÈS MARCHAND"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:811
+msgid "ACTIVITÉ"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:66
+msgid "Accès Keleva enregistré."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:204
+msgid "Accès dashboard refusé."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:764
+msgid "Accès en préparation."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:45
+#: includes/class-native-merchant-portal.php:46
+#: includes/class-native-merchant-portal.php:63
+msgid "Accès marchand Keleva"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:68
+#: includes/class-dashboard-settings.php:144
+#: includes/class-manager-admin.php:45 includes/class-manager-admin.php:175
+#: includes/class-native-merchant-portal.php:56
+#: includes/class-native-merchant-portal.php:99
+msgid "Accès refusé."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:121
+msgid "Acteur"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Actif"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Actif — visible dans le staging"
+msgstr ""
+
+#: includes/class-manager-admin.php:128 includes/class-manager-admin.php:137
+msgid "Action"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:667
+msgid "Action enregistrée."
+msgstr ""
+
+#: includes/class-manager-admin.php:184
+#: includes/class-native-merchant-portal.php:177
+msgid "Action inconnue."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:81
+msgid "Actions autorisées"
+msgstr ""
+
+#: includes/class-elementor-compare.php:12
+#: includes/class-elementor-wishlist.php:12
+msgid "Affichage"
+msgstr ""
+
+#: includes/class-elementor-product-archive-header.php:13
+#: includes/class-elementor-product-tabs.php:14
+msgid "Afficher la description"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:13
+msgid "Afficher le filtre de stock"
+msgstr ""
+
+#: includes/class-elementor-product-meta.php:14
+msgid "Afficher le stock"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:15
+msgid "Afficher les informations complémentaires"
+msgstr ""
+
+#. translators: %s: image alternative text or product name.
+#: includes/class-elementor-product-media.php:51
+#, php-format
+msgid "Afficher l’image : %s"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:41
+msgid "Afficher l’image produit en grand"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:16
+msgid "Afficher nouveauté (30 jours)"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:15
+msgid "Afficher promotion"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+msgid "Afficher seulement les 6 derniers"
+msgstr ""
+
+#: includes/class-elementor-product-archive-header.php:14
+msgid "Afficher tri et compteur"
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:12
+msgid "Ajout panier"
+msgstr ""
+
+#: includes/class-saved-product-lists.php:61
+msgid "Ajouter"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:914
+msgid "Ajouter un choix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:904
+msgid "Ajouter un groupe de choix"
+msgstr ""
+
+#: includes/class-product-options.php:212
+msgid "Ajouter un groupe d’options"
+msgstr ""
+
+#: includes/class-manager-admin.php:100
+msgid "Ajouter un plat"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:799
+#: includes/class-native-merchant-portal.php:800
+#: includes/class-native-merchant-portal.php:802
+msgid "Ajouter un produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:886
+msgid "Ajouter une variante"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:445
+msgid "Ajoutez au moins un choix."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:524
+msgid "Ajoutez au moins une variante."
+msgstr ""
+
+#: includes/class-elementor-compare.php:25
+msgid "Ajoutez jusqu’à quatre produits pour les comparer."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:755
+msgid ""
+"Ajoutez un produit, adaptez le prix ou consultez une commande en quelques "
+"gestes simples."
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "Annulée"
+msgstr ""
+
+#: includes/class-elementor-quick-view.php:12
+msgid "Aperçu produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:799
+#: includes/class-native-merchant-portal.php:810
+msgid "Apparence"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:34
+msgid "Appliquer"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:810
+msgid "Appliquer la palette"
+msgstr ""
+
+#: includes/class-elementor-product-archive-header.php:12
+msgid "Archive produit"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:919
+msgid "Attributs produit invalides."
+msgstr ""
+
+#: includes/class-elementor-quick-view.php:22
+msgid "Aucun aperçu produit disponible."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:891
+msgid "Aucun choix supplémentaire pour le moment."
+msgstr ""
+
+#: includes/class-elementor-wishlist.php:25
+msgid "Aucun favori enregistré dans cette session."
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:23
+msgid "Aucun menu n’est configuré pour cet emplacement."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:809
+msgid "Aucun paiement ni message n’est envoyé depuis cette page."
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:32
+msgid "Aucun panneau produit n’est activé."
+msgstr ""
+
+#: includes/class-manager-admin.php:127
+msgid "Aucun produit publié ou brouillon à afficher."
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:83
+#: includes/class-native-merchant-portal.php:806
+msgid "Aucun produit à afficher."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:114
+msgid "Aucun événement d’audit disponible."
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+msgid "Aucune commande récente."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:809
+msgid "Aucune commande à afficher."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:680
+msgid "Aucune modification de catégorie reçue."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:584
+#: includes/class-dashboard-endpoint.php:812
+msgid "Aucune modification reçue."
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:12
+msgid "Badges produit"
+msgstr ""
+
+#: includes/class-elementor-mobile-cart-bar.php:12
+msgid "Barre panier mobile"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:760
+msgid "Bienvenue."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:800
+#, php-format
+msgid "Bonjour %s, que voulez-vous faire ?"
+msgstr ""
+
+#: includes/class-manager-admin.php:79
+msgid "Bonjour, que voulez-vous faire aujourd’hui ?"
+msgstr ""
+
+#: includes/class-elementor-compare.php:12
+#: includes/class-elementor-wishlist.php:12
+msgid "Bouton produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Brouillon"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Brouillon — vérifier avant publication"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:827
+msgid "CATALOGUE ENRICHI"
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:12
+msgid "Carrousel produits"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:12
+msgid "Catalogue"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:25
+#: includes/class-elementor-product-grid.php:21
+#: includes/class-native-merchant-portal.php:803
+#: includes/class-native-merchant-portal.php:807
+msgid "Catégorie"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:661
+msgid "Catégorie créée. Vous pouvez maintenant la choisir pour un produit."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:665
+#: includes/class-dashboard-endpoint.php:673
+#: includes/class-dashboard-endpoint.php:693
+#: includes/class-dashboard-endpoint.php:747
+#: includes/class-dashboard-endpoint.php:840
+msgid "Catégorie introuvable."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:843
+msgid "Catégories disponibles"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:828
+msgid "Catégories, variantes et suppléments"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:773
+msgid ""
+"Ce portail est hébergé dans votre site Keleva. Il ne donne jamais accès à "
+"l’administration technique."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:875
+msgid ""
+"Ce produit a déjà des variantes WooCommerce externes. Elles restent "
+"protégées dans cet espace."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:151
+msgid "Ce produit ne peut pas être ajouté au panier."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:509
+msgid ""
+"Ce produit possède déjà des variantes gérées hors du portail. Elles sont "
+"protégées ici."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:607
+msgid "Ce statut de commande n’est pas autorisé."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:74
+msgid "Cet identifiant est indépendant de WordPress."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:271
+msgid "Cette action n’est pas autorisée pour ce compte Keleva."
+msgstr ""
+
+#. translators: %d is the number of products assigned to the category.
+#: includes/class-dashboard-endpoint.php:708
+#, php-format
+msgid ""
+"Cette catégorie contient %d produit. Déplacez-le avant de supprimer la "
+"catégorie."
+msgid_plural ""
+"Cette catégorie contient %d produits. Déplacez-les avant de supprimer la "
+"catégorie."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-dashboard-endpoint.php:1031
+#: includes/class-native-merchant-portal.php:632
+msgid "Cette palette n’existe pas."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:172
+msgid "Cette variation ne correspond pas au produit choisi."
+msgstr ""
+
+#: includes/class-manager-admin.php:136
+msgid ""
+"Changez le statut avec une action explicite. Aucun paiement ou message n’est "
+"envoyé par cette page."
+msgstr ""
+
+#: includes/class-restaurant-extras.php:110
+msgid ""
+"Chaque option nécessite un identifiant, un libellé et un prix positif ou "
+"nul. Laissez le champ vide pour désactiver les suppléments sur ce produit."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:521
+msgid "Chaque variante doit avoir un prix."
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:12
+msgid "Checkout"
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:24
+msgid "Chiffre d’affaires"
+msgstr ""
+
+#: includes/class-manager-admin.php:95
+msgid "Chiffre payé cette semaine"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:44
+msgid "Choisir une image produit"
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:29
+msgid "Choisir une variation"
+msgstr ""
+
+#. translators: %1$d is the maximum number of choices; %2$s is the option group label.
+#: includes/class-product-options.php:99
+#, php-format
+msgid "Choisissez au maximum %1$d option(s) pour « %2$s »."
+msgstr ""
+
+#. translators: %s is the product option group label.
+#: includes/class-product-options.php:95
+#, php-format
+msgid "Choisissez au moins une option pour « %s »."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:193
+msgid "Choisissez au moins une sauce pour ce produit."
+msgstr ""
+
+#: includes/class-restaurant-extras.php:157
+msgid ""
+"Choisissez jusqu’à deux sauces. Les autres choix se désactivent "
+"automatiquement."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:845
+msgid "Choisissez une image de couverture valide."
+msgstr ""
+
+#: includes/class-product-options.php:265
+msgid "Choisissez une option."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:810
+msgid ""
+"Choisissez une palette Keleva validée. Les couleurs techniques restent "
+"cachées."
+msgstr ""
+
+#: includes/class-manager-admin.php:111
+msgid ""
+"Choisissez une palette préparée. Les couleurs brutes ne sont jamais "
+"demandées."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:820
+msgid "Choisissez une photo valide."
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:28
+msgid "Choisissez vos options sur la fiche produit avant ajout."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:912
+msgid "Choix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:662
+msgid "Choix et suppléments enregistrés pour ce produit."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:853
+msgid "Choix, variantes et suppléments"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+msgid "Client"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:459
+#: includes/class-manager-admin.php:137
+msgid "Client invité"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:581
+#: includes/class-dashboard-endpoint.php:592
+msgid "Code de réduction introuvable."
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:47
+msgid "Colonnes"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+msgid "Commande"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:158
+msgid ""
+"Commande créée depuis le panier avant collecte WhatsApp. Les coordonnées, la "
+"localisation et la date de livraison seront complétées par l’automatisation."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:482
+#: includes/class-dashboard-endpoint.php:490
+#: includes/class-native-merchant-portal.php:611
+#: includes/class-whatsapp-order.php:168
+msgid "Commande introuvable."
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:24
+#: includes/class-native-merchant-portal.php:799
+#: includes/class-native-merchant-portal.php:809
+msgid "Commandes"
+msgstr ""
+
+#: includes/class-manager-admin.php:93 includes/class-manager-admin.php:136
+msgid "Commandes à traiter"
+msgstr ""
+
+#: includes/class-manager-admin.php:100
+msgid ""
+"Commencez par les informations essentielles. Le brouillon est le choix par "
+"défaut."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:802
+msgid ""
+"Commencez simplement. Le brouillon évite toute publication involontaire."
+msgstr ""
+
+#: includes/class-elementor-compare.php:11
+msgid "Comparaison"
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+msgid "Comparaison enregistrée pour cette session"
+msgstr ""
+
+#: includes/class-elementor-compare.php:21
+msgid "Comparer les produits"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:82
+msgid "Configuration Keleva enregistrée."
+msgstr ""
+
+#: includes/class-restaurant-extras.php:107
+msgid ""
+"Configuration visible uniquement pour les produits de restauration. Le "
+"storefront limite strictement la sélection à deux sauces."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:64
+msgid ""
+"Configurez ici le seul compte du portail marchand de staging. Ce compte ne "
+"crée jamais de compte WordPress et ne peut pas ouvrir wp-admin."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:761
+msgid "Connectez-vous avec vos identifiants Keleva dédiés."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:683
+msgid "Connexion Keleva"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:197
+msgid "Connexion Keleva réussie."
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:12
+msgid "Contenu produit"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:122
+msgid "Contexte"
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+msgid "Critère"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:41
+msgid "Croissant"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:25
+msgid "Créer et modifier les produits"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:840
+msgid "Créer la catégorie"
+msgstr ""
+
+#: includes/class-manager-admin.php:106
+msgid "Créer le plat"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Créer le produit de test"
+msgstr ""
+
+#: includes/class-product-options.php:210
+msgid ""
+"Créez des groupes comme « Couleur », « Extras » ou « Finition ». Chaque "
+"groupe peut s’afficher en boutons, radios ou cases à cocher et accepter "
+"jusqu’à quatre choix simultanés."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:829
+msgid ""
+"Créez une catégorie, gérez le prix et le stock de chaque variante, puis "
+"ajoutez des extras payants et des limites de sélection."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:540
+msgid "Date d’expiration invalide."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:811
+msgid "Dernières actions"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:15
+#: includes/class-elementor-product-tabs.php:39
+#: includes/class-native-merchant-portal.php:807
+msgid "Description"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Description (facultative)"
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+#: includes/class-native-merchant-portal.php:883
+msgid "Disponibilité"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:883
+msgid "Disponible"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:427
+msgid "Donnez un nom à ce groupe de choix."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:799
+msgid "Déconnexion"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:657
+msgid "Déconnexion Keleva terminée."
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:41
+msgid "Décroissant"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:93
+msgid "Déjà configuré — laisser vide pour conserver"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:800
+msgid "ESPACE DE STAGING"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+msgid "Effacer"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:844
+msgid "Elles apparaissent ensuite dans la fiche produit."
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:12
+msgid "Emplacement du menu"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "En attente"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:159
+msgid "En attente des informations client WhatsApp."
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "En pause"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "En préparation"
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+#: includes/class-elementor-quick-view.php:28
+#: includes/class-native-merchant-portal.php:807
+msgid "En stock"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:32
+msgid "En stock uniquement"
+msgstr ""
+
+#: includes/class-manager-admin.php:131
+msgid "Enregistrer"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:108
+msgid "Enregistrer la configuration chiffrée"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Enregistrer le produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:914
+msgid "Enregistrer les choix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:89
+msgid "Enregistrer l’accès marchand"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:886
+msgid "Enregistrer prix, stock et disponibilité"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:770
+msgid "Entrer dans mon espace"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:837
+msgid "Ex. Entrées, Burgers, Desserts ou Boissons."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:877
+msgid ""
+"Ex. Taille : Petit, Moyen, Grand. Chaque ligne possède son prix, son stock "
+"et sa disponibilité."
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:13
+msgid "Fallback catégories produit"
+msgstr ""
+
+#: includes/class-elementor-wishlist.php:11
+#: includes/class-elementor-wishlist.php:21
+msgid "Favoris"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:24
+msgid "Filtrer les produits"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:12
+msgid "Filtres"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:13
+msgid "Finaliser simplement"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:12
+msgid "Galerie produit"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:17
+msgid "Grande"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:483
+#: includes/class-native-merchant-portal.php:488
+msgid "Groupe de choix introuvable."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:663
+msgid "Groupe de choix retiré du produit."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:973
+msgid "Groupes d’options invalides."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:105
+msgid ""
+"Générer côté serveur de nouveaux secrets temporaires de test. Cette action "
+"remplace les jetons et le secret webhook existants, sans jamais les afficher."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:871
+msgid "Gérer les choix"
+msgstr ""
+
+#: includes/class-manager-admin.php:130
+msgid "Géré par WooCommerce"
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:13
+#: includes/class-elementor-product-badges.php:13
+#: includes/class-elementor-product-card.php:14
+#: includes/class-elementor-quick-view.php:13
+msgid "ID produit"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:13
+msgid "ID produit hors template"
+msgstr ""
+
+#: includes/class-elementor-compare.php:13
+#: includes/class-elementor-wishlist.php:13
+msgid "ID produit pour le bouton"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:73
+msgid "Identifiant Keleva"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:85
+msgid "Identifiant d’événement webhook invalide."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:192
+msgid "Identifiant ou mot de passe Keleva incorrect."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:768
+msgid "Identifiant portail"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:261
+msgid "Identifiants marchand incorrects."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:165
+msgid ""
+"Impossible de chiffrer la configuration. Vérifiez que l’extension OpenSSL "
+"PHP est active."
+msgstr ""
+
+#: includes/class-whatsapp-order.php:239
+msgid "Impossible de préparer la commande. Réessayez."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:205
+msgid "Impossible d’ajouter ce produit au panier."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:895
+msgid "Inclus"
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:11
+msgid "Indicateurs"
+msgstr ""
+
+#. translators: %d: number of calendar days included in the merchant data source.
+#: includes/class-elementor-analytics-cards.php:24
+msgid "Indicateurs marchand"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:731
+msgid "Indiquez au moins une catégorie à ordonner."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:511
+msgid "Indiquez le nom du choix, par exemple Taille ou Cuisson."
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+#: includes/class-elementor-quick-view.php:28
+#: includes/class-native-merchant-portal.php:883
+msgid "Indisponible"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:208
+msgid "Informations WhatsApp reçues — paiement à la livraison à confirmer."
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:45
+msgid "Informations complémentaires"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:35
+#: includes/class-elementor-product-meta.php:12
+#: includes/class-elementor-product-tabs.php:36
+msgid "Informations produit"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:207
+#, php-format
+msgid "Informations reçues par WhatsApp : %1$s — %2$s — livraison le %3$s."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:110
+msgid "Journal d’audit récent"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:894
+#, php-format
+msgid "Jusqu’à %d choix"
+msgstr ""
+
+#. translators: %d is the maximum number of choices.
+#: includes/class-product-options.php:265
+#, php-format
+msgid "Jusqu’à %d options."
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:6
+msgid "Keleva Add to Cart"
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:6
+msgid "Keleva Analytics Cards"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:6
+msgid "Keleva Checkout Shell"
+msgstr ""
+
+#: includes/class-elementor-compare.php:6
+msgid "Keleva Compare"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:56
+#: includes/class-dashboard-settings.php:57
+msgid "Keleva Dashboard"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:77
+msgid "Keleva Dashboard — intégration sécurisée"
+msgstr ""
+
+#: includes/class-manager-admin.php:24 includes/class-manager-admin.php:25
+msgid "Keleva Manager"
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:6
+msgid "Keleva Mega Menu"
+msgstr ""
+
+#: includes/class-elementor-mini-cart.php:6
+msgid "Keleva Mini Cart"
+msgstr ""
+
+#: includes/class-elementor-mobile-cart-bar.php:6
+msgid "Keleva Mobile Cart Bar"
+msgstr ""
+
+#: includes/class-elementor-product-archive-header.php:6
+msgid "Keleva Product Archive Header"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:6
+msgid "Keleva Product Badges"
+msgstr ""
+
+#: includes/class-elementor-product-card.php:6
+msgid "Keleva Product Card"
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:6
+msgid "Keleva Product Carousel"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:6
+msgid "Keleva Product Filters"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:6
+msgid "Keleva Product Grid"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:6
+msgid "Keleva Product Media"
+msgstr ""
+
+#: includes/class-elementor-product-meta.php:6
+msgid "Keleva Product Meta"
+msgstr ""
+
+#: includes/class-elementor-product-search.php:6
+msgid "Keleva Product Search"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:6
+msgid "Keleva Product Tabs"
+msgstr ""
+
+#: includes/class-elementor-quick-view.php:6
+msgid "Keleva Quick View"
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:6
+msgid "Keleva Side Cart"
+msgstr ""
+
+#: includes/class-elementor-wishlist.php:6
+msgid "Keleva Wishlist"
+msgstr ""
+
+#: keleva-woo-addons.php:53
+msgid "Keleva Woo"
+msgstr ""
+
+#: includes/class-product-options.php:196
+msgid "Keleva — groupes d’options"
+msgstr ""
+
+#: includes/class-restaurant-extras.php:94
+msgid "Keleva — suppléments restaurant"
+msgstr ""
+
+#: includes/class-category-service.php:123
+msgid "La catégorie ne peut pas être créée."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:804
+msgid "La catégorie ne peut pas être enregistrée."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:718
+msgid "La catégorie ne peut pas être supprimée."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:696
+msgid "La catégorie produit par défaut ne peut pas être supprimée."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:163
+msgid "La confirmation de cette action a expiré. Réessayez."
+msgstr ""
+
+#: includes/class-category-service.php:151
+msgid "La couverture doit être une image de la médiathèque."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:846
+msgid "La couverture ne doit pas dépasser 5 Mo."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:852
+msgid "La couverture ne peut pas être enregistrée."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:850
+msgid "La couverture ne peut pas être importée."
+msgstr ""
+
+#: includes/class-whatsapp-order.php:188
+msgid "La date de livraison doit être au format AAAA-MM-JJ."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:388
+msgid "La gestion des catégories n’est pas disponible."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:418
+#: includes/class-native-merchant-portal.php:477
+msgid "La gestion des options n’est pas disponible."
+msgstr ""
+
+#: includes/class-manager-admin.php:63
+msgid "La modification n’a pas été enregistrée."
+msgstr ""
+
+#: includes/class-manager-admin.php:120
+msgid "La palette active est signalée. Le changement est réversible."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:821
+msgid "La photo ne doit pas dépasser 5 Mo."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:827
+msgid "La photo ne peut pas être enregistrée."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:825
+msgid "La photo ne peut pas être importée."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:582
+msgid ""
+"La photo n’a pas pu être enregistrée. Utilisez une image JPG, PNG, WebP ou "
+"AVIF valide."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:168
+msgid "La variation sélectionnée est indisponible."
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:14
+msgid "Label administrable"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:909
+msgid "Le client doit choisir"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:525
+#: includes/class-dashboard-endpoint.php:527
+msgid "Le code promotionnel est requis."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:534
+msgid "Le montant doit être supérieur à zéro."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:117
+msgid "Le mot de passe Keleva doit contenir au moins 12 caractères."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:616
+#: includes/class-dashboard-endpoint.php:620
+msgid "Le nom de catégorie est requis."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:393
+msgid "Le nom de la catégorie est requis."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:295
+msgid "Le nom et le prix sont requis."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:791
+msgid "Le nom produit est requis."
+msgstr ""
+
+#: includes/class-whatsapp-order.php:185
+msgid "Le nom, la localisation et la date de livraison sont obligatoires."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:146
+msgid "Le panier WooCommerce est indisponible."
+msgstr ""
+
+#: includes/class-whatsapp-order.php:68 includes/class-whatsapp-order.php:98
+msgid "Le panier est vide."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:796
+msgid "Le prix doit être positif ou nul."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:338
+msgid "Le prix est requis."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:803
+msgid ""
+"Le prix et le stock d’un produit variable se gèrent depuis ses variations "
+"WooCommerce."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:373
+msgid "Le produit de test n’a pas pu être supprimé."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:531
+msgid "Le produit ne peut pas devenir variable."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:309
+msgid "Le produit n’a pas pu être créé."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:764
+msgid ""
+"Le propriétaire doit créer le premier identifiant Keleva dans les réglages "
+"sécurisés du site."
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:29
+msgid "Le shell est rendu sans formulaire WooCommerce par ce réglage."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:797
+msgid "Le stock doit être un entier positif ou nul."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+msgid ""
+"Les 6 produits les plus récents sont affichés pour garder cette page simple. "
+"Ouvrez un produit seulement si vous voulez le modifier."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:800
+msgid ""
+"Les actions essentielles sont présentées clairement. Les réglages techniques "
+"restent hors de cet espace."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:79
+msgid ""
+"Les actions marchandes guidées se font depuis le portail Keleva natif de ce "
+"site. Cette page reste réservée aux réglages d’intégration avancés."
+msgstr ""
+
+#: includes/class-manager-admin.php:80
+msgid ""
+"Les cinq actions essentielles sont ici. Les réglages techniques restent "
+"séparés pour éviter les erreurs."
+msgstr ""
+
+#: includes/class-elementor-compare.php:12
+#: includes/class-elementor-wishlist.php:12
+msgid "Les deux"
+msgstr ""
+
+#: includes/class-manager-admin.php:66
+msgid "Les données du tableau de bord ne sont pas disponibles pour le moment."
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:17
+msgid "Les indicateurs marchand sont réservés aux comptes autorisés."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:642
+msgid "Les modèles d’options sont invalides."
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:17
+msgid ""
+"Les options, délais et tarifs sont calculés au checkout selon votre adresse "
+"et les règles WooCommerce actives."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:627
+msgid "Les palettes Keleva ne sont pas disponibles dans le thème actif."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:1011
+#: includes/class-dashboard-endpoint.php:1026
+#: includes/class-dashboard-endpoint.php:1041
+msgid "Les palettes du thème Keleva ne sont pas disponibles."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:810
+msgid "Les palettes ne sont pas disponibles avec le thème actuellement actif."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:700
+msgid "Les produits de cette catégorie ne peuvent pas être vérifiés."
+msgstr ""
+
+#: includes/class-manager-admin.php:140
+msgid ""
+"Les secrets dashboard, WhatsApp/n8n et les réglages techniques restent dans "
+"la page de configuration sécurisée."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:854
+msgid ""
+"Les variantes gèrent un prix, un stock et une disponibilité par option. Les "
+"groupes de choix servent aux tailles sans stock séparé, aux extras et aux "
+"suppléments."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:111
+msgid ""
+"Les événements sont réservés aux gestionnaires WooCommerce. Les bascules de "
+"thème ne conservent ni adresse IP ni secret."
+msgstr ""
+
+#: includes/class-elementor-mobile-cart-bar.php:13
+#: includes/class-elementor-quick-view.php:14
+msgid "Libellé"
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:19
+msgid "Libellé de commande"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:28
+msgid "Lien WhatsApp expiré. Rechargez le panier puis réessayez."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:91
+msgid "Lien à communiquer au marchand :"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:19
+msgid "Lier à l’image source"
+msgstr ""
+
+#: includes/class-elementor-wishlist.php:12
+msgid "Liste"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:16
+#: includes/class-elementor-product-tabs.php:48
+msgid "Livraison"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:161
+msgid "L’URL du webhook doit être une URL HTTPS valide."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:633
+msgid "L’ordre doit être un entier positif."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:908
+msgid "Maximum"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:29
+msgid "Mettre à jour les statuts de commande"
+msgstr ""
+
+#: includes/class-elementor-mini-cart.php:12
+msgid "Mini panier"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:45
+msgid "Mise en page"
+msgstr ""
+
+#: includes/class-manager-admin.php:61 includes/class-manager-admin.php:189
+msgid "Modification enregistrée."
+msgstr ""
+
+#: includes/class-manager-admin.php:130
+msgid "Modifier"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Modifier ce produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:28
+msgid "Modifier le stock"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:30
+msgid "Modifier les palettes validées"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:27
+msgid "Modifier les prix"
+msgstr ""
+
+#: includes/class-manager-admin.php:111
+msgid "Modifier l’apparence"
+msgstr ""
+
+#: includes/class-manager-admin.php:126
+msgid ""
+"Modifiez un prix ou une quantité. Chaque action est validée puis journalisée."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:769
+msgid "Mot de passe"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:77
+msgid "Mot de passe Keleva"
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:11
+msgid "Navigation"
+msgstr ""
+
+#: includes/class-elementor-mega-menu.php:20
+msgid "Navigation catalogue"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Ne pas modifier"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:838
+msgid "Nom de la catégorie"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:880
+msgid "Nom du choix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:906
+msgid "Nom du groupe"
+msgstr ""
+
+#: includes/class-manager-admin.php:103
+msgid "Nom du plat"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Nom du produit"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:798
+msgid "Nom, prix et stock sont requis."
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:14
+#: includes/class-elementor-product-grid.php:14
+msgid "Nombre de produits"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:26
+msgid "Nouveau"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+msgid "Nouveau statut"
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:24
+#: includes/class-elementor-product-grid.php:31
+msgid "Nouveauté"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:836
+msgid "Nouvelle catégorie"
+msgstr ""
+
+#: includes/class-manager-admin.php:131
+msgid "Nouvelle photo (facultatif)"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Nouvelle photo (facultative)"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:883
+msgid "Option"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:34
+msgid "Ordre boutique"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:228
+msgid "Origine de requête refusée."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:756
+msgid "Outil technique"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:79
+msgid "Ouvrir Keleva Manager"
+msgstr ""
+
+#: includes/class-manager-admin.php:85
+msgid "Ouvrir le portail marchand Keleva"
+msgstr ""
+
+#: includes/class-manager-admin.php:140
+msgid "Ouvrir les réglages avancés"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:132
+msgid "Paiement à la livraison — WhatsApp"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:666
+msgid "Palette appliquée."
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:29
+msgid "Panier"
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:12
+msgid "Panier latéral"
+msgstr ""
+
+#: includes/class-elementor-mobile-cart-bar.php:20
+msgid "Panier mobile"
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:21
+msgid "Passer commande"
+msgstr ""
+
+#: includes/class-restaurant-extras.php:156
+msgid "Personnalisez votre commande"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:839
+msgid "Petite description (facultative)"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Photo"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Photo (facultative)"
+msgstr ""
+
+#: includes/class-elementor-product-search.php:12
+msgid "Placeholder"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:907
+msgid "Plusieurs choix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:799
+msgid "Portail marchand"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:683
+msgid "Portail marchand Keleva"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:756
+msgid "Portail unique"
+msgstr ""
+
+#: includes/class-product-options.php:214
+msgid ""
+"Pour chaque option, définissez un libellé et, si nécessaire, un supplément "
+"de prix. Les limites sont appliquées par le storefront et vérifiées de "
+"nouveau par WooCommerce avant l’ajout panier."
+msgstr ""
+
+#: includes/class-elementor-compare.php:26
+#: includes/class-elementor-product-carousel.php:24
+#: includes/class-elementor-product-grid.php:32
+#: includes/class-manager-admin.php:104 includes/class-manager-admin.php:128
+#: includes/class-manager-admin.php:131
+#: includes/class-native-merchant-portal.php:803
+#: includes/class-native-merchant-portal.php:807
+#: includes/class-native-merchant-portal.php:883
+msgid "Prix"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+#: includes/class-native-merchant-portal.php:868
+msgid "Prix non défini"
+msgstr ""
+
+#: includes/class-elementor-product-card.php:12
+#: includes/class-elementor-product-media.php:17
+#: includes/class-manager-admin.php:128
+msgid "Produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:658
+msgid "Produit de test créé."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:660
+msgid "Produit de test supprimé."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:763
+#: includes/class-dashboard-endpoint.php:780
+#: includes/class-dashboard-endpoint.php:812
+#: includes/class-dashboard-endpoint.php:817
+#: includes/class-dashboard-endpoint.php:867
+#: includes/class-dashboard-endpoint.php:907
+#: includes/class-manager-admin.php:205
+#: includes/class-native-merchant-portal.php:332
+#: includes/class-native-merchant-portal.php:423
+#: includes/class-native-merchant-portal.php:508
+#: includes/class-product-options.php:244
+#: includes/class-quick-view-endpoint.php:110
+msgid "Produit introuvable."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:659
+msgid "Produit mis à jour."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:799
+#: includes/class-native-merchant-portal.php:805
+msgid "Produits & stock"
+msgstr ""
+
+#: includes/class-manager-admin.php:126
+msgid "Produits et stock"
+msgstr ""
+
+#: includes/class-manager-admin.php:92
+msgid "Produits publiés"
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:41
+msgid "Produits à découvrir"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:24
+msgid "Promotion"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:238
+msgid "Préparation de votre commande…"
+msgstr ""
+
+#: includes/class-manager-admin.php:119
+msgid "Prévisualiser et appliquer"
+msgstr ""
+
+#: includes/class-manager-admin.php:105
+msgid "Publier immédiatement"
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:12
+msgid "Période (jours)"
+msgstr ""
+
+#: includes/class-elementor-product-search.php:11
+msgid "Recherche"
+msgstr ""
+
+#: includes/class-elementor-product-search.php:21
+#: includes/class-native-merchant-portal.php:805
+msgid "Rechercher"
+msgstr ""
+
+#: includes/class-elementor-product-search.php:12
+#: includes/class-elementor-product-search.php:18
+#: includes/class-native-merchant-portal.php:805
+msgid "Rechercher un produit"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:16
+msgid "Rendre le checkout classique"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:78
+msgid ""
+"Renseignez-le pour créer ou modifier le mot de passe. Laissez vide pour "
+"conserver le mot de passe actuel."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:883
+#: includes/class-native-merchant-portal.php:912
+#: includes/class-saved-product-lists.php:61
+msgid "Retirer"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:896
+msgid "Retirer ce groupe"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Rupture de stock"
+msgstr ""
+
+#: includes/class-manager-admin.php:94
+msgid "Ruptures"
+msgstr ""
+
+#: includes/class-manager-admin.php:140
+msgid "Réglages avancés et sécurité"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:35
+msgid "Réinitialiser"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+#, php-format
+msgid "Résultats pour « %s »."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Sans catégorie"
+msgstr ""
+
+#: includes/class-restaurant-extras.php:209
+msgid "Sauces"
+msgstr ""
+
+#: includes/class-restaurant-extras.php:108
+msgid "Sauces au format JSON"
+msgstr ""
+
+#: includes/class-elementor-product-grid.php:38
+msgid "Sens"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:756
+msgid "Session Keleva"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:65
+msgid "Session de panier expirée. Rechargez la page puis réessayez."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:215
+msgid "Session marchande requise."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:100
+msgid "Session panier invalide. Actualisez la page puis réessayez."
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:17
+msgid "Seuil stock bas"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:95
+msgid "Seules les URL HTTPS sont acceptées."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:369
+msgid ""
+"Seuls les produits de test créés dans ce portail peuvent être supprimés ici."
+msgstr ""
+
+#: includes/class-whatsapp-order.php:79 includes/class-whatsapp-order.php:90
+msgid "Signature webhook invalide."
+msgstr ""
+
+#: includes/class-manager-admin.php:105
+msgid ""
+"Sinon, le produit reste en brouillon afin de vérifier la photo et le "
+"résultat."
+msgstr ""
+
+#: includes/class-elementor-analytics-cards.php:24
+#, php-format
+msgid ""
+"Source : commandes WooCommerce des %d derniers jours, plafonnées à 200 "
+"lignes."
+msgstr ""
+
+#: includes/class-manager-admin.php:128 includes/class-manager-admin.php:137
+msgid "Statut"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:496
+msgid "Statut de commande invalide."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:665
+msgid "Statut de commande mis à jour."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:499
+msgid "Statut mis à jour depuis Keleva Merchant."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:613
+msgid "Statut modifié depuis le portail marchand Keleva."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:795
+msgid "Statut produit invalide."
+msgstr ""
+
+#: includes/class-manager-admin.php:128 includes/class-manager-admin.php:131
+#: includes/class-native-merchant-portal.php:803
+#: includes/class-native-merchant-portal.php:807
+#: includes/class-native-merchant-portal.php:883
+msgid "Stock"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+#, php-format
+msgid "Stock : %s"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:28
+msgid "Stock bas"
+msgstr ""
+
+#: includes/class-manager-admin.php:104
+msgid "Stock initial"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:912
+msgid "Supplément"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Supprimer le produit de test"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:26
+msgid "Supprimer les produits de test créés dans le portail"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:13
+msgid "Surtitre"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:753
+msgid "Sélectionnez au moins un produit à déplacer."
+msgstr ""
+
+#: includes/class-elementor-product-card.php:26
+msgid "Sélectionnez un produit publié dans les réglages du widget."
+msgstr ""
+
+#: includes/class-elementor-add-to-cart.php:21
+msgid "Sélectionnez un produit publié pour afficher l’ajout au panier."
+msgstr ""
+
+#: includes/class-elementor-compare.php:12
+msgid "Tableau"
+msgstr ""
+
+#: includes/class-elementor-product-media.php:14
+msgid "Taille des images"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "Terminée"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:807
+msgid "Texte de la photo"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+msgid "Texte de la photo (facultatif)"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:17
+msgid "Texte livraison"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:14
+#: includes/class-elementor-mini-cart.php:13
+#: includes/class-elementor-product-carousel.php:24
+#: includes/class-elementor-product-grid.php:33
+#: includes/class-elementor-side-cart.php:14
+msgid "Titre"
+msgstr ""
+
+#: includes/class-elementor-product-tabs.php:16
+msgid "Titre livraison"
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+msgid "Total"
+msgstr ""
+
+#: includes/class-elementor-product-filters.php:26
+#: includes/class-elementor-product-grid.php:61
+msgid "Toutes les catégories"
+msgstr ""
+
+#: includes/class-elementor-product-carousel.php:21
+#: includes/class-elementor-product-grid.php:27
+msgid "Trier par"
+msgstr ""
+
+#: includes/class-rest-rate-limiter.php:53
+msgid "Trop de requêtes. Réessayez dans un instant."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:907
+msgid "Type de choix"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:530
+msgid "Type de remise invalide."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:911
+msgid "Type produit invalide."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:119
+msgid "UTC"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:894
+msgid "Un choix"
+msgstr ""
+
+#: includes/class-product-options.php:86
+msgid "Un groupe d’options sélectionné est invalide."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:111
+msgid "Un identifiant Keleva est requis."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:114
+msgid ""
+"Un mot de passe Keleva d’au moins 12 caractères est requis pour créer le "
+"premier accès."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:458
+msgid "Un produit peut avoir au maximum 8 groupes de choix."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:907
+msgid "Un seul choix"
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:736
+msgid "Une catégorie à ordonner est introuvable."
+msgstr ""
+
+#: includes/class-product-options.php:108
+msgid "Une option sélectionnée est invalide."
+msgstr ""
+
+#: includes/class-restaurant-extras.php:51
+msgid "Une sauce sélectionnée est invalide."
+msgstr ""
+
+#: includes/class-manager-admin.php:87
+msgid ""
+"Utilisez les identifiants Keleva dédiés : ce portail est séparé de "
+"l’administration."
+msgstr ""
+
+#: includes/class-dashboard-settings.php:78
+msgid ""
+"Utilisez uniquement des secrets de test en préproduction. Les valeurs sont "
+"chiffrées dans WordPress et ne s’affichent jamais après enregistrement."
+msgstr ""
+
+#: includes/class-manager-admin.php:137
+#: includes/class-native-merchant-portal.php:809
+msgid "Valider"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:873
+msgid "Variantes avec stock"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:664
+msgid "Variantes et stocks enregistrés pour ce produit."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:939
+msgid "Variations produit invalides."
+msgstr ""
+
+#. translators: %d is the maximum number of sauces allowed.
+#: includes/class-restaurant-extras.php:40
+#, php-format
+msgid "Veuillez choisir au maximum %d sauces."
+msgstr ""
+
+#: includes/class-elementor-mobile-cart-bar.php:13
+msgid "Voir le panier"
+msgstr ""
+
+#: includes/class-elementor-quick-view.php:14
+msgid "Voir le produit"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+#, php-format
+msgid "Voir les %d derniers produits"
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:15
+msgid ""
+"Vos coordonnées servent uniquement à préparer la livraison. Les modes de "
+"paiement et de livraison proviennent de WooCommerce."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:754
+msgid "Votre activité, sans le technique."
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:14
+msgid "Votre commande, sans compte obligatoire."
+msgstr ""
+
+#: includes/class-manager-admin.php:78
+msgid "Votre espace de gestion"
+msgstr ""
+
+#: includes/class-elementor-mini-cart.php:13
+msgid "Votre panier"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:159
+msgid "Votre session Keleva a expiré. Reconnectez-vous."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:221
+msgid "Votre session a expiré. Connectez-vous à nouveau."
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:16
+msgid "Votre sélection"
+msgstr ""
+
+#: includes/class-elementor-side-cart.php:32
+msgid "Votre sélection est prête à accueillir un produit."
+msgstr ""
+
+#: includes/class-dashboard-endpoint.php:233
+msgid "Vérification de sécurité expirée. Rechargez la console."
+msgstr ""
+
+#: includes/class-elementor-checkout-shell.php:31
+msgid "WooCommerce doit être actif pour afficher le checkout."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:286
+msgid "WooCommerce doit être actif pour créer un produit."
+msgstr ""
+
+#: includes/class-manager-admin.php:49
+msgid "WooCommerce doit être actif pour utiliser Keleva Manager."
+msgstr ""
+
+#: includes/class-quick-view-endpoint.php:105
+msgid "WooCommerce est indisponible."
+msgstr ""
+
+#: includes/class-elementor-mini-cart.php:20
+msgid "WooCommerce est requis pour le mini panier."
+msgstr ""
+
+#: includes/class-manager-admin.php:83
+msgid "WooCommerce reste la source de vérité"
+msgstr ""
+
+#: includes/class-saved-product-lists.php:62
+msgid "comparaison"
+msgstr ""
+
+#: includes/class-saved-product-lists.php:62
+msgid "favoris"
+msgstr ""
+
+#: includes/class-product-options.php:56 includes/class-product-options.php:269
+#: includes/class-quick-view-endpoint.php:130
+#: includes/class-restaurant-extras.php:161
+msgid "incluse"
+msgstr ""
+
+#: includes/class-elementor-product-badges.php:45
+msgid "À placer dans un template produit ou configurez un produit."
+msgstr ""
+
+#: includes/class-elementor-product-media.php:63
+#: includes/class-elementor-product-meta.php:24
+#: includes/class-elementor-product-tabs.php:26
+msgid "À placer dans un template produit."
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:802
+msgid "ÉTAPE 1"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:805
+msgid "ÉTAPE 2"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:809
+msgid "ÉTAPE 3"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:810
+msgid "ÉTAPE 4"
+msgstr ""
+
+#: includes/class-native-merchant-portal.php:803
+#: includes/class-native-merchant-portal.php:807
+msgid "État"
+msgstr ""
+
+#: includes/class-dashboard-settings.php:120
+msgid "Événement"
+msgstr ""
+
+#: includes/class-whatsapp-order.php:82
+msgid "Événement webhook expiré."
+msgstr ""

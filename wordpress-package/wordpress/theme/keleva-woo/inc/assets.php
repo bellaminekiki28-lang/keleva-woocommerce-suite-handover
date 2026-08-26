@@ -6,6 +6,10 @@ function keleva_woo_asset_version(string $relative_path): string {
     return file_exists($path) ? (string) filemtime($path) : wp_get_theme()->get('Version');
 }
 
+function keleva_woo_font_stylesheet_url(): string {
+    return 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap';
+}
+
 function keleva_woo_is_storefront_context(): bool {
     if (!function_exists('is_woocommerce')) {
         return is_front_page();
@@ -29,7 +33,7 @@ add_filter('wp_preload_resources', static function (array $preloads): array {
         return $preloads;
     }
     $preloads[] = [
-        'href' => 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap',
+        'href' => keleva_woo_font_stylesheet_url(),
         'as' => 'style',
         'type' => 'text/css',
     ];
@@ -45,11 +49,14 @@ add_action('wp_head', static function (): void {
 }, 0);
 
 add_action('wp_enqueue_scripts', static function (): void {
-    wp_enqueue_style('keleva-woo-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap', [], keleva_woo_asset_version('/style.css'));
+    wp_enqueue_style('keleva-woo-fonts', keleva_woo_font_stylesheet_url(), [], keleva_woo_asset_version('/style.css'));
     wp_enqueue_style('keleva-woo', get_stylesheet_uri(), [], keleva_woo_asset_version('/style.css'));
     wp_add_inline_style('keleva-woo', keleva_woo_palette_css());
     wp_enqueue_style('keleva-woo-velora-parity', get_template_directory_uri() . '/assets/css/velora-parity.css', ['keleva-woo'], keleva_woo_asset_version('/assets/css/velora-parity.css'));
     wp_enqueue_style('keleva-woo-states', get_template_directory_uri() . '/assets/css/velora-states.css', ['keleva-woo-velora-parity'], keleva_woo_asset_version('/assets/css/velora-states.css'));
+    if (is_rtl()) {
+        wp_enqueue_style('keleva-woo-rtl', get_template_directory_uri() . '/assets/css/rtl.css', ['keleva-woo-states'], keleva_woo_asset_version('/assets/css/rtl.css'));
+    }
     wp_add_inline_style('keleva-woo-velora-parity', '.velora-intent>span,.velora-result-line,.keleva-product-card__meta,[data-keleva-cart-message],.velora-category-list a small,.site-footer__note,.velora-benefits article p{color:var(--muted)}.velora-category-list a{color:var(--ink)}');
 
     if (!keleva_woo_is_storefront_context()) {

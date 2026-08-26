@@ -18,7 +18,9 @@ Keleva Woo rassemble les sources du storefront WordPress/WooCommerce, du portail
 
 Le parcours marchand actif est un portail PHP rendu par WordPress. Il est séparé de wp-admin et prend en charge les produits, le prix, le stock, les catégories, les options, les suppléments, les limites de sélection et les vraies variantes WooCommerce avec un prix, un stock et une disponibilité propres à chaque option.
 
-La source de l’extension `Keleva Woo Addons` est en version **0.6.11**. Cette release comprend le portail de variantes stockées, le retrait des anciens raccourcis externes, et un écran technique Keleva Dashboard sans promotions tierces hors sujet. Les détails de recette et de reprise sont dans [HANDOVER.md](HANDOVER.md).
+La source de l’extension `Keleva Woo Addons` est en version **0.6.15** et le thème Keleva Woo en version **0.4.13**. Ces releases comprennent le portail de variantes stockées, le retrait des anciens raccourcis externes, la fondation i18n/RTL et l’auto-hébergement de Noto Sans Arabic pour les routes arabes. Les détails de recette et de reprise sont dans [HANDOVER.md](HANDOVER.md) et [la note i18n/RTL staging](wordpress-package/docs/I18N_RTL_STAGING_2026-08-26.md).
+
+La fondation française-arabe est prête sur le staging, mais le catalogue WooCommerce reste français. La traduction sûre de produits, catégories et variantes exige l’unique prérequis officiel documenté : **Polylang Business Pack avec Polylang for WooCommerce**. N’installez pas un second gestionnaire multilingue et ne créez pas de traductions manuelles de produits variables avant cette étape.
 
 ## Démarrage rapide
 
