@@ -36,3 +36,12 @@ Traduire d’abord une seule fiche variable de recette et une seule catégorie. 
 [1] [TranslatePress — extension officielle WordPress.org](https://wordpress.org/plugins/translatepress-multilingual/)
 
 [2] [TranslatePress — traduire les produits WooCommerce](https://translatepress.com/translate-woocommerce-products-translatepress/)
+
+
+## Résultats de la matrice finale
+
+La matrice desktop post-correction couvre 12 routes à 1280 px : accueil, archive catégorie, fiche variable, panier, checkout et portail, chacun en français et en arabe. Toutes ont `scrollWidth=1265`, zéro débordement, zéro contrôle hors canevas et zéro ressource Noto externe. La recette mobile post-correction couvre l’accueil arabe, la fiche variable arabe et le portail arabe à 390 × 844 px : chaque surface a `scrollWidth=390`, sans débordement ni contrôle hors viewport.
+
+Le thème **Keleva Woo 0.4.16** corrige le lien de catégorie « Végétal » qui sortait auparavant de l’écran sur les archives. Les liens se replient maintenant sur plusieurs lignes, en français comme en arabe. Le même jalon conserve le correctif précédent des onglets WCFM RTL mobiles.
+
+Le périmètre traduit de la fiche variable de recette comprend le titre, l’attribut Sauce, les choix Pesto et Miel épicé, Quick view, le libellé de paiement et More Offers. Le socle de navigation arabe a également reçu des traductions contrôlées. Les titres, descriptions, catégories, panier et checkout restants nécessitent encore une traduction éditoriale méthodique ; cette étape n’a réalisé aucune commande ni aucun paiement.
