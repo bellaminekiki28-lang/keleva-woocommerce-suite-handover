@@ -213,6 +213,10 @@ final class Keleva_Native_Merchant_Portal {
 
     public static function render(): void {
         nocache_headers();
+        $is_arabic_portal = false !== strpos((string) ($_SERVER['REQUEST_URI'] ?? ''), '/ar/' . self::PATH);
+        if ($is_arabic_portal) {
+            ob_start([self::class, 'translate_arabic_markup']);
+        }
         // Arabic labels are rendered through the route-aware UI strings; avoid a global gettext hook on Hostinger.
         // The portal is session-aware; shared page caches must never replay its login form.
         header('Cache-Control: private, no-store, no-cache, must-revalidate, max-age=0');
@@ -233,6 +237,33 @@ final class Keleva_Native_Merchant_Portal {
             self::render_dashboard($session);
         }
         self::render_document_end();
+        if ($is_arabic_portal && ob_get_level() > 0) {
+            ob_end_flush();
+        }
+    }
+
+    /**
+     * Translate visible portal labels only on the Arabic route.
+     * Keep HTML attributes and product/order data untouched.
+     *
+     * @param string $buffer
+     * @return string
+     */
+    public static function translate_arabic_markup($buffer) {
+        return preg_replace_callback('/>([^<>]+)</u', static function ($matches) {
+            $value = (string) $matches[1];
+            $trimmed = trim($value);
+            if ('' === $trimmed) {
+                return $matches[0];
+            }
+            $translated = Keleva_Native_Merchant_Portal::arabic_portal_gettext($trimmed, $trimmed, 'keleva-woo-addons');
+            if ($translated === $trimmed) {
+                return $matches[0];
+            }
+            $prefix = substr($value, 0, strlen($value) - strlen(ltrim($value)));
+            $suffix = substr($value, strlen(rtrim($value)));
+            return '>' . $prefix . $translated . $suffix . '<';
+        }, (string) $buffer) ?? (string) $buffer;
     }
 
     private static function handle_public_action(): void {
