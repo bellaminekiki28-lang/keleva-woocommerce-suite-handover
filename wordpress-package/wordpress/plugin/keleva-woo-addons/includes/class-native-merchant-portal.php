@@ -210,7 +210,7 @@ final class Keleva_Native_Merchant_Portal {
         set_transient(self::SESSION_PREFIX . hash('sha256', $token), $record, self::SESSION_TTL);
         setcookie(self::COOKIE_NAME, $token, [
             'expires' => time() + self::SESSION_TTL,
-            'path' => '/' . self::PATH . '/',
+            'path' => '/',
             'secure' => is_ssl(),
             'httponly' => true,
             'samesite' => 'Lax',
@@ -247,7 +247,7 @@ final class Keleva_Native_Merchant_Portal {
     private static function clear_session_cookie(): void {
         setcookie(self::COOKIE_NAME, '', [
             'expires' => time() - HOUR_IN_SECONDS,
-            'path' => '/' . self::PATH . '/',
+            'path' => '/',
             'secure' => is_ssl(),
             'httponly' => true,
             'samesite' => 'Lax',

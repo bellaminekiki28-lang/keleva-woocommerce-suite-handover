@@ -1,0 +1,136 @@
+[
+  {
+    "type": "login",
+    "error": "login-navigation-context-ended"
+  },
+  {
+    "type": "state",
+    "label": "initial-authenticated",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\nKeleva\nPORTAIL MARCHAND\nAjouter un produit\nProduits & stock\nCommandes\nApparence\nCatégories & options\nDéconnexion\n\nESPACE DE STAGING\n\nBonjour keleva.recette, que voulez-vous faire ?\n\nLes actions essentielles sont présentées clairement. Les réglages techniques restent hors de cet espace.\n\nAjouter un produit\n\nÉTAPE 1\n\nAjouter un produit\n\nCommencez simplement. Le brouillon évite toute publication involontaire.\n\nNom du produit\nCatégorie\nSans catégorie\nغير مصنف\nبرانش ومقهى\nBurgers artisanaux\nItalien frais\nJaponais\nLevantin\nMarocain contemporain\nPâtisserie & café\nPizza napolitaine\nPlats\nPoisson & grillades\nVégétal\nPrix\nStock\nDescription (facultative)\nPhoto (facultative)\nTexte de la photo (facultatif)\nÉtat\n Brouillon — vérifier avant publication\n Actif — visible dans le staging\nCréer le produit de test\n\nÉTAPE 2\n\nProduits & stock\n\nLes 6 produits les plus récents sont affichés pour garder cette page simple. Ouvrez un produit seulement si vous voulez le modifier.\n\nVoir les 20 derniers produits\nRechercher un produit\nRechercher\nمنتج Keleva التجريبي — بيئة الاختبار\n\nBrouillon · 47.00 د.م. · Stock : 0\n\nModifier ce produit\nPhoto\nدجاج مشوي بالأعشاب\n\nActif · 96.00 د.م. · En stock\n\nModifier ce produit\nكوكيز بالبندق\n\nActif · 28.00 د.م. · En stock\n\nModifier ce produit\nتيراميسو بالقهوة\n\nActif · 42.00 د.م. · En stock\n\nModifier ce produit\nسمك الدنيس المشوي\n\nActif · 112.00 د.م. · En stock\n\nModifier ce produit\nكالاماري مقلي\n\nActif · 79.00 د.م. · En stock\n\nModifier ce produit\n\nÉTAPE 3\n\nCommandes\n\nAucun paiement ni message n’est envoyé depuis cette page.\n\n#348\n24/08/2026 18:55\nد.م.540.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n#347\n24/08/2026 18:51\nد.م.452.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n#333\n24/08/2026 14:36\nد.م.0.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n\nÉTAPE 4\n\nApparence\n\nChoisissez une palette Keleva validée. Les couleurs techniques restent cachées.\n\nVelora Corail\nOnyx Doré\nSienne Atelier\nSauge Minérale\nAzur Profond\nObsidienne Cuivrée\nIvoire Encre\nArgile Sombre\nPerle Graphite\nAppliquer la palette\n\nACTIVITÉ\n\nDernières actions\nmerchant_native_login\n2026-08-26 15:41:31\nmerchant_native_logout\n2026-08-26 15:37:45\nmerchant_native_order_updated\n2026-08-26 15:37:36\nmerchant_native_order_updated\n2026-08-26 15:37:31\nmerchant_native_product_updated\n2026-08-26 15:37:14\nmerchant_native_login\n2026-08-26 15:30:17\nmerchant_native_login\n2026-08-26 15:14:35\nmerchant_native_access_configured\n2026-08-26 15:13:46\n\nCATALOGUE ENRICHI\n\nCatégories, variantes et suppléments\n\nCréez une catégorie, gérez le prix et le stock de chaque variante, puis ajoutez des extras payants et des limites de sélection.\n\nNouvelle catégorie\n\nEx. Entrées, Burgers, Desserts ou Boissons.\n\nNom de la catégorie\nPetite description (facultative)\nCréer la catégorie\nCatégories disponibles\n\nElles apparaissent ensuite dans la fiche produit.\n\nغير مصنف\n1 produit\nبرانش ومقهى\n3 produits\nBurgers artisanaux\n3 produits\nItalien frais\n3 produits\nJaponais\n3 produits\nLevantin\n3 produits\nMarocain contemporain\n3 produits\nPâtisserie & café\n3 produits\nPizza napolitaine\n3 produits\nPlats\n0 produits\nPoisson & grillades\n3 produits\nVégétal\n3 produits\nChoix, variantes et suppléments\n\nLes variantes gèrent un prix, un stock et une disponibilité par option. Les groupes de choix servent aux tailles sans stock séparé, aux extras et aux suppléments.\n\nمنتج Keleva التجريبي — بيئة الاختبار\n47.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nدجاج مشوي بالأعشاب\n96.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nكوكيز بالبندق\n28.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nتيراميسو بالقهوة\n42.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nسمك الدنيس المشوي\n112.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nكالاماري مقلي\n79.00 د.م. · 0 groupes · 0 variantes\nGérer les choix",
+    "authenticated": true
+  },
+  {
+    "type": "post",
+    "action": "update_product",
+    "ok": true,
+    "status": 200,
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/?keleva_notice=success&keleva_message=Produit%20mis%20%C3%A0%20jour.",
+    "hasSuccess": true,
+    "excerpt": "onst button = event.target.closest('[data-kp-remove-variant]'); if (button && rows.children.length > 1) button.closest('[data-kp-variant-row]')?.remove(); }); }); document.querySelector('.kp-header nav')?.insertAdjacentHTML('beforeend', ' Catégories & options '); })(); SUPPRESSION DE TEST Supprimer ce produit ? Cette action retire définitivement ce produit de test du staging. Les autres produits ne seront pas modifiés. Annuler Oui, supprimer le produit test (() => { const dialog = document.getElementById('kp-delete-dialog'); const cancel = document.getElementById('kp-delete-cancel'); const confirm = document.getElementById('kp-delete-confirm'); let formToDelete = null; if (!dialog || !cancel || !confirm) return; document.querySelectorAll('.kp-danger-form .kp-danger').forEach((button) => { button.addEventListener('click', () => { formToDelete = button.closest('form'); if (formToDelete) dialog.showModal(); }); }); cancel.addEventListener('click', () => dialog.close()); dialog.addEventListener('cancel', (event) => { event.preventDefault(); dialog.close(); }); confirm.addEventListener('click', () => { if (!formToDelete) return; confirm.disabled = true; formToDelete.submit(); }); })(); "
+  },
+  {
+    "type": "state",
+    "label": "product-updated",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\nKeleva\nPORTAIL MARCHAND\nAjouter un produit\nProduits & stock\nCommandes\nApparence\nCatégories & options\nDéconnexion\n\nESPACE DE STAGING\n\nBonjour keleva.recette, que voulez-vous faire ?\n\nLes actions essentielles sont présentées clairement. Les réglages techniques restent hors de cet espace.\n\nAjouter un produit\n\nÉTAPE 1\n\nAjouter un produit\n\nCommencez simplement. Le brouillon évite toute publication involontaire.\n\nNom du produit\nCatégorie\nSans catégorie\nغير مصنف\nبرانش ومقهى\nBurgers artisanaux\nItalien frais\nJaponais\nLevantin\nMarocain contemporain\nPâtisserie & café\nPizza napolitaine\nPlats\nPoisson & grillades\nVégétal\nPrix\nStock\nDescription (facultative)\nPhoto (facultative)\nTexte de la photo (facultatif)\nÉtat\n Brouillon — vérifier avant publication\n Actif — visible dans le staging\nCréer le produit de test\n\nÉTAPE 2\n\nProduits & stock\n\nLes 6 produits les plus récents sont affichés pour garder cette page simple. Ouvrez un produit seulement si vous voulez le modifier.\n\nVoir les 20 derniers produits\nRechercher un produit\nRechercher\nمنتج Keleva التجريبي — بيئة الاختبار\n\nBrouillon · 48.00 د.م. · Stock : 3\n\nModifier ce produit\nPhoto\nدجاج مشوي بالأعشاب\n\nActif · 96.00 د.م. · En stock\n\nModifier ce produit\nكوكيز بالبندق\n\nActif · 28.00 د.م. · En stock\n\nModifier ce produit\nتيراميسو بالقهوة\n\nActif · 42.00 د.م. · En stock\n\nModifier ce produit\nسمك الدنيس المشوي\n\nActif · 112.00 د.م. · En stock\n\nModifier ce produit\nكالاماري مقلي\n\nActif · 79.00 د.م. · En stock\n\nModifier ce produit\n\nÉTAPE 3\n\nCommandes\n\nAucun paiement ni message n’est envoyé depuis cette page.\n\n#348\n24/08/2026 18:55\nد.م.540.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n#347\n24/08/2026 18:51\nد.م.452.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n#333\n24/08/2026 14:36\nد.م.0.00\nEn attente\nEn pause\nEn préparation\nTerminée\nAnnulée\nValider\n\nÉTAPE 4\n\nApparence\n\nChoisissez une palette Keleva validée. Les couleurs techniques restent cachées.\n\nVelora Corail\nOnyx Doré\nSienne Atelier\nSauge Minérale\nAzur Profond\nObsidienne Cuivrée\nIvoire Encre\nArgile Sombre\nPerle Graphite\nAppliquer la palette\n\nACTIVITÉ\n\nDernières actions\nmerchant_native_product_updated\n2026-08-26 15:42:03\nmerchant_native_login\n2026-08-26 15:41:31\nmerchant_native_logout\n2026-08-26 15:37:45\nmerchant_native_order_updated\n2026-08-26 15:37:36\nmerchant_native_order_updated\n2026-08-26 15:37:31\nmerchant_native_product_updated\n2026-08-26 15:37:14\nmerchant_native_login\n2026-08-26 15:30:17\nmerchant_native_login\n2026-08-26 15:14:35\n\nCATALOGUE ENRICHI\n\nCatégories, variantes et suppléments\n\nCréez une catégorie, gérez le prix et le stock de chaque variante, puis ajoutez des extras payants et des limites de sélection.\n\nNouvelle catégorie\n\nEx. Entrées, Burgers, Desserts ou Boissons.\n\nNom de la catégorie\nPetite description (facultative)\nCréer la catégorie\nCatégories disponibles\n\nElles apparaissent ensuite dans la fiche produit.\n\nغير مصنف\n1 produit\nبرانش ومقهى\n3 produits\nBurgers artisanaux\n3 produits\nItalien frais\n3 produits\nJaponais\n3 produits\nLevantin\n3 produits\nMarocain contemporain\n3 produits\nPâtisserie & café\n3 produits\nPizza napolitaine\n3 produits\nPlats\n0 produits\nPoisson & grillades\n3 produits\nVégétal\n3 produits\nChoix, variantes et suppléments\n\nLes variantes gèrent un prix, un stock et une disponibilité par option. Les groupes de choix servent aux tailles sans stock séparé, aux extras et aux suppléments.\n\nمنتج Keleva التجريبي — بيئة الاختبار\n48.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nدجاج مشوي بالأعشاب\n96.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nكوكيز بالبندق\n28.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nتيراميسو بالقهوة\n42.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nسمك الدنيس المشوي\n112.00 د.م. · 0 groupes · 0 variantes\nGérer les choix\nكالاماري مقلي\n79.00 د.م. · 0 groupes · 0 variantes\nGérer les choix",
+    "authenticated": true
+  },
+  {
+    "type": "post",
+    "action": "create_category",
+    "ok": true,
+    "status": 200,
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/?keleva_notice=success&keleva_message=Cat%C3%A9gorie%20cr%C3%A9%C3%A9e.%20Vous%20pouvez%20maintenant%20la%20choisir%20pour%20un%20produit.",
+    "hasSuccess": true,
+    "excerpt": "z-vous avec vos identifiants Keleva dédiés. Catégorie créée. Vous pouvez maintenant la choisir pour un produit. Identifiant portail Mot de passe Entrer dans mon espace Ce portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique. SUPPRESSION DE TEST Supprimer ce produit ? Cette action retire définitivement ce produit de test du staging. Les autres produits ne seront pas modifiés. Annuler Oui, supprimer le produit test (() => { const dialog = document.getElementById('kp-delete-dialog'); const cancel = document.getElementById('kp-delete-cancel'); const confirm = document.getElementById('kp-delete-confirm'); let formToDelete = null; if (!dialog || !cancel || !confirm) return; document.querySelectorAll('.kp-danger-form .kp-danger').forEach((button) => { button.addEventListener('click', () => { formToDelete = button.closest('form'); if (formToDelete) dialog.showModal(); }); }); cancel.addEventListener('click', () => dialog.close()); dialog.addEventListener('cancel', (event) => { event.preventDefault(); dialog.close(); }); confirm.addEventListener('click', () => { if (!formToDelete) return; confirm.disabled = true; formToDelete.submit(); }); })(); "
+  },
+  {
+    "type": "state",
+    "label": "category-created",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "add_product_option_group",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "paid-option-created",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "save_product_variants",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "variant-created",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "update_order",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "order-completed",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "update_order",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "order-restored",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "delete_product_option_group",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "option-cleanup",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "delete_product",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "test-product-cleaned",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  },
+  {
+    "type": "post",
+    "action": "logout",
+    "ok": false,
+    "error": "form-not-found"
+  },
+  {
+    "type": "state",
+    "label": "logout-verified",
+    "url": "https://aliceblue-bison-433987.hostingersite.com/ar/espace-marchand/",
+    "text": "K\n\nKELEVA · ESPACE MARCHAND\n\nVotre activité, sans le technique.\n\nAjoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.\n\n01\nPortail unique\n08h\nSession Keleva\n0\nOutil technique\n\nACCÈS MARCHAND\n\nBienvenue.\n\nConnectez-vous avec vos identifiants Keleva dédiés.\n\nIdentifiant portail\nMot de passe\nEntrer dans mon espace\n\nCe portail est hébergé dans votre site Keleva. Il ne donne jamais accès à l’administration technique.",
+    "authenticated": false
+  }
+]
