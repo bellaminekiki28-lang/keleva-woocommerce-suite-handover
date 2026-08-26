@@ -264,32 +264,52 @@ final class Keleva_Native_Merchant_Portal {
      * @return string
      */
     public static function translate_arabic_markup($buffer) {
-        $buffer = strtr((string) $buffer, [
+        $replacements = [
+            'Connexion Keleva' => 'تسجيل الدخول إلى كيليفا',
+            'Portail marchand Keleva' => 'بوابة التاجر كيليفا',
+            'Portail marchand' => 'بوابة التاجر',
+            'Ajouter un produit' => 'إضافة منتج',
+            'Produits &amp; stock' => 'المنتجات والمخزون',
+            'Commandes' => 'الطلبات',
+            'Apparence' => 'المظهر',
+            'Catégories &amp; options' => 'الفئات والخيارات',
+            'Déconnexion' => 'تسجيل الخروج',
+            'ESPACE DE STAGING' => 'بيئة الاختبار',
+            'ÉTAPE 1' => 'الخطوة 1',
+            'ÉTAPE 2' => 'الخطوة 2',
+            'ÉTAPE 3' => 'الخطوة 3',
+            'ÉTAPE 4' => 'الخطوة 4',
+            'Votre activité, sans le technique.' => 'نشاطك، بدون تعقيد تقني.',
+            'Ajoutez un produit, adaptez le prix ou consultez une commande en quelques gestes simples.' => 'أضف منتجًا، عدّل السعر أو راجع طلبًا بخطوات بسيطة.',
+            'Portail unique' => 'بوابة موحّدة',
+            'Session Keleva' => 'جلسة كيليفا',
+            'Outil technique' => 'أداة تقنية',
+            'ACCÈS MARCHAND' => 'دخول التاجر',
+            'Bienvenue.' => 'مرحبًا بك.',
+            'Connectez-vous avec vos identifiants Keleva dédiés.' => 'سجّل الدخول باستخدام بيانات كيليفا المخصّصة لك.',
+            'Accès en préparation.' => 'الدخول قيد الإعداد.',
+            'Identifiant portail' => 'معرّف البوابة',
+            'Mot de passe' => 'كلمة المرور',
+            'Entrer dans mon espace' => 'الدخول إلى مساحتي',
+            'Nom du produit' => 'اسم المنتج',
+            'Catégorie' => 'الفئة',
+            'Sans catégorie' => 'بدون فئة',
+            'Prix' => 'السعر',
+            'Stock' => 'المخزون',
+            'Description (facultative)' => 'الوصف (اختياري)',
+            'Photo (facultative)' => 'الصورة (اختيارية)',
+            'Rechercher un produit' => 'البحث عن منتج',
+            'Rechercher' => 'بحث',
+            'Modifier ce produit' => 'تعديل هذا المنتج',
+            'Enregistrer le produit' => 'حفظ المنتج',
             'placeholder="Ex. Brunch du dimanche"' => 'placeholder="مثال: فطور الأحد"',
             'placeholder="Ex. 49.00"' => 'placeholder="مثال: 49.00"',
             'placeholder="Décrivez le produit simplement."' => 'placeholder="اكتب وصف المنتج ببساطة."',
             'placeholder="Ex. Assiette brunch"' => 'placeholder="مثال: طبق فطور"',
             'placeholder="Ex. brunch, tajine, pizza"' => 'placeholder="مثال: برانش، طاجين، بيتزا"',
-        ]);
-        $buffer = preg_replace_callback('/>([^<>]+)</u', static function ($matches) {
-            $value = (string) $matches[1];
-            $trimmed = trim($value);
-            if ('' === $trimmed) {
-                return $matches[0];
-            }
-            $decoded = html_entity_decode($trimmed, ENT_QUOTES, 'UTF-8');
-            if (preg_match('/^Bonjour\s+(.+),\s+que voulez-vous faire \?$/u', $decoded, $greeting)) {
-                $translated = 'مرحبًا ' . $greeting[1] . '، ماذا تريد أن تفعل؟';
-            } else {
-                $translated = Keleva_Native_Merchant_Portal::arabic_portal_gettext($decoded, $decoded, 'keleva-woo-addons');
-            }
-            if ($translated === $decoded) {
-                return $matches[0];
-            }
-            $prefix = substr($value, 0, strlen($value) - strlen(ltrim($value)));
-            $suffix = substr($value, strlen(rtrim($value)));
-            return '>' . $prefix . esc_html($translated) . $suffix . '<';
-        }, (string) $buffer) ?? (string) $buffer;
+        ];
+        $buffer = strtr((string) $buffer, $replacements);
+        return preg_replace('/Bonjour\\s+([^<]+),\\s+que voulez-vous faire \\?/u', 'مرحبًا $1، ماذا تريد أن تفعل؟', $buffer) ?: $buffer;
     }
 
     private static function handle_public_action(): void {

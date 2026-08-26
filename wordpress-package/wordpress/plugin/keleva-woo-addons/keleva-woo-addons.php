@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Keleva Woo Addons
  * Description: Quick view REST endpoint and Elementor commerce widgets for Keleva Woo.
- * Version: 0.6.22
+ * Version: 0.6.23
  * Author: Keleva
  * Text Domain: keleva-woo-addons
  * Domain Path: /languages
