@@ -83,3 +83,33 @@ body.keleva-cart-drawer-open{overflow:hidden}.keleva-cart-drawer{position:fixed;
     white-space: normal;
   }
 }
+
+
+/* Mobile regression fix: keep CTA rows inside the viewport for FR and RTL catalog cards. */
+@media (max-width: 800px) {
+  .keleva-product-card__buy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .keleva-product-card .price,
+  .keleva-product-card .button {
+    min-width: 0;
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .keleva-product-card .button {
+    max-width: 100%;
+    padding-inline: 6px 0;
+    white-space: normal;
+  }
+
+  .velora-product-details-content .woocommerce-tabs ul.tabs {
+    max-width: 100%;
+    min-width: 0;
+    overscroll-behavior-inline: contain;
+  }
+}

@@ -89,3 +89,9 @@ La session marchande Keleva est opaque, limitée au chemin marchand, et distinct
 Les fonctions de paiement, WhatsApp, n8n, Merchant Center et les clés WooCommerce exigent une configuration séparée avec secrets et coordonnées opérationnelles hors Git. Le bouton WhatsApp ne s’affiche que lorsqu’un numéro est configuré dans WordPress. Ces fonctions doivent être validées par des preuves sandbox propres.
 
 Les prochaines améliorations pertinentes sont la duplication guidée d’un produit avec ses variantes Keleva, une gestion média avec recadrage et validation de taille, et une matrice de recette mobile/navigateurs pour le portail natif.
+
+## Recette mobile FR/AR — 26 août 2026
+
+Une matrice CDP à 390 × 844 px a été exécutée sans transaction, paiement, saisie client ni soumission de checkout sur les routes françaises et arabes suivantes : accueil, catégorie, fiche produit variable, panier, checkout et portail marchand. Les routes arabes ont conservé `lang=ar`, `dir=rtl`, `scrollWidth=390` et aucune ressource Noto externe. Les routes françaises ont conservé `lang=fr-FR` et `dir=ltr`.
+
+La recette a révélé un débordement de 24 px sur l’accueil français (`scrollWidth=414`) lié à la ligne prix/CTA des cartes produit, ainsi que deux libellés d’onglets volontairement défilables sur la fiche variable. Un correctif source a été ajouté au thème 0.4.17 : grille mobile fluide pour la ligne d’achat dans les deux directions, contraintes `min-width`/`overflow-wrap`, et garde-fou de largeur pour les onglets. Le PHP lint (25 fichiers) et `git diff --check` sont verts. **Le correctif est préparé dans le dépôt, mais doit encore être téléversé via WordPress staging puis recetté avant d’être considéré comme actif sur Hostinger.**
