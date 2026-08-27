@@ -1,6 +1,6 @@
 # État des preuves GO/NO-GO — Keleva
 
-**Référence release candidate :** `9f39ece11285dd9da7bcbd8cc6d0ac9b491f4298` (`main`)
+**Référence release candidate :** `8663ce3f59da5549b3c0b29b2a2245a82789d3b2` (`main`)
 
 | Contrôle | Statut | Preuve ou action restante |
 |---|---|---|

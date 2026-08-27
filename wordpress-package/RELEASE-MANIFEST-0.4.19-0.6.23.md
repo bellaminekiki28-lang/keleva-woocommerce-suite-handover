@@ -2,7 +2,7 @@
 
 ## Référence
 
-La release candidate est construite depuis le commit GitHub `9f39ece11285dd9da7bcbd8cc6d0ac9b491f4298`, branche `main`. Les commits `6c69e41` et `9c7e5f3` sont historiques et ne sont pas des références de déploiement.
+La release candidate est construite depuis le commit GitHub `8663ce3f59da5549b3c0b29b2a2245a82789d3b2`, branche `main`. Le commit `9f39ece` est le parent avant alignement des métadonnées ; `6c69e41` et `9c7e5f3` sont historiques et ne sont pas des références de déploiement.
 
 | Composant | Version | Archive | SHA-256 |
 |---|---:|---|---|
