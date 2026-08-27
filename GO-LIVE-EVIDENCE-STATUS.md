@@ -1,6 +1,6 @@
 # État des preuves GO/NO-GO — Keleva
 
-**Référence release candidate :** `8663ce3f59da5549b3c0b29b2a2245a82789d3b2` (`main`)
+**Référence packages de release :** `8663ce3f59da5549b3c0b29b2a2245a82789d3b2` (`main`). **Dernière correction source storefront staging :** `8b08a45f1203fc9c5fb7b9aa4e4d9b61b8694c82`.
 
 | Contrôle | Statut | Preuve ou action restante |
 |---|---|---|
@@ -10,6 +10,7 @@
 | SHA-256 des archives finales | PASS | `wordpress-package/RELEASE-SHA256-0.4.19-0.6.23.txt` |
 | Manifest fichiers/dépendances/ordre/rollback | PASS | `wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md` |
 | Correction storefront mobilier sur staging | PASS — staging uniquement | Rapport factuel `RAPPORT-CORRECTION-STOREFRONT-MOBILIER-2026-08-27.md` ; la vitrine ne publie plus que quatre meubles et les fixtures restaurant restent en brouillon réversible. |
+| Sauvegarde privée complète du staging créée et checksumée | PASS — staging uniquement | Archive privée de `473439028` octets, SHA-256 `39eee23dd79c48aef36dfd8065b25e09eaadf5eef63a27664397c08a235b8cd0`, intégrité ZIP vérifiée sans extraction ; preuve assainie : `private-evidence-index/HOSTINGER-STAGING-DUPLICATOR-BACKUP-PROOF-2026-08-27.md`. |
 | Checkpoint géré du portail | PASS | URI `manus-webdev://2e04398a`, commit `2e04398a863d8ecd7466735f43741f7d881246b0` ; détail dans `private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md` |
 | Restauration du checkpoint du portail sur copie | FAIL | Non exécutée ; aucune branche ou copie isolée de vérification n’a été créée. |
 | Sauvegarde complète de production téléchargée | FAIL | À réaliser avec accès Hostinger production |
@@ -26,4 +27,4 @@
 
 ## Décision
 
-**NO-GO production.** Les archives de code, l’export TranslatePress privé et le checkpoint du portail sont prouvés comme créés. Les restaurations isolées, la sauvegarde production, le rollback mesuré, l’inventaire production, la recette métier et les signatures ne sont pas disponibles. Aucun déploiement, paiement réel, commande réelle ou écrasement de données ne doit être effectué sur la base de ce fichier.
+**NO-GO production.** Les archives de code, l’export TranslatePress privé, le checkpoint du portail et une sauvegarde Duplicator privée du **staging** sont prouvés comme créés. La sauvegarde staging ne vaut ni sauvegarde de production ni restauration validée. Les restaurations isolées, la sauvegarde production, le rollback mesuré, l’inventaire production, la recette métier et les signatures ne sont pas disponibles. Aucun déploiement, paiement réel, commande réelle ou écrasement de données ne doit être effectué sur la base de ce fichier.
