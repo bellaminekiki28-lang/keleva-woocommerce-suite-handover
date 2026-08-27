@@ -13,11 +13,23 @@ Cette preuve atteste uniquement d’une sauvegarde complète du **staging** `ali
 | Intégrité ZIP | PASS | `unzip -tqq` a terminé sans extraction ni erreur |
 | Portée structurelle | PASS | L’arborescence WordPress, le thème Keleva Woo et un dump SQL Duplicator interne ont été relevés dans le listing du ZIP, sans lecture ni publication de leur contenu. |
 
+## Restauration locale isolée
+
+Une copie privée locale a été créée depuis cette archive sans redéployer ni restaurer Hostinger. Les `25751` fichiers ont été extraits dans un répertoire privé, puis le dump a été importé dans une base locale dédiée (`101` tables, `719` lignes `wp_options`). L’accueil français et la fiche configurable du Fauteuil Ligne Noa ont démarré et ont été contrôlés localement, sans panier, commande, paiement ni appel externe.
+
+| Validation sur copie locale | Statut | Portée et limite |
+|---|---|---|
+| Fichiers et base WordPress | PASS — local/staging seulement | Extraction et import terminés ; aucune écriture Hostinger. |
+| Storefront français et configurateur | PASS — local/staging seulement | Catalogue mobilier et choix radio/checkbox du fauteuil visibles. |
+| Données TranslatePress | PASS — données présentes | Plugin actif ; tables de traduction importées. |
+| Rendu `/ar/` TranslatePress | FAIL — non validé | Le serveur PHP intégré ne reproduit pas entièrement la réécriture d’un serveur Apache/Nginx : la route locale `/ar/` demeure 404 après trois essais d’adaptation retirés. Une nouvelle recette sous Apache/Nginx local est requise. |
+| Rollback de code | PASS — sonde locale seulement | Une sonde de code MU visible a été supprimée et son absence contrôlée sur l’accueil ; délai end-to-end observé : `128 ms`. Cette sonde ne remplace pas un rollback complet de release. |
+
 > **Limite de preuve.** Une archive créée, téléchargée et checksumée n’est pas une restauration validée. Aucune archive n’a été restaurée sur Hostinger, aucune copie isolée n’a encore été montée, et aucun rollback chronométré n’a été exécuté.
 
 ## État de décision
 
-La sauvegarde staging est désormais une preuve **PASS — staging seulement**. Elle ne remplace pas la sauvegarde complète de production, qui demeure **FAIL**, et ne modifie pas la décision **NO-GO production**. La prochaine preuve acceptable consiste en une restauration sur une copie locale isolée, suivie d’un rollback chronométré, sans toucher au staging ni à la production.
+La sauvegarde staging est désormais une preuve **PASS — staging seulement**. La restauration locale des fichiers et de la base ainsi qu’un rollback de sonde sont aussi prouvés, mais la recette TranslatePress arabe reste incomplète. Ces éléments ne remplacent pas la sauvegarde complète de production, qui demeure **FAIL**, et ne modifient pas la décision **NO-GO production**. La prochaine preuve acceptable consiste en une recette de la copie sous Apache/Nginx local, suivie d’un rollback de release complet, sans toucher au staging ni à la production.
 
 ## Références internes de reprise
 

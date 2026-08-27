@@ -14,11 +14,11 @@
 | Checkpoint géré du portail | PASS | URI `manus-webdev://2e04398a`, commit `2e04398a863d8ecd7466735f43741f7d881246b0` ; détail dans `private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md` |
 | Restauration du checkpoint du portail sur copie | FAIL | Non exécutée ; aucune branche ou copie isolée de vérification n’a été créée. |
 | Sauvegarde complète de production téléchargée | FAIL | À réaliser avec accès Hostinger production |
-| Restauration de sauvegarde sur copie isolée | FAIL | À exécuter et documenter |
+| Restauration fichiers/base de sauvegarde staging sur copie isolée | PASS — local/staging uniquement | `25751` fichiers extraits et dump importé dans une base locale dédiée : `101` tables et `719` lignes `wp_options`. Accueil FR et fiche configurable contrôlés localement ; aucune écriture Hostinger. Détail : `private-evidence-index/HOSTINGER-STAGING-DUPLICATOR-BACKUP-PROOF-2026-08-27.md`. |
 | Export TranslatePress privé généré | PASS | Artefact privé `keleva-translatepress-private-20260827-001010.json` ; SHA-256 `0f6bdd5e961249c15306acec74b288e0ee280d989fa75476c217c5bd25d50427` ; inventaire assaini dans `private-evidence-index/TRANSLATEPRESS-EXPORT-INVENTORY-2026-08-27.json` |
-| Restauration isolée de l’export TranslatePress | FAIL | Journal de restauration absent : aucune copie WordPress isolée n’a été fournie ou créée. L’export ne doit pas être qualifié de « restaurable validé ». |
+| Restauration isolée de l’export TranslatePress | FAIL | Les données et tables TranslatePress sont importées et le plugin est actif dans la copie locale, mais la route `/ar/` reste 404 sous le serveur PHP intégré ; une recette Apache/Nginx locale est nécessaire. La restauration bilingue complète ne doit pas être qualifiée de validée. |
 | Cause des bascules de thème et stabilité observée | N/A non approuvé | À diagnostiquer sur l’environnement concerné et faire approuver |
-| Exercice de rollback sur copie | FAIL | À exécuter avec temps de retour mesuré |
+| Exercice de rollback sur copie | PASS — sonde locale seulement | Sonde MU locale visible, supprimée, puis absence contrôlée sur l’accueil ; délai end-to-end `128 ms`. Cette preuve de mécanisme ne constitue pas encore un rollback complet de release. |
 | Inventaire de configuration production | FAIL | À relever séparément du staging |
 | Paiements/livraison/emails/webhooks sandbox | N/A non approuvé | À valider si ces fonctions sont activées, sinon signer l’exclusion |
 | Recette métier FR/AR signée | FAIL | Validation responsable métier manquante |
@@ -27,4 +27,4 @@
 
 ## Décision
 
-**NO-GO production.** Les archives de code, l’export TranslatePress privé, le checkpoint du portail et une sauvegarde Duplicator privée du **staging** sont prouvés comme créés. La sauvegarde staging ne vaut ni sauvegarde de production ni restauration validée. Les restaurations isolées, la sauvegarde production, le rollback mesuré, l’inventaire production, la recette métier et les signatures ne sont pas disponibles. Aucun déploiement, paiement réel, commande réelle ou écrasement de données ne doit être effectué sur la base de ce fichier.
+**NO-GO production.** Les archives de code, l’export TranslatePress privé, le checkpoint du portail et une sauvegarde Duplicator privée du **staging** sont prouvés comme créés. Les fichiers et la base de cette sauvegarde ont été restaurés sur copie locale ; un rollback de sonde de code y a été mesuré. Toutefois, la route arabe TranslatePress n’a pas été validée sous l’émulation locale minimale, et aucun rollback complet de release ni sauvegarde de production n’est disponible. L’inventaire production, la recette métier et les signatures restent absents. Aucun déploiement, paiement réel, commande réelle ou écrasement de données ne doit être effectué sur la base de ce fichier.
