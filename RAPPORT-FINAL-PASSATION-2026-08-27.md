@@ -6,7 +6,7 @@ Le staging Hostinger est documenté avec le thème Keleva 0.4.19 et Keleva Woo A
 
 Dépôt : https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover
 
-Dernier commit publié : `6c69e41` — `docs: finalize restoration and go-live handover`
+Source de release autorisée : `8663ce3f59da5549b3c0b29b2a2245a82789d3b2`. Le commit de handover le plus récent sera celui créé après cette mise à jour.
 
 ## Documents à lire en premier
 
@@ -15,6 +15,10 @@ Dernier commit publié : `6c69e41` — `docs: finalize restoration and go-live h
 3. `CHECKLIST-RESTAURATION-GO-LIVE.md`
 4. `PUBLIC-TEST-FIXTURES.md`
 5. `wordpress-package/docs/RELEASE_NOTES_0.4.19_RECONCILED.md`
+
+## Artefacts de release
+
+Les archives installables officielles ont été reconstruites depuis la source : `wordpress-package/installables/keleva-woo-0.4.19.zip` et `wordpress-package/installables/keleva-woo-addons-0.6.23.zip`. Leurs SHA-256 sont consignés dans `wordpress-package/RELEASE-SHA256-0.4.19-0.6.23.txt` et leur ordre d’installation/rollback dans `wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md`.
 
 ## Validation réalisée
 
