@@ -22,8 +22,20 @@ Le hash ci-dessus est le SHA-1 Git du snapshot géré. Ce n’est pas un SHA-256
 
 Le journal Git confirme que ce checkpoint a enregistré la mise à jour de `todo.md` correspondante.
 
-## Limite de restauration
+## Restauration sur copie isolée
 
-Aucune restauration du checkpoint `2e04398a` n’a été déclenchée, afin de ne pas écraser le travail et les preuves générés après lui. Il n’existe donc **pas** de journal de restauration réussie. Cette absence est distincte de l’existence vérifiée du checkpoint et maintient le statut **NO-GO production**.
+Le 27 août 2026, le checkpoint `2e04398a` a été restauré dans l’espace de travail, puis copié dans un répertoire de recette privé. L’état de travail plus récent a été figé au préalable et rétabli après la recette ; le staging WordPress, le portail WordPress natif et les données Hostinger n’ont jamais été modifiés.
 
-Pour produire cette preuve, le prochain opérateur doit restaurer le checkpoint sur une copie ou utiliser l’historique du projet pour créer une branche de vérification, contrôler l’URL, lancer les tests Vitest et archiver le journal horodaté. Cette opération ne doit pas être confondue avec la restauration de la sauvegarde WordPress/Hostinger de production.
+| Contrôle de la copie du checkpoint | Statut | Résultat vérifié |
+|---|---|---|
+| Dépendances verrouillées | PASS | `pnpm install --frozen-lockfile` terminé. |
+| Tests et vérification TypeScript | PASS | `5` fichiers Vitest et `16` tests réussis ; `pnpm run check` terminé sans erreur. |
+| Build production | PASS | `pnpm run build` terminé ; avertissement non bloquant sur la taille d’un chunk uniquement. |
+| Connexion portail | PASS | Connexion par formulaire avec compte de recette strictement local. |
+| Persistance de session | PASS | Dashboard maintenu après rechargement local. |
+| Déconnexion et révocation | PASS | Retour au formulaire et session révoquée. |
+| Identifiant invalide | PASS | Accès refusé sans divulgation d’information sensible. |
+
+Le journal complet est privé car il inclut le chemin de copie et des détails d’environnement local. Aucun mot de passe, cookie, chaîne de connexion, URL de recette locale, donnée utilisateur ou base n’est publié.
+
+> **Limite.** Cette restauration valide le checkpoint du portail en copie isolée ; elle ne vaut ni restauration WordPress, ni rollback complet de release, ni validation de production. Le statut global reste **NO-GO production**.
