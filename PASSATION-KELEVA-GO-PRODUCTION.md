@@ -4,7 +4,7 @@
 
 ## 1. Réponse courte : le travail est-il entièrement sur GitHub ?
 
-Le dépôt public contient les sources WordPress de reprise, le plugin Keleva Woo Addons, le thème Keleva Woo, la console historique, les tests, les journaux de recette, les rapports FR/AR, les contrôles de sécurité, la procédure de migration et la documentation technique. Le dépôt distant vérifié est : [bellaminekiki28-lang/keleva-woocommerce-suite-handover](https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover), branche `main`, dernier commit vérifié `9c7e5f3cde0d68ff09a939b3a480290d813562a` (`9c7e5f3`).
+Le dépôt public contient les sources WordPress de reprise, le plugin Keleva Woo Addons, le thème Keleva Woo, la console historique, les tests, les journaux de recette, les rapports FR/AR, les contrôles de sécurité, la procédure de migration et la documentation technique. Le dépôt distant vérifié est : [bellaminekiki28-lang/keleva-woocommerce-suite-handover](https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover), branche `main`, dernier commit vérifié `9f39ece11285dd9da7bcbd8cc6d0ac9b491f4298` (`9f39ece`). Les commits `6c69e41` et `9c7e5f3` sont historiques et ne constituent pas la release autorisée.
 
 Cependant, **tout ce qui existe sur le site WordPress ne peut pas être contenu dans GitHub**. Les traductions enregistrées par TranslatePress Free, les produits, catégories, variations, médias, réglages, comptes portail, cookies, commandes et autres données du staging résident dans la base et le stockage Hostinger. Ils ne sont pas exportés dans le dépôt public, conformément à la protection des secrets et des données métier. Le prochain développeur doit donc récupérer une sauvegarde privée du staging et un accès Hostinger séparé.
 
@@ -13,14 +13,17 @@ Cependant, **tout ce qui existe sur le site WordPress ne peut pas être contenu 
 | Élément | Emplacement | État |
 |---|---|---|
 | Plugin WordPress | `wordpress-package/wordpress/plugin/keleva-woo-addons/` | Source de release avec en-tête 0.6.23 |
-| Thème WordPress | `wordpress-package/wordpress/theme/keleva-woo/` | Source versionnée ; l’en-tête présent dans le dépôt indique 0.4.17 |
+| Thème WordPress | `wordpress-package/wordpress/theme/keleva-woo/` | Source versionnée ; en-tête officiel 0.4.19 |
 | Documentation bilingue/RTL | `wordpress-package/docs/` | Rapports, inventaires i18n, recettes et limites |
 | Journaux de recette finaux | `AR_STOREFRONT_SCAN_2026-08-26.md`, `AR_PORTAL_AUTHENTICATED_2026-08-26.md`, `FINAL_HTTP_CHECK_2026-08-26.md` | Présents dans `main` |
 | Procédure de migration | `PROCEDURE-MIGRATION-STAGING-PRODUCTION.md` | Présente dans `main` |
 | Passe éditoriale arabe | `TRANSLATION-AR-EDITORIAL-2026-08-27.md` | Présente dans `main` |
 | Console historique | `merchant-console/` | Code de reprise, à ne pas confondre avec le portail natif Hostinger |
 | Sécurité et contribution | `SECURITY.md`, `CONTRIBUTING.md`, `README.md` | Présents |
-| Intégrité | `wordpress-package/CHECKSUMS-SHA256.txt` | À recalculer après toute nouvelle archive |
+| Intégrité historique | `wordpress-package/CHECKSUMS-SHA256.txt` | Archives historiques ; ne pas utiliser comme checksum de la release actuelle |
+| Release candidate | `wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md` | Archives 0.4.19/0.6.23 reconstruites et documentées |
+| Checksums release candidate | `wordpress-package/RELEASE-SHA256-0.4.19-0.6.23.txt` | SHA-256 des deux archives actuelles |
+| État des preuves GO/NO-GO | `GO-LIVE-EVIDENCE-STATUS.md` | Code PASS ; preuves production encore bloquantes |
 | Fixtures publiques | `PUBLIC-TEST-FIXTURES.md` | Manifeste assaini des produits, options et scénarios de démonstration |
 
 Pour récupérer le projet :
@@ -43,7 +46,7 @@ Ne jamais ajouter de fichier `.env`, mot de passe, token, export SQL, sauvegarde
 | Portail arabe | `/ar/espace-marchand/` |
 | Moteur multilingue | TranslatePress Free actif ; français source, arabe sous `/ar/` |
 | Plugin actif observé après la dernière installation | Keleva Woo Addons 0.6.23 |
-| Thème source documenté dans le dépôt | Keleva Woo 0.4.17 |
+| Thème source documenté dans le dépôt | Keleva Woo 0.4.19 |
 | Données | Staging uniquement ; aucune commande, client ou paiement réel prévu |
 | Portail | Authentification dédiée Keleva, séparée de wp-admin, session signée HMAC |
 
@@ -57,7 +60,7 @@ Le storefront bilingue couvre les routes françaises et arabes testées, le RTL,
 
 ## 5. Écart important à vérifier avant toute release
 
-Le dépôt contient actuellement un thème dont l’en-tête indique **0.4.17**, alors que certains journaux historiques mentionnent une release thème **0.4.19** pour les notices AJAX et les derniers correctifs. Le plugin du dépôt indique **0.6.23**. Avant production, le développeur doit comparer les fichiers réellement actifs sur Hostinger avec les sources du dépôt, recalculer les checksums et publier une release unique et cohérente. Il ne faut pas déclarer le thème « synchronisé » tant que cet écart n’est pas résolu.
+La source du dépôt porte désormais l’en-tête officiel **0.4.19** et le plugin porte **0.6.23**, avec `Stable tag: 0.6.23`. Les mentions 0.4.17 et 0.5.6 conservées dans certains journaux sont historiques. Avant production, le développeur doit encore comparer les fichiers réellement actifs et la feuille CSS servie sur Hostinger, reconstruire les archives installables et recalculer les checksums finaux.
 
 La base TranslatePress du staging n’est pas dans GitHub. Il faut exporter ou sauvegarder les traductions par une méthode privée et vérifiable, puis décider précisément si elles doivent être reportées en production. Les commandes, clients, stocks et paiements de production doivent rester la source de vérité et ne doivent jamais être remplacés par ceux du staging.
 
@@ -76,7 +79,7 @@ La base TranslatePress du staging n’est pas dans GitHub. Il faut exporter ou s
 | Portail | Tester connexion dédiée, produits, commandes, apparence et déconnexion | Aucune session wp-admin, aucun 5xx |
 | Clôture | Purger cache, réactiver cache, sortir de maintenance et archiver le rapport | Go final écrit |
 
-La procédure détaillée est dans [`PROCEDURE-MIGRATION-STAGING-PRODUCTION.md`](./PROCEDURE-MIGRATION-STAGING-PRODUCTION.md). Elle doit être lue intégralement avant toute intervention sur la production.
+La procédure détaillée est dans [`PROCEDURE-MIGRATION-STAGING-PRODUCTION.md`](./PROCEDURE-MIGRATION-STAGING-PRODUCTION.md). Le tableau reproductible des preuves est dans [`GO-LIVE-EVIDENCE-STATUS.md`](./GO-LIVE-EVIDENCE-STATUS.md). Le manifeste de release est dans [`wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md`](./wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md). Ces documents doivent être lus intégralement avant toute intervention sur la production.
 
 ## 7. Rollback obligatoire
 

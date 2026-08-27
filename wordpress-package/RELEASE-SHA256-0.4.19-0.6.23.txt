@@ -1,0 +1,2 @@
+93447d2b91c19cc9ce30d0c21e41dd8b38bc570e1ea0acfdd5b8d42a86c1af41  wordpress-package/installables/keleva-woo-0.4.19.zip
+130b105a3fcb42d3ac6e7dd97f84f895d31594f1b1f538cce09e537dbb3a744b  wordpress-package/installables/keleva-woo-addons-0.6.23.zip
