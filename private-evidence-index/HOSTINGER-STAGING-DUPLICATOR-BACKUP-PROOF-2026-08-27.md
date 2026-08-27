@@ -22,7 +22,7 @@ Une copie privée locale a été créée depuis cette archive sans redéployer n
 | Fichiers et base WordPress | PASS — local/staging seulement | Extraction et import terminés ; aucune écriture Hostinger. |
 | Storefront français et configurateur | PASS — local/staging seulement | Catalogue mobilier et choix radio/checkbox du fauteuil visibles. |
 | Données TranslatePress | PASS — données présentes | Plugin actif ; tables de traduction importées. |
-| Rendu `/ar/` TranslatePress | FAIL — non validé | La route locale `/ar/` demeure 404 sous le serveur PHP intégré, puis sous Apache local avec PHP et `mod_rewrite`. TranslatePress détecte pourtant la langue `ar`. Les adaptations temporaires ont été retirées ; une configuration Apache/Nginx isolée reproduisant l’hébergement reste requise. |
+| Rendu `/ar/` TranslatePress | FAIL — non validé | La route locale `/ar/` demeure 404 sous le serveur PHP intégré, puis sous Apache local avec PHP et `mod_rewrite`. TranslatePress détecte pourtant la langue `ar`, mais une entrée locale explicitement forcée conserve aussi le rendu français. Les adaptations temporaires ont été retirées ; une configuration Apache/Nginx isolée reproduisant l’hébergement reste requise. |
 | Rollback de code | PASS — sonde locale seulement | Une sonde de code MU visible a été supprimée et son absence contrôlée sur l’accueil ; délai end-to-end observé : `128 ms`. Cette sonde ne remplace pas un rollback complet de release. |
 
 > **Limite de preuve.** Une archive créée, téléchargée et checksumée n’est pas une restauration validée. Aucune archive n’a été restaurée sur Hostinger, aucune copie isolée n’a encore été montée, et aucun rollback chronométré n’a été exécuté.
