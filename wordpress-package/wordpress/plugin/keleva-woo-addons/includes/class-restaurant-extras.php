@@ -36,8 +36,8 @@ final class Keleva_Restaurant_Extras {
         $requested = is_array($requested) ? $requested : [];
         $requested = array_values(array_unique(array_map('sanitize_key', $requested)));
         if (count($requested) > self::MAX_SAUCES) {
-            /* translators: %d is the maximum number of sauces allowed. */
-            return new WP_Error('keleva_too_many_sauces', sprintf(__('Veuillez choisir au maximum %d sauces.', 'keleva-woo-addons'), self::MAX_SAUCES), ['status' => 400]);
+            /* translators: %d is the maximum number of options allowed. */
+            return new WP_Error('keleva_too_many_extras', sprintf(__('Veuillez choisir au maximum %d options complémentaires.', 'keleva-woo-addons'), self::MAX_SAUCES), ['status' => 400]);
         }
 
         $allowed = [];
@@ -48,7 +48,7 @@ final class Keleva_Restaurant_Extras {
         $selected = [];
         foreach ($requested as $id) {
             if (!isset($allowed[$id])) {
-                return new WP_Error('keleva_invalid_sauce', __('Une sauce sélectionnée est invalide.', 'keleva-woo-addons'), ['status' => 400]);
+                return new WP_Error('keleva_invalid_extra', __('Une option complémentaire sélectionnée est invalide.', 'keleva-woo-addons'), ['status' => 400]);
             }
             $selected[] = $allowed[$id];
         }
@@ -91,7 +91,7 @@ final class Keleva_Restaurant_Extras {
     public static function add_meta_box(): void {
         add_meta_box(
             'keleva-restaurant-sauces',
-            __('Keleva — suppléments restaurant', 'keleva-woo-addons'),
+            __('Keleva — options complémentaires', 'keleva-woo-addons'),
             [self::class, 'render_admin_options'],
             'product',
             'normal',
@@ -104,10 +104,10 @@ final class Keleva_Restaurant_Extras {
         $product = wc_get_product($post->ID);
         $options = $product ? self::options_for($product) : [];
         $json = wp_json_encode($options, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        echo '<p>' . esc_html__('Configuration visible uniquement pour les produits de restauration. Le storefront limite strictement la sélection à deux sauces.', 'keleva-woo-addons') . '</p>';
-        echo '<label for="keleva-restaurant-sauces-json"><strong>' . esc_html__('Sauces au format JSON', 'keleva-woo-addons') . '</strong></label>';
-        echo '<textarea id="keleva-restaurant-sauces-json" class="widefat code" rows="10" name="keleva_restaurant_sauces_json" placeholder="[{&quot;id&quot;:&quot;sauce-maison&quot;,&quot;label&quot;:&quot;Sauce maison&quot;,&quot;price&quot;:0}]">' . esc_textarea((string) $json) . '</textarea>';
-        echo '<p class="description">' . esc_html__('Chaque option nécessite un identifiant, un libellé et un prix positif ou nul. Laissez le champ vide pour désactiver les suppléments sur ce produit.', 'keleva-woo-addons') . '</p>';
+        echo '<p>' . esc_html__('Ajoutez des services ou finitions complémentaires. Le storefront limite strictement la sélection à deux options.', 'keleva-woo-addons') . '</p>';
+        echo '<label for="keleva-restaurant-sauces-json"><strong>' . esc_html__('Options au format JSON', 'keleva-woo-addons') . '</strong></label>';
+        echo '<textarea id="keleva-restaurant-sauces-json" class="widefat code" rows="10" name="keleva_restaurant_sauces_json" placeholder="[{&quot;id&quot;:&quot;montage&quot;,&quot;label&quot;:&quot;Montage à domicile&quot;,&quot;price&quot;:450}]">' . esc_textarea((string) $json) . '</textarea>';
+        echo '<p class="description">' . esc_html__('Chaque option nécessite un identifiant, un libellé et un prix positif ou nul. Laissez le champ vide pour désactiver les options complémentaires sur ce produit.', 'keleva-woo-addons') . '</p>';
     }
 
     public static function save_admin_options(int $post_id): void {
@@ -153,8 +153,8 @@ final class Keleva_Restaurant_Extras {
             return;
         }
         echo '<fieldset class="keleva-sauce-picker" data-keleva-sauce-picker data-max-sauces="' . esc_attr((string) self::MAX_SAUCES) . '">';
-        echo '<legend>' . esc_html__('Personnalisez votre commande', 'keleva-woo-addons') . '</legend>';
-        echo '<p class="keleva-sauce-picker__hint">' . esc_html__('Choisissez jusqu’à deux sauces. Les autres choix se désactivent automatiquement.', 'keleva-woo-addons') . '</p>';
+        echo '<legend>' . esc_html__('Personnalisez votre pièce', 'keleva-woo-addons') . '</legend>';
+        echo '<p class="keleva-sauce-picker__hint">' . esc_html__('Choisissez jusqu’à deux options complémentaires. Les autres choix se désactivent automatiquement.', 'keleva-woo-addons') . '</p>';
         echo '<p class="keleva-sauce-picker__status" aria-live="polite"></p>';
         foreach ($options as $option) {
             $id = 'keleva-sauce-' . $product->get_id() . '-' . $option['id'];
@@ -206,7 +206,7 @@ final class Keleva_Restaurant_Extras {
             return $item_data;
         }
         $labels = array_map(static fn (array $option): string => (string) $option['label'], $cart_item['keleva_sauces']);
-        $item_data[] = ['key' => __('Sauces', 'keleva-woo-addons'), 'value' => implode(', ', $labels)];
+        $item_data[] = ['key' => __('Options complémentaires', 'keleva-woo-addons'), 'value' => implode(', ', $labels)];
         return $item_data;
     }
 

@@ -26,10 +26,10 @@ if (!$hero_image_id) {
 }
 $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/');
 $categories = [
-  ['label' => __('Nouveautés', 'keleva-woo'), 'slug' => 'nouveautes', 'count' => '03'],
-  ['label' => __('Maison', 'keleva-woo'), 'slug' => 'maison', 'count' => '03'],
-  ['label' => __('Équipement', 'keleva-woo'), 'slug' => 'equipement', 'count' => '03'],
-  ['label' => __('Coffrets', 'keleva-woo'), 'slug' => 'coffrets', 'count' => '02'],
+  ['label' => __('Assises', 'keleva-woo'), 'slug' => 'assises', 'count' => '03'],
+  ['label' => __('Tables', 'keleva-woo'), 'slug' => 'tables', 'count' => '02'],
+  ['label' => __('Rangements', 'keleva-woo'), 'slug' => 'rangements', 'count' => '02'],
+  ['label' => __('Luminaires', 'keleva-woo'), 'slug' => 'luminaires', 'count' => '02'],
 ];
 $copy = static fn (string $key, string $default): string => keleva_woo_home_copy($key, $default);
 $benefits = [
@@ -46,21 +46,21 @@ $faqs = [
 <main id="keleva-main" class="keleva-main" tabindex="-1">
   <section class="velora-hero" aria-labelledby="keleva-hero-title">
     <div class="velora-hero__copy">
-      <p class="velora-eyebrow"><span></span><?php esc_html_e('Objets utiles, choisis avec intention', 'keleva-woo'); ?></p>
-      <h1 id="keleva-hero-title"><?php esc_html_e('Choisissez vite.', 'keleva-woo'); ?><br><em><?php esc_html_e('Gardez le contrôle.', 'keleva-woo'); ?></em></h1>
-      <p class="velora-hero__description"><?php esc_html_e('Une boutique pensée pour parcourir moins, décider mieux et garder votre panier dans le champ — du premier regard au dernier clic.', 'keleva-woo'); ?></p>
+      <p class="velora-eyebrow"><span></span><?php esc_html_e('Mobilier contemporain, choisi avec intention', 'keleva-woo'); ?></p>
+      <h1 id="keleva-hero-title"><?php esc_html_e('Composez votre intérieur.', 'keleva-woo'); ?><br><em><?php esc_html_e('Affirmez votre style.', 'keleva-woo'); ?></em></h1>
+      <p class="velora-hero__description"><?php esc_html_e('Des pièces durables, des matières justes et des finitions à composer pour créer un intérieur qui vous ressemble.', 'keleva-woo'); ?></p>
       <div class="velora-intent" aria-label="<?php esc_attr_e('Commencer par une catégorie', 'keleva-woo'); ?>">
         <span><?php esc_html_e('Commencer par', 'keleva-woo'); ?></span>
         <div>
           <?php foreach (array_slice($categories, 0, 2) as $category) : $keleva_term = get_term_by('slug', $category['slug'], 'product_cat'); ?>
             <a href="<?php echo esc_url($keleva_term ? get_term_link($keleva_term) : $shop_url); ?>"><?php echo esc_html($category['label']); ?><b aria-hidden="true">→</b></a>
           <?php endforeach; ?>
-          <?php $coffrets = get_term_by('slug', 'coffrets', 'product_cat'); ?><a href="<?php echo esc_url($coffrets ? get_term_link($coffrets) : $shop_url); ?>"><?php esc_html_e('Coffrets', 'keleva-woo'); ?><b aria-hidden="true">→</b></a>
+          <?php $luminaires = get_term_by('slug', 'luminaires', 'product_cat'); ?><a href="<?php echo esc_url($luminaires ? get_term_link($luminaires) : $shop_url); ?>"><?php esc_html_e('Luminaires', 'keleva-woo'); ?><b aria-hidden="true">→</b></a>
         </div>
       </div>
       <div class="velora-hero__actions"><a class="velora-primary" href="#catalogue"><?php esc_html_e('Explorer la sélection', 'keleva-woo'); ?><b aria-hidden="true">→</b></a><a class="velora-quiet-link" href="#pourquoi"><?php esc_html_e('Pourquoi Velora', 'keleva-woo'); ?><b aria-hidden="true">⌄</b></a></div>
       <div class="velora-proof"><span>⌁ <?php esc_html_e('Expédition nette', 'keleva-woo'); ?></span><span>◈ <?php esc_html_e('Paiement protégé', 'keleva-woo'); ?></span></div>
-      <p class="velora-status"><span class="site-brand__mark site-brand__mark--velora" aria-hidden="true">V</span><span><strong><?php esc_html_e('Votre panier est prêt.', 'keleva-woo'); ?></strong> <span data-keleva-cart-message><?php esc_html_e('0 article(s) déjà sélectionné(s).', 'keleva-woo'); ?></span></span></p>
+      <p class="velora-status"><span class="site-brand__mark site-brand__mark--velora" aria-hidden="true">V</span><span><strong><?php esc_html_e('Votre sélection évolue.', 'keleva-woo'); ?></strong> <span data-keleva-cart-message><?php esc_html_e('0 pièce sélectionnée.', 'keleva-woo'); ?></span></span></p>
     </div>
     <figure class="velora-hero__visual">
       <?php if ($hero_image_id) : ?>
@@ -75,8 +75,8 @@ $faqs = [
   <section class="velora-shop" id="catalogue" aria-labelledby="keleva-catalog-title">
     <div class="velora-shop__catalog">
       <header class="velora-section-heading">
-        <div><p class="velora-eyebrow"><?php esc_html_e('Le catalogue, sans détour', 'keleva-woo'); ?></p><h2 id="keleva-catalog-title"><?php esc_html_e('Objets qui trouvent', 'keleva-woo'); ?><br><em><?php esc_html_e('leur place.', 'keleva-woo'); ?></em></h2></div>
-        <p><?php esc_html_e('Petites séries, belles matières, aucune distraction inutile.', 'keleva-woo'); ?></p>
+        <div><p class="velora-eyebrow"><?php esc_html_e('La collection, sans détour', 'keleva-woo'); ?></p><h2 id="keleva-catalog-title"><?php esc_html_e('Des pièces qui trouvent', 'keleva-woo'); ?><br><em><?php esc_html_e('leur place.', 'keleva-woo'); ?></em></h2></div>
+        <p><?php esc_html_e('Assises, tables et objets de lumière : des formes calmes, des matières qui durent.', 'keleva-woo'); ?></p>
       </header>
       <div class="velora-toolbar"><nav class="velora-category-list" aria-label="<?php esc_attr_e('Catégories du catalogue', 'keleva-woo'); ?>"><a href="#catalogue" aria-current="page"><?php esc_html_e('Tout', 'keleva-woo'); ?><small>08</small></a><?php foreach ($categories as $category) : $keleva_term = get_term_by('slug', $category['slug'], 'product_cat'); if ($keleva_term) : ?><a href="<?php echo esc_url(get_term_link($keleva_term)); ?>"><?php echo esc_html($category['label']); ?><small><?php echo esc_html($category['count']); ?></small></a><?php endif; endforeach; ?></nav><a class="velora-sort-link" href="<?php echo esc_url($shop_url); ?>"><?php esc_html_e('Trier : pertinence', 'keleva-woo'); ?> <b aria-hidden="true">⌄</b></a></div>
       <?php /* translators: %d: number of products in the selection. */ ?><p class="velora-result-line"><?php echo esc_html(sprintf(_n('%d pièce dans la sélection', '%d pièces dans la sélection', count($products), 'keleva-woo'), count($products))); ?></p>

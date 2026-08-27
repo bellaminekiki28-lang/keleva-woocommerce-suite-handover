@@ -101,6 +101,19 @@ $primary_category = $velora_categories[sanitize_title($product->get_slug())] ?? 
       <p><?php esc_html_e('Retrouvez les informations fournies pour ce produit et les suggestions associées, dans un format lisible sur tous les écrans.', 'keleva-woo'); ?></p>
     </header>
     <div class="velora-product-details-content">
+      <?php
+      if (has_term(['assises', 'tables', 'rangements', 'luminaires'], 'product_cat', $product->get_id())) {
+          add_filter('woocommerce_product_tabs', static function (array $tabs): array {
+              unset(
+                  $tabs['additional_information'],
+                  $tabs['wcfm_product_multivendor_tab'],
+                  $tabs['wcfm_policies_tab'],
+                  $tabs['wcfm_enquiry_tab']
+              );
+              return $tabs;
+          }, 99);
+      }
+      ?>
       <?php do_action('woocommerce_after_single_product_summary'); ?>
     </div>
   </section>

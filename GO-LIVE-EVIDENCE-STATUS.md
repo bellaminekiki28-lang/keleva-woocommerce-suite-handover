@@ -9,6 +9,7 @@
 | Archive installable du plugin 0.6.23 | PASS | `wordpress-package/installables/keleva-woo-addons-0.6.23.zip` |
 | SHA-256 des archives finales | PASS | `wordpress-package/RELEASE-SHA256-0.4.19-0.6.23.txt` |
 | Manifest fichiers/dépendances/ordre/rollback | PASS | `wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md` |
+| Correction storefront mobilier sur staging | PASS — staging uniquement | Rapport factuel `RAPPORT-CORRECTION-STOREFRONT-MOBILIER-2026-08-27.md` ; la vitrine ne publie plus que quatre meubles et les fixtures restaurant restent en brouillon réversible. |
 | Checkpoint géré du portail | PASS | URI `manus-webdev://2e04398a`, commit `2e04398a863d8ecd7466735f43741f7d881246b0` ; détail dans `private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md` |
 | Restauration du checkpoint du portail sur copie | FAIL | Non exécutée ; aucune branche ou copie isolée de vérification n’a été créée. |
 | Sauvegarde complète de production téléchargée | FAIL | À réaliser avec accès Hostinger production |

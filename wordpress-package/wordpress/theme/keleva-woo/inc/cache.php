@@ -81,9 +81,10 @@ add_action('template_redirect', static function (): void {
 }, 0);
 
 function keleva_woo_featured_products(int $limit = 9): array {
-    // Keep the curated list when the Velora demo catalog exists, but fall back to
+    // Use the curated furniture demonstration when it exists, but fall back to
     // the latest published WooCommerce products on stores with different slugs.
-    $key = 'keleva_featured_products_v2_' . $limit;
+    // v3 deliberately bypasses the former product transient.
+    $key = 'keleva_featured_products_v3_' . $limit;
     $products = get_transient($key);
 
     if (false !== $products) {
@@ -94,21 +95,17 @@ function keleva_woo_featured_products(int $limit = 9): array {
         return [];
     }
 
-    $velora_slugs = [
-        'mug-nomade-sienna',
-        'pochette-field-olive',
-        'vase-forme-02',
-        'lampe-halo-portable',
-        'carnet-ligne-claire',
-        'tote-canvas-03',
-        'plateau-ondulation',
-        'duo-pause-juste',
+    $furniture_slugs = [
+        'fauteuil-ligne-noa',
+        'table-basse-arco',
+        'canape-modulaire-serein',
+        'lampe-atelier-halo',
     ];
     $ids = get_posts([
         'post_type' => 'product',
         'post_status' => 'publish',
         'posts_per_page' => $limit,
-        'post_name__in' => $velora_slugs,
+        'post_name__in' => $furniture_slugs,
         'orderby' => 'post_name__in',
         'order' => 'ASC',
         'fields' => 'ids',
@@ -141,6 +138,7 @@ function keleva_woo_flush_product_caches(): void {
     foreach ([6, 9, 12] as $limit) {
         delete_transient('keleva_featured_products_' . $limit);
         delete_transient('keleva_featured_products_v2_' . $limit);
+        delete_transient('keleva_featured_products_v3_' . $limit);
     }
 }
 

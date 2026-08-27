@@ -3,6 +3,7 @@ defined('ABSPATH') || exit;
 get_header('shop');
 
 $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url('/');
+$furniture_category_slugs = ['assises', 'tables', 'rangements', 'luminaires'];
 ?>
 <div id="keleva-main" class="keleva-main velora-listing" tabindex="-1">
   <?php if (keleva_woo_render_layout('shop_archive')) : ?>
@@ -15,7 +16,7 @@ $shop_url = function_exists('wc_get_page_permalink') ? wc_get_page_permalink('sh
           <p><?php esc_html_e('Choisissez, ajustez, continuez : les détails et le panier restent à portée de main.', 'keleva-woo'); ?></p>
         </header>
         <?php if (woocommerce_product_loop()) : ?>
-          <div class="velora-toolbar"><nav class="velora-category-list" aria-label="<?php esc_attr_e('Catégories du catalogue', 'keleva-woo'); ?>"><a href="<?php echo esc_url($shop_url); ?>"<?php echo is_shop() ? ' aria-current="page"' : ''; ?>><?php esc_html_e('Tout', 'keleva-woo'); ?></a><?php foreach (get_terms(['taxonomy' => 'product_cat', 'hide_empty' => true]) as $category) : ?><a href="<?php echo esc_url(get_term_link($category)); ?>"<?php echo is_product_category($category->slug) ? ' aria-current="page"' : ''; ?>><?php echo esc_html($category->name); ?></a><?php endforeach; ?></nav><?php do_action('woocommerce_before_shop_loop'); ?></div>
+          <div class="velora-toolbar"><nav class="velora-category-list" aria-label="<?php esc_attr_e('Catégories du catalogue', 'keleva-woo'); ?>"><a href="<?php echo esc_url($shop_url); ?>"<?php echo is_shop() ? ' aria-current="page"' : ''; ?>><?php esc_html_e('Tout', 'keleva-woo'); ?></a><?php foreach (get_terms(['taxonomy' => 'product_cat', 'hide_empty' => true]) as $category) : ?><?php if (in_array($category->slug, $furniture_category_slugs, true)) : ?><a href="<?php echo esc_url(get_term_link($category)); ?>"<?php echo is_product_category($category->slug) ? ' aria-current="page"' : ''; ?>><?php echo esc_html($category->name); ?></a><?php endif; ?><?php endforeach; ?></nav><?php do_action('woocommerce_before_shop_loop'); ?></div>
           <ul class="keleva-product-grid velora-product-grid">
             <?php while (have_posts()) : the_post(); wc_get_template_part('content', 'product'); endwhile; ?>
           </ul>
