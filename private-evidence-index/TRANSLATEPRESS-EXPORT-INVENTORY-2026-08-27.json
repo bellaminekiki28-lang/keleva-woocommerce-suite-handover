@@ -1,17 +1,17 @@
 {
-  "evidence_type": "sanitized TranslatePress export inventory",
-  "artifact_filename": "keleva-translatepress-private-20260827-001010.json",
-  "artifact_size_bytes": 241812,
-  "artifact_sha256": "0f6bdd5e961249c15306acec74b288e0ee280d989fa75476c217c5bd25d50427",
-  "format": "keleva-translatepress-private-v1",
-  "exported_at_utc": "2026-08-27T00:10:10+00:00",
-  "site": "aliceblue-bison-433987.hostingersite.com",
+  "evidence_type": "sanitized TranslatePress furniture export inventory",
+  "artifact_filename": "keleva-translatepress-private-furniture-20260827-121218.json",
+  "artifact_size_bytes": 246503,
+  "artifact_sha256": "23cbb12b2da275ccb076ec8250bd6123dbff3f8b4d258c3f835d1d42f18eec20",
+  "format": "keleva-translatepress-private-v2",
+  "exported_at_utc": "2026-08-27T12:12:18+00:00",
+  "scope": "Hostinger staging current furniture catalogue only",
   "table_prefix": "wp_",
   "dictionary_tables": {
-    "wp_trp_dictionary_fr_fr_ar": 912
+    "wp_trp_dictionary_fr_fr_ar": 934
   },
   "dictionary_table_count": 1,
-  "dictionary_row_count": 912,
+  "dictionary_row_count": 934,
   "translatepress_option_count": 9,
   "translatepress_option_names": [
     "trp_advanced_settings",
@@ -25,12 +25,10 @@
     "trp_updated_database_gettext_tables_optimization"
   ],
   "collection_method": {
-    "dictionary_discovery": "SHOW TABLES LIKE '<prefix>trp_dictionary_%'",
-    "dictionary_selection": "Only names matching ^<prefix>trp_dictionary_[a-z0-9_]+$ were exported.",
-    "dictionary_count": "For each selected dictionary table, the exporter selected all rows and counted the resulting JSON array length.",
-    "options_query": "SELECT option_name, option_value FROM <prefix>options WHERE option_name LIKE 'trp_%'",
-    "options_count": "The exporter counted the distinct option_name keys in the exported object.",
-    "excluded": "No posts, products, customers, orders, WordPress users, passwords, cookies, payment keys, or general WordPress options were selected."
+    "dictionary_discovery": "Selected the current FR-to-AR TranslatePress dictionary table matching the WordPress prefix.",
+    "dictionary_count": "Counted exported dictionary records in the private artifact.",
+    "options_count": "Counted WordPress options whose names start with trp_.",
+    "excluded": "Posts, products, customers, orders, WordPress users, passwords, cookies, payment keys and general WordPress options were excluded."
   },
-  "restoration_status": "NOT EXECUTED — no isolated WordPress copy was supplied or created; production remains NO-GO."
+  "restoration_status": "Imported locally, but full French/Arabic route and rendering parity remains FAIL because local /ar/ routing was not reproduced. This is not production evidence."
 }

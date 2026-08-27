@@ -5,6 +5,8 @@
 **Périmètre :** staging Hostinger et copies locales isolées uniquement
 **Décision officielle :** **NO-GO production**
 
+> **Statut documentaire :** ce rapport est un instantané historique. Les résultats les plus récents de recette, d’export TranslatePress, de rollback code, de migration WCFM/Sauce et de nettoyage staging sont consolidés dans l’[addendum de mission staging](RAPPORT-MISSION-STAGING-2026-08-27.md) et le [registre GO/NO-GO](GO-LIVE-EVIDENCE-STATUS.md), qui prévalent en cas d’écart.
+
 > Ce rapport distingue strictement les résultats prouvés sur le staging et sur des copies locales des validations de production. Aucune commande réelle, aucun paiement réel, aucune donnée client, aucune restauration Hostinger et aucune modification de production commerciale n’ont été exécutés.
 
 ## 1. Résumé exécutif

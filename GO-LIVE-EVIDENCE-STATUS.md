@@ -1,30 +1,52 @@
 # État des preuves GO/NO-GO — Keleva
 
-**Référence packages de release :** `8663ce3f59da5549b3c0b29b2a2245a82789d3b2` (`main`). **Dernière correction source storefront staging :** `8b08a45f1203fc9c5fb7b9aa4e4d9b61b8694c82`.
+**Périmètre contrôlé :** staging WordPress Hostinger et copies locales isolées uniquement. **Release de référence :** thème Keleva Woo `0.4.19` et plugin Keleva Woo Addons `0.6.23`, commit source `8663ce3`. **Décision officielle :** **NO-GO production**.
 
-| Contrôle | Statut | Preuve ou action restante |
+> Une preuve `PASS` ne s’étend jamais au-delà de son environnement et de son objet de contrôle. Les données utilisateurs, sauvegardes, exports bruts, SQL, cookies, identifiants, clés, URL privées et chemins locaux ne sont volontairement pas publiés.
+
+| Contrôle | Statut | Portée et preuve publique assainie |
 |---|---|---|
-| Commit officiel et versions documentés | PASS | Manifeste 0.4.19/0.6.23 et guide de passation |
-| Archive installable du thème 0.4.19 | PASS | `wordpress-package/installables/keleva-woo-0.4.19.zip` |
-| Archive installable du plugin 0.6.23 | PASS | `wordpress-package/installables/keleva-woo-addons-0.6.23.zip` |
-| SHA-256 des archives finales | PASS | `wordpress-package/RELEASE-SHA256-0.4.19-0.6.23.txt` |
-| Manifest fichiers/dépendances/ordre/rollback | PASS | `wordpress-package/RELEASE-MANIFEST-0.4.19-0.6.23.md` |
-| Correction storefront mobilier sur staging | PASS — staging uniquement | Rapport factuel `RAPPORT-CORRECTION-STOREFRONT-MOBILIER-2026-08-27.md` ; la vitrine ne publie plus que quatre meubles et les fixtures restaurant restent en brouillon réversible. |
-| Sauvegarde privée complète du staging créée et checksumée | PASS — staging uniquement | Archive privée de `473439028` octets, SHA-256 `39eee23dd79c48aef36dfd8065b25e09eaadf5eef63a27664397c08a235b8cd0`, intégrité ZIP vérifiée sans extraction ; preuve assainie : `private-evidence-index/HOSTINGER-STAGING-DUPLICATOR-BACKUP-PROOF-2026-08-27.md`. |
-| Checkpoint géré du portail | PASS | URI `manus-webdev://2e04398a`, commit `2e04398a863d8ecd7466735f43741f7d881246b0` ; détail dans `private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md` |
-| Restauration du checkpoint du portail sur copie | PASS | Checkpoint `2e04398a` restauré puis validé dans une copie isolée : dépendances verrouillées, `5` fichiers Vitest / `16` tests, TypeScript, build, connexion, persistance après rechargement, déconnexion/révocation et refus d’identifiant invalide. Preuve : `private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md`. Cette preuve ne couvre pas WordPress ni la production. |
-| Sauvegarde complète de production téléchargée | FAIL | À réaliser avec accès Hostinger production |
-| Restauration fichiers/base de sauvegarde staging sur copie isolée | PASS — local/staging uniquement | `25751` fichiers extraits et dump importé dans une base locale dédiée : `101` tables et `719` lignes `wp_options`. Accueil FR et fiche configurable contrôlés localement ; aucune écriture Hostinger. Détail : `private-evidence-index/HOSTINGER-STAGING-DUPLICATOR-BACKUP-PROOF-2026-08-27.md`. |
-| Export TranslatePress privé généré | PASS | Artefact privé `keleva-translatepress-private-20260827-001010.json` ; SHA-256 `0f6bdd5e961249c15306acec74b288e0ee280d989fa75476c217c5bd25d50427` ; inventaire assaini dans `private-evidence-index/TRANSLATEPRESS-EXPORT-INVENTORY-2026-08-27.json` |
-| Restauration isolée de l’export TranslatePress | FAIL | Les données et tables TranslatePress sont importées et le plugin est actif dans la copie locale, mais la route `/ar/` reste 404 sous le serveur PHP intégré puis sous Apache local avec PHP et `mod_rewrite`; une entrée locale explicitement forcée conserve le rendu français. Une recette sous une configuration Apache/Nginx reproduisant l’hébergement est nécessaire. La restauration bilingue complète ne doit pas être qualifiée de validée. |
-| Cause des bascules de thème et stabilité observée | N/A non approuvé | À diagnostiquer sur l’environnement concerné et faire approuver |
-| Exercice de rollback sur copie | PASS — sonde locale seulement | Sonde MU locale visible, supprimée, puis absence contrôlée sur l’accueil ; délai end-to-end `128 ms`. Cette preuve de mécanisme ne constitue pas encore un rollback complet de release. |
-| Inventaire de configuration production | FAIL | À relever séparément du staging |
-| Paiements/livraison/emails/webhooks sandbox | N/A non approuvé | À valider si ces fonctions sont activées, sinon signer l’exclusion |
-| Recette métier FR/AR signée | FAIL | Validation responsable métier manquante |
-| SEO, sécurité et monitoring production | FAIL | Vérification production manquante |
-| Signatures technique et métier | FAIL | Procès-verbal go/no-go manquant |
+| Commit officiel et versions documentés | **PASS** | Release `0.4.19/0.6.23` et manifeste de livraison [1]. |
+| Archives installables thème et plugin | **PASS** | Archives et SHA-256 versionnés dans le package de release [1]. |
+| Correction storefront mobilier | **PASS — staging** | Accueil et catalogues FR/AR : quatre meubles publiés ; les fixtures restaurant sont en brouillon réversible. Contrôle public : [FR][2], [AR][3]. |
+| Fixture restaurant résiduelle | **PASS — staging, réversible** | Le produit de fixture identifié pendant la recette a été passé en brouillon, sans suppression. Les deux catalogues publics n’exposent ensuite que les quatre meubles. [2] [3] |
+| Configurateur fauteuil premium | **PASS — staging** | Choix radio obligatoire, services par cases à cocher, limites et total de recette de 5 920 MAD précédemment vérifiés, sans checkout ni paiement. [4] |
+| Traduction AR des quatre meubles et catégories | **PASS — périmètre recetté** | Noms, descriptions, catégories et options principales de Noa, Arco, Serein et Halo sont rendus en arabe RTL sur les routes contrôlées. [3] [4] [5] [6] |
+| Panier AR vide | **PASS — staging** | Les deux messages d’état vide sont rendus en arabe, le compteur public est à `00` et aucun article n’est présent. [7] |
+| Recette responsive FR/AR | **PASS — mobile ciblé** | Les dix routes clés FR/AR retournent HTTP 200 à 390 × 844 px ; les premiers écrans de l’accueil, boutique, fauteuil, panier et checkout ne montrent ni débordement ni superposition observés. Ce contrôle n’est pas une matrice cross-browser complète. [8] |
+| Portail marchand white-label | **PASS — staging/code** | Portail natif sous les routes dédiées, authentification distincte et absence d’accès marchand à `wp-admin` documentées séparément. [9] |
+| Tests du checkpoint portail | **PASS — copie isolée** | Dépendances verrouillées, cinq fichiers Vitest / seize tests, TypeScript, build, login, persistance, logout/révocation et refus d’identifiant invalide. [10] |
+| Sauvegarde Duplicator staging | **PASS — staging, privée** | Archive privée créée, téléchargée, checksumée et vérifiée ; l’index public ne décrit que les métadonnées autorisées. [11] |
+| Restauration WordPress staging sur copie isolée | **PASS — partiel** | Fichiers et base restaurés ; accueil FR et fiche configurable vérifiés. Ce résultat ne couvre ni la production ni le rendu AR complet. [11] |
+| Export TranslatePress mobilier actuel | **PASS — staging, privé** | Export daté du 27 août 2026 à 12:12:18 UTC ; SHA-256 `23cbb12b2da275ccb076ec8250bd6123dbff3f8b4d258c3f835d1d42f18eec20`, 246 503 octets, table `wp_trp_dictionary_fr_fr_ar` (934 lignes), neuf options `trp_%`. Le JSON brut reste privé. [12] |
+| Restauration isolée de l’export TranslatePress et routes AR locales | **FAIL** | Les données ont été importées, mais les routes `/ar/` locales restent en 404 sous les configurations déjà testées. Aucune preuve de parité hôte n’est simulée. [13] |
+| Rollback complet de release code | **PASS — copie isolée** | Retour code vers la release précédente contrôlé en 877 ms après incident simulé, puis réinstallation candidate en 853 ms. Rollback base : **N/A**, non exécuté. [14] |
+| Migration Sauce des quatre meubles | **PASS — copie isolée** | Snapshot, inventaire, forward limité, intégrité WooCommerce, inverse et comparaison fonctionnelle après rollback sont prouvés. Le routage local des fiches/panier reste non fidèle ; aucune application staging. [15] |
+| Reliquat WCFM restaurant | **OUVERT / NON APPLIQUÉ** | La cause est identifiée (auteurs et `_wcfm_vendor` hérités). Une neutralisation locale a été testée puis annulée ; son application staging est bloquée par la limite de recette locale et requiert une décision séparée. [15] |
+| Correcteur TranslatePress temporaire | **PASS — nettoyage staging** | Désactivé puis supprimé après recontrôle public des traductions persistantes. L’archive de récupération est privée. [8] |
+| Sauvegarde et restauration production | **FAIL** | Production commerciale distincte non identifiée et non modifiée. |
+| Inventaire production | **FAIL** | Domaine, hPanel, versions, extensions, paiements, cache et données métier ne sont pas prouvés hors staging. |
+| Paiements, n8n et WhatsApp | **N/A — non approuvé** | Aucune intégration réelle ni credential tiers n’a été configuré, et aucun flux n’a été déclenché. |
+| Recette métier, SEO, sécurité, monitoring et signatures | **FAIL** | Décision métier, inventaire production et signatures techniques/métier manquent. |
 
 ## Décision
 
-**NO-GO production.** Les archives de code, l’export TranslatePress privé, le checkpoint du portail et une sauvegarde Duplicator privée du **staging** sont prouvés comme créés. Le checkpoint portail a désormais été restauré et recetté sur copie isolée. Les fichiers et la base de la sauvegarde staging ont aussi été restaurés localement ; un rollback de sonde de code y a été mesuré. Toutefois, la route arabe TranslatePress n’a pas été validée sous l’émulation locale minimale, et aucun rollback complet de release ni sauvegarde de production n’est disponible. L’inventaire production, la recette métier et les signatures restent absents. Aucun déploiement, paiement réel, commande réelle ou écrasement de données ne doit être effectué sur la base de ce fichier.
+**NO-GO production maintenu.** Les outils et accès ont permis de corriger et recetter le staging, de traduire les parcours AR ciblés, d’exporter TranslatePress dans un artefact privé, d’exercer des restaurations et rollback sur copies isolées, et de publier une documentation assainie. Ils ne prouvent pas une sauvegarde ou restauration de production, la parité locale du routage AR avec l’hébergement, les intégrations Stripe/n8n/WhatsApp, ni les signatures métier et techniques. Aucun déploiement, restauration, paiement, commande, automatisation ou écrasement de la production ne doit être exécuté sur la base de ce registre.
+
+## Références
+
+[1]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/tree/main/wordpress-package "Package de release Keleva"
+[2]: https://aliceblue-bison-433987.hostingersite.com/boutique/ "Boutique Keleva staging FR"
+[3]: https://aliceblue-bison-433987.hostingersite.com/ar/boutique/ "Boutique Keleva staging AR"
+[4]: https://aliceblue-bison-433987.hostingersite.com/ar/product/fauteuil-ligne-noa/ "Fiche Fauteuil Ligne Noa AR"
+[5]: https://aliceblue-bison-433987.hostingersite.com/ar/product/table-basse-arco/ "Fiche Table basse Arco AR"
+[6]: https://aliceblue-bison-433987.hostingersite.com/ar/product/canape-modulaire-serein/ "Fiche Canapé Modulaire Serein AR"
+[7]: https://aliceblue-bison-433987.hostingersite.com/ar/panier/ "Panier Keleva staging AR"
+[8]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/RAPPORT-MISSION-STAGING-2026-08-27.md "Addendum de recette staging"
+[9]: https://aliceblue-bison-433987.hostingersite.com/espace-marchand/ "Portail marchand Keleva"
+[10]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/private-evidence-index/PORTAL-CHECKPOINT-PROOF-2026-08-27.md "Preuve publique assainie du checkpoint portail"
+[11]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/private-evidence-index/HOSTINGER-STAGING-DUPLICATOR-BACKUP-PROOF-2026-08-27.md "Preuve publique assainie de sauvegarde staging"
+[12]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/RAPPORT-MISSION-STAGING-2026-08-27.md#export-translatepress "Métadonnées publiques de l’export TranslatePress courant"
+[13]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/private-evidence-index/TRANSLATEPRESS-EXPORT-INVENTORY-2026-08-27.json "Index public assaini TranslatePress"
+[14]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/RAPPORT-MISSION-STAGING-2026-08-27.md#rollback-de-release "Résultat public assaini du rollback de release"
+[15]: https://github.com/bellaminekiki28-lang/keleva-woocommerce-suite-handover/blob/main/private-evidence-index/WCFM-SAUCE-LOCAL-MIGRATION-PROOF-2026-08-27.md "Résultat public assaini de la migration locale"
