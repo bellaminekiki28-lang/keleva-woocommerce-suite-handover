@@ -15,6 +15,8 @@ Source de release autorisée : `8663ce3f59da5549b3c0b29b2a2245a82789d3b2`. Le co
 3. `CHECKLIST-RESTAURATION-GO-LIVE.md`
 4. `PUBLIC-TEST-FIXTURES.md`
 5. `wordpress-package/docs/RELEASE_NOTES_0.4.19_RECONCILED.md`
+6. `GO-LIVE-EVIDENCE-STATUS.md`
+7. `RAPPORT-PREUVES-FINALES-2026-08-27.md`
 
 ## Artefacts de release
 
@@ -26,9 +28,9 @@ Le parcours storefront FR/AR, le responsive desktop/mobile, le portail marchand 
 
 ## Export TranslatePress — statut honnête
 
-TranslatePress Free ne fournit pas de bouton d’export autonome dans l’écran de réglages observé. Les traductions sont stockées dans la base WordPress, dans les tables de dictionnaire TranslatePress. Une tentative d’installation d’un exporteur temporaire authentifié sur le staging a été refusée par l’endpoint d’installation Hostinger avec HTTP 500 ; aucune extension temporaire n’a donc été laissée active et aucune donnée n’a été publiée.
+L’export privé TranslatePress a été généré depuis le staging avec un outil temporaire administrateur, puis l’outil a été retiré immédiatement. L’artefact s’appelle `keleva-translatepress-private-20260827-001010.json`, contient une table de dictionnaire et neuf options TranslatePress, et son SHA-256 est `0f6bdd5e961249c15306acec74b288e0ee280d989fa75476c217c5bd25d50427`. Il est remis hors dépôt public. Le relevé sans contenu traduit est publié dans `private-evidence-index/TRANSLATEPRESS-EXPORT-PROOF-2026-08-27.md`.
 
-Par conséquent, aucun lien de téléchargement d’un export complet TranslatePress ne doit être annoncé comme disponible. Pour produire cet export en toute sécurité, le prochain développeur doit effectuer un export SQL privé des tables `wp_trp_dictionary_*` et des options TranslatePress `trp_%`, après sauvegarde complète, puis le chiffrer et le conserver hors du dépôt public. Le préfixe `wp_` doit être remplacé par le préfixe réellement observé sur la production.
+Cet export est prouvé comme généré mais **n’est pas encore restauré et validé sur une copie isolée**. Il ne doit donc pas être qualifié de restaurable validé, ni être importé sur la production. Le préfixe `wp_` relevé sur le staging ne doit pas être supposé identique à celui de la production.
 
 ## Règles de sécurité
 

@@ -1,0 +1,36 @@
+{
+  "evidence_type": "sanitized TranslatePress export inventory",
+  "artifact_filename": "keleva-translatepress-private-20260827-001010.json",
+  "artifact_size_bytes": 241812,
+  "artifact_sha256": "0f6bdd5e961249c15306acec74b288e0ee280d989fa75476c217c5bd25d50427",
+  "format": "keleva-translatepress-private-v1",
+  "exported_at_utc": "2026-08-27T00:10:10+00:00",
+  "site": "aliceblue-bison-433987.hostingersite.com",
+  "table_prefix": "wp_",
+  "dictionary_tables": {
+    "wp_trp_dictionary_fr_fr_ar": 912
+  },
+  "dictionary_table_count": 1,
+  "dictionary_row_count": 912,
+  "translatepress_option_count": 9,
+  "translatepress_option_names": [
+    "trp_advanced_settings",
+    "trp_db_stored_data",
+    "trp_language_switcher_settings",
+    "trp_onboarding_started",
+    "trp_plugin_optin",
+    "trp_plugin_version",
+    "trp_settings",
+    "trp_updated_database_gettext_original_lookup_hash",
+    "trp_updated_database_gettext_tables_optimization"
+  ],
+  "collection_method": {
+    "dictionary_discovery": "SHOW TABLES LIKE '<prefix>trp_dictionary_%'",
+    "dictionary_selection": "Only names matching ^<prefix>trp_dictionary_[a-z0-9_]+$ were exported.",
+    "dictionary_count": "For each selected dictionary table, the exporter selected all rows and counted the resulting JSON array length.",
+    "options_query": "SELECT option_name, option_value FROM <prefix>options WHERE option_name LIKE 'trp_%'",
+    "options_count": "The exporter counted the distinct option_name keys in the exported object.",
+    "excluded": "No posts, products, customers, orders, WordPress users, passwords, cookies, payment keys, or general WordPress options were selected."
+  },
+  "restoration_status": "NOT EXECUTED — no isolated WordPress copy was supplied or created; production remains NO-GO."
+}
